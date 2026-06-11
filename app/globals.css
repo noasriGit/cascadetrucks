@@ -1,26 +1,196 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-50: #f5f6f8;
+  --color-brand-100: #ecedf1;
+  --color-brand-200: #d5d8e0;
+  --color-brand-300: #b5bac7;
+  --color-brand-400: #949bae;
+  --color-brand-500: #737c94;
+  --color-brand-600: #5c6478;
+  --color-brand-700: #4a556a;
+  --color-brand-800: #3c4969;
+  --color-brand-900: #323d56;
+  --color-brand-950: #283140;
+
+  --color-accent-300: #f5dc5c;
+  --color-accent-400: #f0d033;
+  --color-accent-500: #ecc30b;
+  --color-accent-600: #d4af0a;
+  --color-accent-700: #bc9b09;
+
+  --color-ink: #0f172a;
+  --color-muted: #475569;
+  --color-line: #e2e8f0;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f6f8fb;
+  --color-surface-muted: #eef2f7;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --radius-xl: 0.875rem;
+  --radius-2xl: 1.125rem;
+  --radius-3xl: 1.5rem;
+
+  --shadow-card: 0 1px 2px 0 rgb(15 23 42 / 0.04), 0 1px 3px 0 rgb(15 23 42 / 0.06);
+  --shadow-card-hover: 0 10px 30px -12px rgb(15 23 42 / 0.25);
+  --shadow-elevated: 0 20px 45px -20px rgb(40 49 64 / 0.45);
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--color-line);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  transition: color 150ms var(--ease-out-soft);
+}
+
+/* Visible focus indicator for keyboard users (accessibility). */
+:focus-visible {
+  outline: 3px solid var(--color-brand-500);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Skip-link helper. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+/* Subtle grid texture used behind dark hero/CTA surfaces. */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Smoothly reveal native <details> content in the FAQ accordion. */
+@keyframes details-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes splash-logo-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes splash-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-splash-logo {
+  animation: splash-logo-in 450ms var(--ease-out-soft) both;
+}
+.animate-splash-out {
+  animation: splash-out 400ms var(--ease-out-soft) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-splash-logo {
+    animation: none;
+  }
+  .animate-splash-out {
+    animation-duration: 150ms;
+  }
+}
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes panel-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-menu-in {
+  animation: menu-in 160ms var(--ease-out-soft);
+}
+.animate-overlay-in {
+  animation: overlay-in 200ms var(--ease-out-soft);
+}
+.animate-panel-in {
+  animation: panel-in 240ms var(--ease-out-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
 }
