@@ -4,9 +4,7 @@ import { useActionState, useId } from "react";
 import { useFormStatus } from "react-dom";
 import { CheckCircle2, ShieldCheck } from "lucide-react";
 import { submitQuoteRequest } from "@/app/actions/quote";
-import { initialQuoteState } from "@/lib/quote";
-import { services } from "@/data/services";
-import { pageLocations } from "@/data/locations";
+import { initialQuoteState, quoteCoverageCategories, resolveQuoteCoverageCategory } from "@/lib/quote";
 import { Field, FieldError, Input, Label, Select, Textarea } from "@/components/ui/Field";
 import { buttonClasses } from "@/components/ui/Button";
 
@@ -23,13 +21,16 @@ export function QuoteForm({
   heading = "Request a free quote",
   description = "Tell us about your vehicles and we'll get back to you fast.",
   defaultCoverage,
+  defaultCity,
 }: {
   heading?: string;
   description?: string;
   defaultCoverage?: string;
+  defaultCity?: string;
 }) {
   const [state, formAction] = useActionState(submitQuoteRequest, initialQuoteState);
   const uid = useId();
+  const coverageDefault = resolveQuoteCoverageCategory(defaultCoverage);
 
   if (state.status === "success") {
     return (
@@ -117,34 +118,32 @@ export function QuoteForm({
               id={`${uid}-coverage`}
               name="coverage"
               required
-              defaultValue={defaultCoverage ?? ""}
+              defaultValue={coverageDefault}
               aria-invalid={Boolean(state.errors.coverage)}
               aria-describedby={state.errors.coverage ? `${uid}-coverage-error` : undefined}
             >
               <option value="" disabled>
-                Select coverage
+                Choose coverage type
               </option>
-              {services.map((s) => (
-                <option key={s.slug} value={s.name}>
-                  {s.name}
+              {quoteCoverageCategories.map((category) => (
+                <option key={category} value={category}>
+                  {category}
                 </option>
               ))}
-              <option value="Other">Other / Not sure</option>
             </Select>
             <FieldError id={`${uid}-coverage-error`} message={state.errors.coverage} />
           </Field>
 
           <Field>
             <Label htmlFor={`${uid}-city`}>City</Label>
-            <Select id={`${uid}-city`} name="city" defaultValue="">
-              <option value="">Select city</option>
-              {pageLocations.map((l) => (
-                <option key={l.slug} value={l.city}>
-                  {l.city}, VA
-                </option>
-              ))}
-              <option value="Other">Other Virginia city</option>
-            </Select>
+            <Input
+              id={`${uid}-city`}
+              name="city"
+              type="text"
+              defaultValue={defaultCity ?? ""}
+              placeholder="e.g. Fairfax"
+              autoComplete="address-level2"
+            />
           </Field>
         </div>
 

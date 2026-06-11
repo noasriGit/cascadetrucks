@@ -1,52 +1,46 @@
 "use client";
 
-import { useLayoutEffect, useState } from "react";
-import { cn } from "@/lib/cn";
-
-const SESSION_KEY = "cascade-splash-seen";
+import { useLayoutEffect } from "react";
+import {
+  SPLASH_FADE_MS,
+  SPLASH_HOLD_MS,
+  SPLASH_SESSION_KEY,
+  hideSplash,
+  startSplashExit,
+} from "@/lib/splash";
 
 export function SplashScreen() {
-  const [visible, setVisible] = useState(false);
-  const [fadeOut, setFadeOut] = useState(false);
-
   useLayoutEffect(() => {
-    if (sessionStorage.getItem(SESSION_KEY)) return;
+    const boot = document.getElementById("splash-boot");
+    const curtain = boot?.querySelector<HTMLElement>(".splash-boot-curtain");
 
-    setVisible(true);
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    if (sessionStorage.getItem(SPLASH_SESSION_KEY)) {
+      hideSplash();
+      return;
+    }
 
-    const fadeTimer = window.setTimeout(() => setFadeOut(true), 750);
-    const hideTimer = window.setTimeout(() => {
-      sessionStorage.setItem(SESSION_KEY, "1");
-      setVisible(false);
-      document.body.style.overflow = previousOverflow;
-    }, 1150);
+    if (!boot || !curtain) return;
 
-    return () => {
-      window.clearTimeout(fadeTimer);
-      window.clearTimeout(hideTimer);
-      document.body.style.overflow = previousOverflow;
-    };
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const fadeMs = reducedMotion ? 180 : SPLASH_FADE_MS;
+    const holdMs = reducedMotion ? 180 : SPLASH_HOLD_MS;
+    const failsafeMs = holdMs + fadeMs + 400;
+
+    boot.classList.add("splash-animate");
+
+    const failsafe = window.setTimeout(hideSplash, failsafeMs);
+
+    const holdTimer = window.setTimeout(() => {
+      startSplashExit(boot, fadeMs, () => {
+        window.clearTimeout(failsafe);
+        hideSplash();
+      });
+    }, holdMs);
+
+    // No cleanup — React Strict Mode remount must not cancel these timers.
+    void holdTimer;
+    void failsafe;
   }, []);
 
-  if (!visible) return null;
-
-  return (
-    <div
-      aria-hidden="true"
-      className={cn(
-        "fixed inset-0 z-[100] flex items-center justify-center bg-brand-800",
-        fadeOut && "animate-splash-out pointer-events-none",
-      )}
-    >
-      <img
-        src="/images/cascadelogo.png"
-        alt=""
-        width={240}
-        height={104}
-        className="w-[min(72vw,240px)] animate-splash-logo object-contain"
-      />
-    </div>
-  );
+  return null;
 }

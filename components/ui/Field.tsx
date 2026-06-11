@@ -5,6 +5,7 @@ import type {
   SelectHTMLAttributes,
   TextareaHTMLAttributes,
 } from "react";
+import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/cn";
 
 const controlBase =
@@ -42,9 +43,22 @@ export function Select({
   ...rest
 }: SelectHTMLAttributes<HTMLSelectElement> & { children: ReactNode }) {
   return (
-    <select className={cn(controlBase, "border-slate-300 appearance-none bg-no-repeat", className)} {...rest}>
-      {children}
-    </select>
+    <div className="relative mt-1.5">
+      <select
+        className={cn(
+          controlBase,
+          "mt-0 border-slate-300 pr-10 appearance-none bg-white",
+          className
+        )}
+        {...rest}
+      >
+        {children}
+      </select>
+      <ChevronDown
+        className="pointer-events-none absolute top-1/2 right-3.5 h-4 w-4 -translate-y-1/2 text-slate-400"
+        aria-hidden="true"
+      />
+    </div>
   );
 }
 

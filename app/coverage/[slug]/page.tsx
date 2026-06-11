@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { Check } from "lucide-react";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Section, SectionHeading } from "@/components/layout/Section";
 import { ClickToCall } from "@/components/layout/ClickToCall";
-import { Button } from "@/components/ui/Button";
 import { DetailHero } from "@/components/marketing/DetailHero";
+import { QuoteForm } from "@/components/forms/QuoteForm";
 import { ContentSections } from "@/components/marketing/ContentSections";
 import { Faq } from "@/components/marketing/Faq";
 import { RelatedLinks } from "@/components/marketing/RelatedLinks";
@@ -18,9 +17,11 @@ import { serviceSchema } from "@/lib/schema";
 import { services, getService, getServices } from "@/data/services";
 import { getLocations } from "@/data/locations";
 import { getResources } from "@/data/resources";
+import { getVehicles } from "@/data/vehicles";
 import { getFaqs } from "@/data/faqs";
 import { authors } from "@/data/authors";
 import { site } from "@/data/site";
+import { getHeroImage } from "@/data/hero-images";
 
 export const dynamicParams = false;
 
@@ -50,6 +51,7 @@ export default async function ServicePage(props: PageProps<"/coverage/[slug]">) 
   const relatedServices = getServices(service.relatedServiceSlugs);
   const relatedLocations = getLocations(service.relatedLocationSlugs).filter((l) => l.hasPage);
   const relatedResources = getResources(service.relatedResourceSlugs);
+  const relatedVehicles = getVehicles(service.relatedVehicleSlugs ?? []);
   const author = authors[0];
 
   return (
@@ -69,25 +71,14 @@ export default async function ServicePage(props: PageProps<"/coverage/[slug]">) 
         eyebrow={service.category === "industry" ? "Industry Coverage" : "Coverage Type"}
         headline={service.heroHeadline}
         subheadline={service.heroSubheadline}
-        actions={
-          <>
-            <ClickToCall variant="solid" />
-            <Button href="/quote" variant="outlineLight" size="lg">
-              Request a Quote
-            </Button>
-          </>
-        }
+        actions={<ClickToCall variant="solid" />}
+        backgroundImage={getHeroImage(service.slug)}
         aside={
-          <div className="overflow-hidden rounded-2xl shadow-elevated ring-1 ring-white/10">
-            <Image
-              src={service.image.src}
-              alt={service.image.alt}
-              width={service.image.width}
-              height={service.image.height}
-              className="h-auto w-full object-cover"
-              priority
-            />
-          </div>
+          <QuoteForm
+            defaultCoverage={service.name}
+            heading="Get your free quote"
+            description="Tell us about your operation and we'll follow up fast."
+          />
         }
       />
 
@@ -147,6 +138,10 @@ export default async function ServicePage(props: PageProps<"/coverage/[slug]">) 
               {
                 heading: "Related coverage",
                 links: relatedServices.map((s) => ({ label: s.name, href: `/coverage/${s.slug}` })),
+              },
+              {
+                heading: "Vehicle types",
+                links: relatedVehicles.map((v) => ({ label: v.name, href: `/vehicles/${v.slug}` })),
               },
               {
                 heading: "Service areas",

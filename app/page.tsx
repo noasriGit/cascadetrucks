@@ -1,23 +1,23 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/marketing/Hero";
 import { Section, SectionHeading } from "@/components/layout/Section";
 import { QuoteForm } from "@/components/forms/QuoteForm";
-import { TrustIndicators } from "@/components/marketing/TrustIndicators";
 import { CoverageGrid } from "@/components/marketing/CoverageGrid";
 import { ServiceAreaGrid } from "@/components/marketing/ServiceAreaGrid";
 import { CarrierLogos } from "@/components/marketing/CarrierLogos";
-import { Reviews } from "@/components/marketing/Reviews";
 import { Faq } from "@/components/marketing/Faq";
-import { StatStrip } from "@/components/marketing/StatStrip";
 import { CallToActionBar } from "@/components/marketing/CallToActionBar";
 import { ParallaxQuote } from "@/components/marketing/ParallaxQuote";
 import { Container } from "@/components/layout/Container";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { insuranceAgencySchema } from "@/lib/schema";
 import { services, coverageServices, industryServices } from "@/data/services";
 import { locations } from "@/data/locations";
 import { getFaqs } from "@/data/faqs";
 import { site } from "@/data/site";
+import { media } from "@/data/media";
 
 const homeFaqs = getFaqs([
   "general-cost",
@@ -64,13 +64,6 @@ export default function HomePage() {
         aside={<QuoteForm />}
       />
 
-      <Section tone="soft" ariaLabelledby="trust-heading">
-        <h2 id="trust-heading" className="sr-only">
-          Why businesses trust {site.brandName}
-        </h2>
-        <TrustIndicators />
-      </Section>
-
       <Section ariaLabelledby="coverage-heading">
         <SectionHeading
           id="coverage-heading"
@@ -84,10 +77,7 @@ export default function HomePage() {
       </Section>
 
       <ParallaxQuote
-        quote="Cascade had our dump truck fleet covered in less than a day. The whole process was painless and the pricing beat every other agency we called."
-        author="Mike R."
-        detail="Owner, R&amp;R Excavation — Fairfax, VA"
-        rating={5}
+        quote="Your fleet is your livelihood. Every mile on the road is a mile your business depends on, make sure it's covered."
         imageSrc="/images/hero-banner.png"
         imagePosition="object-[65%_center]"
       />
@@ -104,18 +94,38 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section tone="brand" ariaLabelledby="stats-heading">
-        <h2 id="stats-heading" className="sr-only">
-          Cascade by the numbers
-        </h2>
-        <StatStrip
-          stats={[
-            { value: `${site.aggregateRating.ratingValue}/5`, label: "Average review rating" },
-            { value: `${site.aggregateRating.reviewCount}+`, label: "Client reviews" },
-            { value: `${services.length}`, label: "Coverage types" },
-            { value: "VA", label: "Statewide service" },
-          ]}
-        />
+      <Section tone="brand" ariaLabelledby="about-preview-heading">
+        <div className="grid items-center gap-10 lg:grid-cols-2">
+          <div>
+            <Eyebrow invert>Our Team</Eyebrow>
+            <h2
+              id="about-preview-heading"
+              className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            >
+              Virginia-licensed advisors who know commercial trucking
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-brand-100">
+              {site.brandName} is the commercial vehicle specialty of {site.parentName}, an independent
+              agency based in Manassas, VA. Our licensed team compares options across multiple A-rated
+              carriers to find coverage built around how your operation actually runs.
+            </p>
+            <Link
+              href="/about"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand-800 shadow-sm transition hover:bg-brand-50"
+            >
+              Meet our team <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </div>
+          <figure className="overflow-hidden rounded-2xl shadow-elevated ring-1 ring-white/10">
+            <Image
+              src={media.teamPhoto.src}
+              alt={media.teamPhoto.alt}
+              width={media.teamPhoto.width}
+              height={media.teamPhoto.height}
+              className="h-auto w-full object-cover"
+            />
+          </figure>
+        </div>
       </Section>
 
       <Section ariaLabelledby="areas-heading">
@@ -160,13 +170,6 @@ export default function HomePage() {
         />
         <div className="mt-10">
           <CarrierLogos />
-        </div>
-      </Section>
-
-      <Section tone="soft" ariaLabelledby="reviews-heading">
-        <SectionHeading id="reviews-heading" eyebrow="Reviews" title="What Virginia businesses say" />
-        <div className="mt-8">
-          <Reviews />
         </div>
       </Section>
 

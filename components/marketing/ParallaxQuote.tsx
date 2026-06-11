@@ -6,7 +6,7 @@ import { cn } from "@/lib/cn";
 
 interface ParallaxQuoteProps {
   quote: string;
-  author: string;
+  author?: string;
   detail?: string;
   rating?: number;
   imageSrc: string;
@@ -19,7 +19,7 @@ export function ParallaxQuote({
   quote,
   author,
   detail,
-  rating = 5,
+  rating = 0,
   imageSrc,
   imagePosition = "object-center",
   className,
@@ -40,7 +40,7 @@ export function ParallaxQuote({
         const vh = window.innerHeight;
         /* Map element visibility [-1 … 1] to a translate offset. */
         const progress = (rect.top + rect.height / 2 - vh / 2) / (vh + rect.height / 2);
-        const offset = progress * 40; /* px — subtle, keeps image in frame */
+        const offset = progress * 40; /* px, subtle, keeps image in frame */
         el.style.transform = `translateY(${offset}px)`;
         ticking = false;
       });
@@ -53,13 +53,13 @@ export function ParallaxQuote({
 
   return (
     <div
-      aria-label={`Client testimonial: ${quote} — ${author}`}
+      aria-label={author ? `${quote} — ${author}` : quote}
       className={cn(
         "relative h-64 overflow-hidden sm:h-72 lg:h-80",
         className,
       )}
     >
-      {/* Parallax image layer — slightly taller than container so it can shift. */}
+      {/* Parallax image layer, slightly taller than container so it can shift. */}
       <div
         ref={imgRef}
         aria-hidden="true"
@@ -90,12 +90,14 @@ export function ParallaxQuote({
             <blockquote className="text-xl font-semibold leading-relaxed text-white sm:text-2xl">
               &ldquo;{quote}&rdquo;
             </blockquote>
-            <figcaption className="mt-4">
-              <span className="block text-sm font-bold text-accent-400">{author}</span>
-              {detail ? (
-                <span className="block text-sm text-brand-200">{detail}</span>
-              ) : null}
-            </figcaption>
+            {author ? (
+              <figcaption className="mt-4">
+                <span className="block text-sm font-bold text-accent-400">{author}</span>
+                {detail ? (
+                  <span className="block text-sm text-brand-200">{detail}</span>
+                ) : null}
+              </figcaption>
+            ) : null}
           </div>
         </div>
       </div>

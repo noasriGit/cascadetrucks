@@ -91,8 +91,9 @@ export const services: Service[] = [
     relatedServiceSlugs: ["construction-vehicle-insurance", "commercial-fleet-insurance", "commercial-auto-insurance"],
     relatedLocationSlugs: DEFAULT_LOCATIONS,
     relatedResourceSlugs: ["how-dump-truck-insurance-works", "virginia-commercial-auto-insurance-guide"],
+    relatedVehicleSlugs: ["dump-trailer-insurance", "transfer-dump-trailer-insurance", "bulk-commodity-trailer-insurance", "truck-tractor-insurance"],
     image: image("dump-truck-insurance", "Dump truck on a Virginia job site"),
-    updated: "2026-06-08",
+    updated: "2026-06-11",
   },
   {
     slug: "tow-truck-insurance",
@@ -164,8 +165,9 @@ export const services: Service[] = [
     relatedServiceSlugs: ["commercial-auto-insurance", "commercial-fleet-insurance"],
     relatedLocationSlugs: DEFAULT_LOCATIONS,
     relatedResourceSlugs: ["tow-truck-insurance-requirements", "virginia-commercial-auto-insurance-guide"],
+    relatedVehicleSlugs: ["car-carrier-insurance", "flatbed-truck-insurance", "auto-hauler-trailer-insurance"],
     image: image("tow-truck-insurance", "Tow truck recovering a vehicle in Virginia"),
-    updated: "2026-06-08",
+    updated: "2026-06-11",
   },
   {
     slug: "contractor-vehicle-insurance",
@@ -224,8 +226,9 @@ export const services: Service[] = [
     relatedServiceSlugs: ["plumbing-vehicle-insurance", "hvac-vehicle-insurance", "construction-vehicle-insurance"],
     relatedLocationSlugs: DEFAULT_LOCATIONS,
     relatedResourceSlugs: ["virginia-commercial-auto-insurance-guide"],
+    relatedVehicleSlugs: ["bucket-truck-insurance", "stake-body-truck-insurance", "cement-mixer-truck-insurance", "cargo-van-insurance", "commercial-pickup-insurance"],
     image: image("contractor-vehicle-insurance", "Contractor work truck in Virginia"),
-    updated: "2026-06-08",
+    updated: "2026-06-11",
   },
   {
     slug: "plumbing-vehicle-insurance",
@@ -275,8 +278,9 @@ export const services: Service[] = [
     relatedServiceSlugs: ["hvac-vehicle-insurance", "contractor-vehicle-insurance"],
     relatedLocationSlugs: DEFAULT_LOCATIONS,
     relatedResourceSlugs: ["virginia-commercial-auto-insurance-guide"],
+    relatedVehicleSlugs: ["cargo-van-insurance", "commercial-pickup-insurance", "utility-trailer-insurance", "delivery-van-insurance"],
     image: image("plumbing-vehicle-insurance", "Plumbing service van in Virginia"),
-    updated: "2026-06-08",
+    updated: "2026-06-11",
   },
   {
     slug: "hvac-vehicle-insurance",
@@ -326,8 +330,9 @@ export const services: Service[] = [
     relatedServiceSlugs: ["plumbing-vehicle-insurance", "contractor-vehicle-insurance"],
     relatedLocationSlugs: DEFAULT_LOCATIONS,
     relatedResourceSlugs: ["virginia-commercial-auto-insurance-guide"],
+    relatedVehicleSlugs: ["cargo-van-insurance", "commercial-pickup-insurance", "delivery-van-insurance", "large-utility-trailer-insurance"],
     image: image("hvac-vehicle-insurance", "HVAC service truck in Virginia"),
-    updated: "2026-06-08",
+    updated: "2026-06-11",
   },
   {
     slug: "landscaping-vehicle-insurance",
@@ -379,8 +384,9 @@ export const services: Service[] = [
     relatedServiceSlugs: ["contractor-vehicle-insurance", "construction-vehicle-insurance"],
     relatedLocationSlugs: DEFAULT_LOCATIONS,
     relatedResourceSlugs: ["virginia-commercial-auto-insurance-guide"],
+    relatedVehicleSlugs: ["stake-body-truck-insurance", "utility-trailer-insurance", "tilt-trailer-insurance", "commercial-pickup-insurance", "wedge-trailer-insurance"],
     image: image("landscaping-vehicle-insurance", "Landscaping truck and trailer in Virginia"),
-    updated: "2026-06-08",
+    updated: "2026-06-11",
   },
   {
     slug: "construction-vehicle-insurance",
@@ -439,8 +445,9 @@ export const services: Service[] = [
     relatedServiceSlugs: ["dump-truck-insurance", "contractor-vehicle-insurance", "commercial-fleet-insurance"],
     relatedLocationSlugs: DEFAULT_LOCATIONS,
     relatedResourceSlugs: ["virginia-commercial-auto-insurance-guide", "how-dump-truck-insurance-works"],
+    relatedVehicleSlugs: ["cement-mixer-truck-insurance", "pump-truck-insurance", "lowboy-trailer-insurance", "gooseneck-trailer-insurance", "dump-trailer-insurance"],
     image: image("construction-vehicle-insurance", "Construction vehicles at a Virginia site"),
-    updated: "2026-06-08",
+    updated: "2026-06-11",
   },
   {
     slug: "commercial-fleet-insurance",
@@ -499,8 +506,9 @@ export const services: Service[] = [
     relatedServiceSlugs: ["commercial-auto-insurance", "dump-truck-insurance", "construction-vehicle-insurance"],
     relatedLocationSlugs: DEFAULT_LOCATIONS,
     relatedResourceSlugs: ["commercial-fleet-insurance-guide", "virginia-commercial-auto-insurance-guide"],
+    relatedVehicleSlugs: ["box-truck-insurance", "delivery-van-insurance", "cargo-van-insurance", "refrigerated-truck-insurance", "flatbed-truck-insurance"],
     image: image("commercial-fleet-insurance", "Commercial fleet of trucks in Virginia"),
-    updated: "2026-06-08",
+    updated: "2026-06-11",
   },
   {
     slug: "uber-black-insurance",
@@ -559,8 +567,98 @@ export const services: Service[] = [
     relatedServiceSlugs: ["commercial-auto-insurance", "commercial-fleet-insurance"],
     relatedLocationSlugs: ["fairfax-va", "arlington-va", "richmond-va"],
     relatedResourceSlugs: ["uber-black-insurance-requirements", "virginia-commercial-auto-insurance-guide"],
+    relatedVehicleSlugs: ["limousine-insurance", "luxury-suv-insurance", "hearse-insurance", "passenger-van-insurance"],
     image: image("uber-black-insurance", "Black car service vehicle in Virginia"),
-    updated: "2026-06-08",
+    updated: "2026-06-11",
+  },
+  {
+    slug: "business-auto-insurance",
+    name: "Business Auto Insurance",
+    category: "industry",
+    navLabel: "Business Auto Insurance",
+    shortDescription:
+      "Business auto insurance for Virginia companies using cars, vans, pickups, SUVs, and box trucks for everyday operations. Coverage for owned vehicles, hired autos, and employee-driven units from licensed advisors in Manassas, VA.",
+    heroHeadline: "Virginia Business Auto Insurance",
+    heroSubheadline:
+      "Whether your team drives sedans to client meetings, cargo vans on service calls, or pickups between job sites, business auto insurance covers the gap a personal policy leaves behind. We write business auto coverage for Virginia companies of every size.",
+    semanticEntities: [
+      "business auto",
+      "commercial auto liability",
+      "hired and non-owned auto",
+      "business use",
+      "Virginia DMV",
+    ],
+    sections: [
+      {
+        heading: "What Business Auto Insurance Covers in Virginia",
+        body: [
+          "Business auto insurance protects vehicles used for work, from a single owner-operated sedan to a fleet of service vans. The core coverage is commercial auto liability, which pays for bodily injury and property damage your vehicle causes to others. Without it, a personal policy's business-use exclusion can leave you holding the bill after an at-fault accident on the way to a client.",
+          "Most businesses add physical damage (collision and comprehensive) to repair or replace their own vehicles, and hired and non-owned auto to cover rented vehicles and employees' personal cars used on the job. Together these three coverages handle the most common gaps Virginia business owners face.",
+        ],
+        bullets: [
+          "Commercial auto liability for bodily injury and property damage",
+          "Physical damage: collision and comprehensive for owned vehicles",
+          "Hired auto for rentals and borrowed vehicles",
+          "Non-owned auto for employees driving personal cars on company business",
+        ],
+      },
+      {
+        heading: "Vehicles We Insure Under Business Auto",
+        body: [
+          "Business auto policies are built for the wide range of vehicles Virginia businesses actually drive: passenger cars and luxury sedans for executives and sales teams, cargo vans and minivans for service technicians, pickups for field crews, SUVs for property management and real estate, delivery and step vans for last-mile operations, and box trucks for light hauling.",
+          "If your business owns or regularly uses a vehicle that isn't a specialized heavy truck, tow rig, or dump truck, a business auto policy is almost certainly the right structure. We'll confirm the fit and flag if a more specialized policy is the better match.",
+        ],
+      },
+      {
+        heading: "Virginia Requirements for Business Vehicles",
+        body: [
+          "Every vehicle registered in Virginia must carry liability coverage. As of January 1, 2025, the state minimum is 50/100/25: $50,000 bodily injury per person, $100,000 per accident, and $25,000 property damage. For business vehicles, these minimums are rarely enough, since a commercial claim can easily exceed them and expose the business to direct liability.",
+          "Most Virginia businesses carry $500,000 to $1,000,000 in liability limits, and many contracts, leases, and client agreements require proof of higher limits. Our advisors review your specific exposures to recommend the right limits.",
+        ],
+      },
+      {
+        heading: "What Affects Your Business Auto Premium",
+        body: [
+          "Premiums reflect the vehicles you drive, how you use them, where you operate, and who is behind the wheel. A company with a clean driver roster, newer vehicles, and local routes will price better than one with a history of losses or high-risk drivers.",
+          "Adding drivers to a policy, expanding the radius of operation, or changing vehicle types can all affect your rate. As an independent agency, we monitor your program across multiple carriers to make sure you stay well priced as your business grows.",
+        ],
+        bullets: [
+          "Vehicle type, age, and value",
+          "Driver motor vehicle records and experience",
+          "Annual mileage and radius of operation",
+          "Prior insurance and loss history",
+        ],
+      },
+      {
+        heading: "How to Get a Business Auto Quote",
+        body: [
+          "Have your vehicle schedule (year, make, model, VIN), your driver list with license numbers, your annual mileage estimate, and any prior insurance history ready when you reach out.",
+          "Call (703) 551-2000 or request a quote online, and a licensed advisor will review your operation and build the right coverage. Most business auto policies can be quoted the same day.",
+        ],
+      },
+    ],
+    coverageHighlights: [
+      "Commercial auto liability",
+      "Physical damage: collision & comprehensive",
+      "Hired auto coverage",
+      "Non-owned auto for employee vehicles",
+    ],
+    faqIds: ["general-requirements", "general-cost", "general-multi-vehicle", "general-quote-speed"],
+    relatedServiceSlugs: ["commercial-auto-insurance", "commercial-fleet-insurance", "contractor-vehicle-insurance"],
+    relatedLocationSlugs: DEFAULT_LOCATIONS,
+    relatedResourceSlugs: ["virginia-commercial-auto-insurance-guide"],
+    relatedVehicleSlugs: [
+      "cargo-van-insurance",
+      "delivery-van-insurance",
+      "commercial-pickup-insurance",
+      "commercial-suv-insurance",
+      "passenger-van-insurance",
+      "box-truck-insurance",
+      "luxury-suv-insurance",
+      "commercial-minivan-insurance",
+    ],
+    image: image("business-auto-insurance", "Business vehicles parked at a Virginia office"),
+    updated: "2026-06-11",
   },
   {
     slug: "commercial-auto-insurance",
@@ -626,8 +724,9 @@ export const services: Service[] = [
     relatedServiceSlugs: ["commercial-fleet-insurance", "contractor-vehicle-insurance", "tow-truck-insurance"],
     relatedLocationSlugs: DEFAULT_LOCATIONS,
     relatedResourceSlugs: ["virginia-commercial-auto-insurance-guide", "commercial-fleet-insurance-guide"],
+    relatedVehicleSlugs: ["box-truck-insurance", "cargo-van-insurance", "delivery-van-insurance", "commercial-pickup-insurance", "flatbed-truck-insurance"],
     image: image("commercial-auto-insurance", "Commercial vehicles in Virginia"),
-    updated: "2026-06-08",
+    updated: "2026-06-11",
   },
 ];
 

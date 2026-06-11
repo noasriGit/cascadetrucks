@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { services } from "@/data/services";
 import { pageLocations } from "@/data/locations";
 import { resources } from "@/data/resources";
+import { vehicles } from "@/data/vehicles";
 import { absoluteUrl } from "@/lib/url";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/industries", priority: 0.9, changeFrequency: "monthly" },
     { path: "/locations", priority: 0.9, changeFrequency: "monthly" },
     { path: "/resources", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/vehicles", priority: 0.7, changeFrequency: "monthly" },
     { path: "/about", priority: 0.6, changeFrequency: "yearly" },
     { path: "/contact", priority: 0.7, changeFrequency: "yearly" },
     { path: "/quote", priority: 0.9, changeFrequency: "yearly" },
@@ -46,5 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...serviceEntries, ...locationEntries, ...resourceEntries];
+  const vehicleEntries: MetadataRoute.Sitemap = vehicles.map((v) => ({
+    url: absoluteUrl(`/vehicles/${v.slug}`),
+    lastModified: new Date(v.updated),
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
+  return [...staticEntries, ...serviceEntries, ...locationEntries, ...resourceEntries, ...vehicleEntries];
 }

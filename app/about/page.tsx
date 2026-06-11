@@ -24,7 +24,7 @@ export function generateMetadata(): Metadata {
 const sections = [
   {
     heading: `A trucking insurance brand built on ${site.parentName}`,
-    body: `${site.brandName} is the commercial vehicle and trucking specialty of ${site.parentName}—an independent agency with licensed advisors who focus on dump trucks, tow trucks, contractor vehicles, and fleets across Virginia.`,
+    body: `${site.brandName} is the commercial vehicle and trucking specialty of ${site.parentName}, an independent agency with licensed advisors who focus on dump trucks, tow trucks, contractor vehicles, and fleets across Virginia.`,
   },
   {
     heading: "Local Virginia expertise",
@@ -103,7 +103,7 @@ export default function AboutPage() {
               id="about-office-heading"
               eyebrow="Visit Us"
               title="Our Manassas office"
-              description="Stop by, call, or email—we're here to help Virginia businesses find the right commercial vehicle coverage."
+              description="Stop by, call, or email, we're here to help Virginia businesses find the right commercial vehicle coverage."
             />
             <address className="mt-6 space-y-1 not-italic text-base leading-7 text-muted">
               <span className="block font-semibold text-ink">{site.parentName}</span>

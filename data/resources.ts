@@ -1,7 +1,7 @@
 import type { Resource } from "@/lib/types";
 
-function image(slug: string, alt: string) {
-  return { src: `/images/resources/${slug}.svg`, alt, width: 1200, height: 800 };
+function image(src: string, alt: string) {
+  return { src, alt, width: 1200, height: 800 };
 }
 
 export const resources: Resource[] = [
@@ -60,7 +60,7 @@ export const resources: Resource[] = [
     relatedResourceSlugs: ["commercial-fleet-insurance-guide", "how-dump-truck-insurance-works"],
     published: "2026-01-05",
     updated: "2026-06-08",
-    image: image("virginia-commercial-auto-insurance-guide", "Virginia commercial auto insurance guide"),
+    image: image("https://images.unsplash.com/photo-1473445730015-841f29a9490b?auto=format&fit=crop&w=1920&q=80", "White commercial semi-truck driving on a highway"),
   },
   {
     slug: "how-dump-truck-insurance-works",
@@ -117,7 +117,7 @@ export const resources: Resource[] = [
     relatedResourceSlugs: ["virginia-commercial-auto-insurance-guide", "commercial-fleet-insurance-guide"],
     published: "2026-01-06",
     updated: "2026-06-08",
-    image: image("how-dump-truck-insurance-works", "How dump truck insurance works"),
+    image: image("https://images.pexels.com/photos/3356047/pexels-photo-3356047.jpeg?auto=compress&cs=tinysrgb&w=1920", "Yellow dump truck at a construction site"),
   },
   {
     slug: "tow-truck-insurance-requirements",
@@ -174,7 +174,7 @@ export const resources: Resource[] = [
     relatedResourceSlugs: ["virginia-commercial-auto-insurance-guide"],
     published: "2026-01-07",
     updated: "2026-06-08",
-    image: image("tow-truck-insurance-requirements", "Tow truck insurance requirements"),
+    image: image("https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1920", "Tow truck on the roadside ready for vehicle recovery"),
   },
   {
     slug: "commercial-fleet-insurance-guide",
@@ -231,7 +231,7 @@ export const resources: Resource[] = [
     relatedResourceSlugs: ["virginia-commercial-auto-insurance-guide"],
     published: "2026-01-08",
     updated: "2026-06-08",
-    image: image("commercial-fleet-insurance-guide", "Commercial fleet insurance guide"),
+    image: image("https://images.pexels.com/photos/36124840/pexels-photo-36124840.jpeg?auto=compress&cs=tinysrgb&w=1920", "Row of commercial cargo trucks parked in an outdoor fleet lot"),
   },
   {
     slug: "uber-black-insurance-requirements",
@@ -280,7 +280,7 @@ export const resources: Resource[] = [
     relatedResourceSlugs: ["virginia-commercial-auto-insurance-guide"],
     published: "2026-01-09",
     updated: "2026-06-08",
-    image: image("uber-black-insurance-requirements", "Uber Black insurance requirements"),
+    image: image("https://images.pexels.com/photos/313779/pexels-photo-313779.jpeg?auto=compress&cs=tinysrgb&w=1920", "Black luxury sedan on city streets at twilight"),
   },
 ];
 

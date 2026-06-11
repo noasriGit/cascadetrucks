@@ -60,6 +60,7 @@ export const footerNav: { heading: string; items: NavItem[] }[] = [
       { label: "Commercial Auto Insurance", href: "/coverage/commercial-auto-insurance" },
       { label: "Commercial Fleet Insurance", href: "/coverage/commercial-fleet-insurance" },
       { label: "Uber Black Insurance", href: "/coverage/uber-black-insurance" },
+      { label: "All Vehicle Types", href: "/vehicles" },
     ],
   },
   {

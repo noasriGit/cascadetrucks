@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/site";
 import { absoluteUrl } from "@/lib/url";
 import { SplashScreen } from "@/components/layout/SplashScreen";
+import { SPLASH_BOOT_SCRIPT } from "@/lib/splash";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SkipLink } from "@/components/layout/SkipLink";
@@ -46,8 +48,22 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-surface">
+        <Script id="splash-boot-script" strategy="beforeInteractive">
+          {SPLASH_BOOT_SCRIPT}
+        </Script>
         <JsonLd data={organizationSchema()} />
         <JsonLd data={insuranceAgencySchema()} />
+        <div id="splash-boot" aria-hidden="true">
+          <div className="splash-boot-curtain">
+            <img
+              src="/images/cascadelogo.png"
+              alt=""
+              width={240}
+              height={104}
+              className="splash-boot-logo w-[min(72vw,240px)] object-contain"
+            />
+          </div>
+        </div>
         <SkipLink />
         <SplashScreen />
         <Header />

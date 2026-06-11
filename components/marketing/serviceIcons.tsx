@@ -1,5 +1,6 @@
 import {
   Boxes,
+  Briefcase,
   Car,
   CarFront,
   Droplets,
@@ -23,6 +24,7 @@ const iconBySlug: Record<string, LucideIcon> = {
   "commercial-fleet-insurance": Boxes,
   "uber-black-insurance": CarFront,
   "commercial-auto-insurance": Car,
+  "business-auto-insurance": Briefcase,
 };
 
 export function getServiceIcon(slug: string): LucideIcon {

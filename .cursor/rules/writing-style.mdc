@@ -1,0 +1,19 @@
+---
+description: Writing and copy style conventions for this project
+alwaysApply: true
+---
+
+# Writing Style
+
+## Punctuation
+
+- **No emdashes** (`—`) anywhere — in JSX, strings, comments, or copy.
+- Use a comma, period, or reword the sentence instead.
+
+```tsx
+// ❌ BAD
+"Cascade Insurance — an independent agency"
+
+// ✅ GOOD
+"Cascade Insurance, an independent agency"
+```

@@ -2,7 +2,7 @@ import { site } from "@/data/site";
 import { locations } from "@/data/locations";
 import { reviews as allReviews } from "@/data/reviews";
 import { absoluteUrl } from "@/lib/url";
-import type { Author, Faq, Resource, Review, Service } from "@/lib/types";
+import type { Author, Faq, Resource, Review, Service, VehicleType } from "@/lib/types";
 
 const ORG_ID = absoluteUrl("/#organization");
 const AGENCY_ID = absoluteUrl("/#agency");
@@ -99,6 +99,24 @@ export function serviceSchema(service: Service, path: string): Json {
     name: service.name,
     serviceType: service.name,
     description: service.shortDescription,
+    url: absoluteUrl(path),
+    provider: { "@id": AGENCY_ID },
+    areaServed: locations.map((l) => ({
+      "@type": "City",
+      name: `${l.city}, ${site.address.regionCode}`,
+    })),
+    category: "Commercial Vehicle Insurance",
+  };
+}
+
+export function vehicleTypeSchema(vehicle: VehicleType, path: string): Json {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${absoluteUrl(path)}#service`,
+    name: vehicle.name,
+    serviceType: vehicle.name,
+    description: vehicle.shortDescription,
     url: absoluteUrl(path),
     provider: { "@id": AGENCY_ID },
     areaServed: locations.map((l) => ({

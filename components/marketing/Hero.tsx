@@ -42,8 +42,8 @@ export function Hero({
             className="object-cover object-[72%_center]"
           />
           {/* Left-to-right scrim keeps the headline readable over the photo. */}
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/92 to-brand-900/45 sm:to-brand-900/40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-900/30 via-transparent to-brand-950/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-900 from-[30%] via-brand-900/60 via-[52%] to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-900/15 via-transparent to-brand-950/40" />
         </div>
       ) : null}
 

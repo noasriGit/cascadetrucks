@@ -60,6 +60,33 @@ export interface Service {
   relatedServiceSlugs: string[];
   relatedLocationSlugs: string[];
   relatedResourceSlugs: string[];
+  /** Optional links to /vehicles/[slug] pages, rendered in the Related section. */
+  relatedVehicleSlugs?: string[];
+  image: ServiceImage;
+  updated: string;
+}
+
+export type VehicleGroup = "truck" | "trailer" | "car-van" | "bus-motorhome" | "debris";
+
+export interface VehicleType {
+  slug: string;
+  name: string;
+  vehicleGroup: VehicleGroup;
+  shortDescription: string;
+  heroHeadline: string;
+  heroSubheadline: string;
+  /** Semantic entities reinforced on the page for topical relevance. */
+  semanticEntities: string[];
+  /** Body sections rendered in the page template. */
+  sections: ContentSection[];
+  coverageHighlights: string[];
+  faqIds: string[];
+  /** 3–5 sibling vehicle type slugs. */
+  relatedVehicleSlugs: string[];
+  /** Links to /coverage/[slug] service pages. */
+  relatedServiceSlugs: string[];
+  relatedLocationSlugs: string[];
+  relatedResourceSlugs: string[];
   image: ServiceImage;
   updated: string;
 }

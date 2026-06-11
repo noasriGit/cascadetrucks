@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Section, SectionHeading } from "@/components/layout/Section";
 import { ClickToCall } from "@/components/layout/ClickToCall";
-import { Button } from "@/components/ui/Button";
 import { DetailHero } from "@/components/marketing/DetailHero";
+import { QuoteForm } from "@/components/forms/QuoteForm";
 import { ContentSections } from "@/components/marketing/ContentSections";
 import { Faq } from "@/components/marketing/Faq";
 import { RelatedLinks } from "@/components/marketing/RelatedLinks";
@@ -16,6 +15,7 @@ import { locationSchema } from "@/lib/schema";
 import { pageLocations, getLocation, getLocations } from "@/data/locations";
 import { getServices } from "@/data/services";
 import { getFaqs } from "@/data/faqs";
+import { getHeroImage } from "@/data/hero-images";
 
 export const dynamicParams = false;
 
@@ -62,25 +62,14 @@ export default async function LocationPage(props: PageProps<"/locations/[city]">
         eyebrow={location.region}
         headline={location.headline}
         subheadline={location.heroSubheadline}
-        actions={
-          <>
-            <ClickToCall variant="solid" />
-            <Button href="/quote" variant="outlineLight" size="lg">
-              Request a Quote
-            </Button>
-          </>
-        }
+        actions={<ClickToCall variant="solid" />}
+        backgroundImage={getHeroImage(location.slug)}
         aside={
-          <div className="overflow-hidden rounded-2xl shadow-elevated ring-1 ring-white/10">
-            <Image
-              src={location.image.src}
-              alt={location.image.alt}
-              width={location.image.width}
-              height={location.image.height}
-              className="h-auto w-full object-cover"
-              priority
-            />
-          </div>
+          <QuoteForm
+            defaultCity={location.city}
+            heading="Get your free quote"
+            description="Tell us about your vehicles and we'll follow up fast."
+          />
         }
       />
 

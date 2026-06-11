@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Image from "next/image";
-import { Container } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Section, SectionHeading } from "@/components/layout/Section";
-import { Eyebrow } from "@/components/ui/Eyebrow";
+import { DetailHero } from "@/components/marketing/DetailHero";
 import { ContentSections } from "@/components/marketing/ContentSections";
 import { Faq } from "@/components/marketing/Faq";
 import { AuthorBio } from "@/components/marketing/AuthorBio";
@@ -17,6 +15,7 @@ import { resources, getResource, getResources } from "@/data/resources";
 import { getServices } from "@/data/services";
 import { getFaqs } from "@/data/faqs";
 import { getAuthor } from "@/data/authors";
+import { getHeroImage } from "@/data/hero-images";
 
 export const dynamicParams = false;
 
@@ -52,11 +51,8 @@ export default async function ResourcePage(props: PageProps<"/resources/[slug]">
     <>
       <JsonLd data={articleSchema(resource, author, path)} />
 
-      <section className="relative overflow-hidden bg-brand-900 text-white">
-        <div aria-hidden="true" className="bg-grid absolute inset-0 opacity-60" />
-        <div aria-hidden="true" className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-accent-500/20 blur-3xl" />
-        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-brand-900/0 via-brand-900/0 to-brand-950/60" />
-        <Container className="relative py-12 sm:py-16">
+      <DetailHero
+        breadcrumbs={
           <Breadcrumbs
             items={[
               { name: "Home", path: "/" },
@@ -64,18 +60,12 @@ export default async function ResourcePage(props: PageProps<"/resources/[slug]">
               { name: resource.title, path },
             ]}
           />
-          <div className="mt-6">
-            <Eyebrow invert>Guide</Eyebrow>
-          </div>
-          <h1 className="mt-5 max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl">
-            {resource.title}
-          </h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-brand-100">{resource.excerpt}</p>
-          <p className="mt-4 text-sm text-brand-200">
-            {author ? `By ${author.name}` : null} &middot; Updated {resource.updated}
-          </p>
-        </Container>
-      </section>
+        }
+        eyebrow="Guide"
+        headline={resource.title}
+        subheadline={resource.excerpt}
+        backgroundImage={getHeroImage(resource.slug)}
+      />
 
       <Section ariaLabelledby="resource-body-heading">
         <h2 id="resource-body-heading" className="sr-only">
@@ -83,16 +73,6 @@ export default async function ResourcePage(props: PageProps<"/resources/[slug]">
         </h2>
         <div className="grid gap-12 lg:grid-cols-3">
           <article className="lg:col-span-2">
-            <div className="mb-10 overflow-hidden rounded-2xl">
-              <Image
-                src={resource.image.src}
-                alt={resource.image.alt}
-                width={resource.image.width}
-                height={resource.image.height}
-                className="h-auto w-full object-cover"
-                priority
-              />
-            </div>
             <ContentSections sections={resource.sections} />
             {author ? (
               <div className="mt-12">

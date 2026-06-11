@@ -37,6 +37,10 @@ export default function QuotePage() {
             <p className="mt-3 text-sm text-brand-200">Prefer to talk now? Call {site.phoneDisplay}.</p>
           </div>
         }
+        backgroundImage={{
+          src: "/images/hero-banner.png",
+          alt: "Commercial trucks on a Virginia highway",
+        }}
         aside={<QuoteForm heading="Get your free quote" description="It only takes a minute." />}
       />
 
