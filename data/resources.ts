@@ -29,14 +29,14 @@ export const resources: Resource[] = [
       {
         heading: "Virginia Minimum Liability Limits",
         body: [
-          "Every vehicle registered in Virginia must carry liability insurance. As of January 1, 2025, the Code of Virginia sets the minimum at 50/100/25: $50,000 for bodily injury to one person, $100,000 for bodily injury per accident, and $25,000 for property damage. Virginia also requires uninsured and underinsured motorist coverage at matching limits.",
+          "Every vehicle registered in Virginia must carry liability insurance. As of January 1, 2025, the Code of Virginia sets the minimum at 50/100/25: $50,000 for bodily injury to one person, $100,000 for bodily injury per accident, and $25,000 for property damage. Virginia also requires uninsured and underinsured motorist coverage, generally at bodily injury limits tied to your liability coverage.",
           "These are minimums, not recommendations. A loaded commercial truck can cause damage that far exceeds $50,000 in seconds, and most commercial operators carry liability limits of $500,000 or $1,000,000 to protect their business. General contractors and project owners frequently require proof of higher limits before you can work on their sites.",
         ],
       },
       {
         heading: "Federal Filings and For-Hire Operations",
         body: [
-          "If you operate only within Virginia and do not haul for hire, state coverage is usually all you need. But operations that cross state lines or transport goods for compensation often fall under federal rules administered by the FMCSA.",
+          "If you operate only within Virginia and do not haul for hire, state coverage is usually all you need. But operations in interstate for-hire commerce often fall under federal rules administered by the FMCSA.",
           "For-hire interstate carriers typically need operating authority and an MCS-90 endorsement, which is a federally mandated guarantee that the public will be compensated after a covered accident. For-hire passenger operations, such as livery and black-car service, have their own registration and limit requirements. Getting these filings right keeps you legal and on the road.",
         ],
       },
@@ -93,7 +93,7 @@ export const resources: Resource[] = [
       {
         heading: "Motor Truck Cargo Coverage for Virginia Haulers",
         body: [
-          "Motor truck cargo covers the material you are hauling, the dirt, stone, gravel, sand, or debris in your bed. If a load is lost or damaged in a covered accident, this coverage responds where your liability and physical damage coverage would not.",
+          "Motor truck cargo covers the material you are hauling, the dirt, stone, gravel, and sand in your bed, when your contract or job terms make you responsible for that load. If a load is lost or damaged from a covered cause of loss, this coverage responds where your liability and physical damage coverage would not.",
           "Cargo limits should reflect the value of the heaviest loads you carry. We help operators set a limit that matches their typical hauls so they are neither underinsured on a big load nor overpaying for capacity they never use.",
         ],
       },
@@ -144,14 +144,14 @@ export const resources: Resource[] = [
         heading: "On-Hook vs. Garagekeepers Coverage",
         body: [
           "These two coverages are easy to confuse but cover different moments. On-hook responds when a customer's vehicle is damaged while connected to your truck during a tow, hookup, or recovery. It is the coverage that protects you when a vehicle is dropped or damaged in transit.",
-          "Garagekeepers responds once a vehicle is on your lot or in your impound yard. If a stored vehicle is damaged by fire, theft, vandalism, or weather, garagekeepers pays. Many operators need both, and the right limits depend on the value and volume of vehicles you handle.",
+          "Garagekeepers responds once a vehicle is on your lot or in your impound yard. The legal liability form pays when the operator is found legally responsible for the damage. A direct primary form is also available and covers perils such as fire, theft, vandalism, and weather regardless of fault. Many operators need both on-hook and garagekeepers, and the right form and limits depend on the value and volume of vehicles you handle.",
         ],
       },
       {
         heading: "Virginia Filings and Municipal Compliance",
         body: [
           "Tow businesses in Virginia generally register with the DMV, and the bigger compliance hurdle is usually at the local level. Cities and counties that maintain police-rotation or municipal tow lists almost always require operators to carry specific liability limits and to name the locality as an additional insured on a certificate of insurance.",
-          "These requirements vary by jurisdiction, and falling out of compliance can mean losing your spot on a rotation list. Operators who tow across state lines or for hire may also need federal filings. We track these requirements so your policy and certificates keep you eligible for the work you depend on.",
+          "These requirements vary by jurisdiction, and falling out of compliance can mean losing your spot on a rotation list. Interstate for-hire tow operators may also need federal filings. We track these requirements so your policy and certificates keep you eligible for the work you depend on.",
         ],
       },
       {
@@ -182,7 +182,7 @@ export const resources: Resource[] = [
     excerpt:
       "How commercial fleet insurance works in Virginia, why combining vehicles can lower cost, and the safety programs, telematics, and experience-rating factors that shape your premium.",
     authorId: "cascade-commercial-team",
-    semanticEntities: ["fleet policy", "telematics", "experience modification", "safety program"],
+    semanticEntities: ["fleet policy", "telematics", "experience-rating", "safety program"],
     sections: [
       {
         heading: "How Fleet Policies Differ from Individual Policies",
@@ -237,41 +237,41 @@ export const resources: Resource[] = [
     slug: "uber-black-insurance-requirements",
     title: "Uber Black Insurance Requirements",
     excerpt:
-      "What Uber Black drivers in Virginia need to know about insurance: why it is livery rather than rideshare, the for-hire requirements involved, and the coverage limits the platform expects.",
+      "What Uber Black drivers in Virginia need to know about insurance: TNC rules, personal vehicle registration, and the $1,000,000 liability requirement while carrying a passenger.",
     authorId: "cascade-commercial-team",
-    semanticEntities: ["livery", "TNC", "black car", "for-hire transportation"],
+    semanticEntities: ["TNC", "black car", "Virginia TNC", "prearranged ride"],
     sections: [
       {
-        heading: "Why Uber Black Is Livery, Not Rideshare",
+        heading: "Why Uber Black Falls Under Virginia TNC Rules",
         body: [
-          "Uber Black sits in a different insurance category than standard UberX rideshare. Regular rideshare is handled as Transportation Network Company (TNC) driving, where the platform's commercial policy layers over your personal auto policy. Uber Black is pre-arranged, professional black-car service, which Virginia treats as for-hire livery transportation.",
-          "That distinction changes everything about your coverage. Livery work cannot be insured on a personal auto policy or a basic rideshare endorsement. It requires a commercial livery policy built for carrying passengers for hire.",
+          "Uber Black and standard UberX rideshare both operate under Virginia's Transportation Network Company (TNC) framework. Drivers provide prearranged rides through a digital platform using a personal vehicle registered in their own name, not as a traditional for-hire motor carrier with for-hire license plates.",
+          "The premium tier carries higher vehicle standards and often stricter insurance expectations from the platform, but the regulatory foundation is the same TNC structure. A personal auto policy will not cover platform work, and a standard rideshare endorsement is typically not enough for Uber Black's commercial coverage expectations.",
         ],
         bullets: [
-          "Rideshare (TNC): platform coverage over a personal policy",
-          "Uber Black: for-hire livery requiring commercial coverage",
-          "Personal and rideshare policies typically exclude livery work",
+          "TNC partner vehicle: personal registration, not for-hire plates",
+          "Prearranged rides through a digital platform",
+          "Personal and basic rideshare policies typically exclude TNC platform work",
         ],
       },
       {
         heading: "Coverage Uber Black Drivers Need",
         body: [
-          "A livery policy provides commercial liability at the limits this work requires, along with physical damage coverage for your vehicle and uninsured/underinsured motorist protection. Because you are transporting paying passengers, the liability exposure is higher than ordinary personal driving, and the limits reflect that.",
-          "Operators commonly carry $1,000,000 in liability while a passenger is in the vehicle, which is generally what the platform expects. The right structure also accounts for the periods between rides, so you are not left with a gap when you are logged in but empty.",
+          "Virginia requires primary TNC insurance with at least $1,000,000 in liability while a passenger is in the vehicle during a prearranged ride. The platform's coverage may combine with a driver-maintained policy, but you still need commercial or TNC-compatible coverage that actually responds when a claim occurs.",
+          "Physical damage for your vehicle and uninsured/underinsured motorist protection round out a complete program. Driving Uber Black on a personal policy or a basic rideshare endorsement can leave you uninsured at exactly the wrong moment.",
         ],
       },
       {
         heading: "Staying Compliant in Virginia",
         body: [
-          "For-hire passenger operators in Virginia generally need a for-hire vehicle registration in addition to the right insurance. Driving Uber Black on a personal or rideshare policy risks both a denied claim and a compliance problem that can sideline you.",
-          "Keeping your registration current and your commercial limits in place is what keeps you eligible to accept Uber Black trips. We help drivers line up the coverage and documentation so there are no surprises at renewal or after a claim.",
+          "Uber Black drivers on a TNC platform use personal vehicle registration instead of for-hire motor carrier authority. Independent limousine and contract passenger carriers follow separate DMV rules with for-hire registration and seating-based liability minimums, but that framework does not apply to platform-based Uber Black driving.",
+          "Keeping your TNC-compatible coverage and vehicle documentation current is what keeps you eligible to accept Uber Black trips. We help drivers line up the coverage and limits so there are no surprises at renewal or after a claim.",
         ],
       },
       {
         heading: "How to Get Covered",
         body: [
-          "Have your vehicle details, your driving record, the platforms you drive for, and any prior commercial or livery coverage ready when you reach out.",
-          "Call (703) 551-2000 or request a quote online, and a licensed advisor will set up livery coverage that keeps you compliant and earning. For coverage details, see our Uber Black insurance page.",
+          "Have your vehicle details, your driving record, the platforms you drive for, and any prior commercial or TNC coverage ready when you reach out.",
+          "Call (703) 551-2000 or request a quote online, and a licensed advisor will set up TNC-compatible coverage that keeps you compliant and earning. For coverage details, see our Uber Black insurance page.",
         ],
       },
     ],

@@ -1,0 +1,27 @@
+Fact-check all site copy against primary government sources
+
+Reviewed 360 regulatory and insurance-factual claims across 75 pages.
+Applied 69 corrections verified against VA Code, FMCSA, 49 CFR, DMV, and SCC.
+
+Key fixes:
+- Uber Black correctly framed as Virginia TNC operation (Va. Code 46.2-2000,
+  46.2-2099.52), not for-hire livery; $1M is statutory TNC minimum
+- Garagekeepers legal liability distinguished from direct primary form;
+  fire/theft/weather coverage only automatic under direct primary
+- Virginia for-hire motor carriers over 10,000 lbs GVWR require $750K
+  (Va. Code 46.2-2143.1), not the general 50/100/25 floor
+- Car carrier and auto-hauler interstate liability corrected to $1M
+  (transported vehicles = UN 3166 hazmat under 49 CFR 387.9)
+- FMCSA filing trigger scoped to interstate for-hire, not "haul for hire
+  or cross state lines"
+- Oversize/overweight permits corrected to Virginia DMV (not VDOT)
+- All trailers require separate VA registration per Va. Code 46.2-600
+- Bus/limousine/luxury-SUV seating-based liability tiers added
+  ($350K/$1.5M/$5M per Va. Code 46.2-2053)
+- School bus rules corrected to VDOE (not VDOT)
+- Motor truck cargo trigger corrected to "covered cause of loss"
+- UM/UIM matching limits scoped to BI only
+- Experience modification corrected to experience-rating
+- USDA/AWA scope narrowed for horse/livestock trailers
+
+Full audit trail in docs/fact-check-audit.md

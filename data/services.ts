@@ -56,8 +56,8 @@ export const services: Service[] = [
       {
         heading: "Virginia Requirements for Dump Truck Operators",
         body: [
-          "Every dump truck registered in Virginia must carry liability coverage, and as of January 1, 2025 the state minimum is 50/100/25. In practice, most dump truck operators carry significantly higher limits because a loaded truck can cause serious damage, and general contractors frequently require proof of higher limits before you set foot on a job site.",
-          "If you haul for hire or cross state lines, you may also need federal filings such as an MCS-90 endorsement and FMCSA operating authority. Our advisors confirm exactly what your operation and your contracts require so your coverage holds up when it matters.",
+          "Every dump truck registered in Virginia must carry liability coverage. As of January 1, 2025 the baseline registration minimum is 50/100/25, but for-hire operators with vehicles over 10,000 pounds GVWR must meet higher Virginia minimums, currently $750,000 in liability. In practice, most dump truck operators carry significantly higher limits because a loaded truck can cause serious damage, and general contractors frequently require proof of higher limits before you set foot on a job site.",
+          "Motor carriers that haul for hire in interstate commerce may also need federal filings such as an MCS-90 endorsement and FMCSA operating authority. Our advisors confirm exactly what your operation and your contracts require so your coverage holds up when it matters.",
         ],
       },
       {
@@ -130,7 +130,7 @@ export const services: Service[] = [
         heading: "On-Hook Coverage and Garagekeepers Explained",
         body: [
           "On-hook coverage pays for damage to a customer's vehicle while it is connected to your truck during a tow, hookup, or recovery. Without it, you could be personally responsible if a vehicle is damaged in your care, even when the accident was not your fault.",
-          "Garagekeepers legal liability covers vehicles stored on your lot or in your impound yard. If a stored vehicle is damaged by fire, theft, vandalism, or weather, this coverage responds. We help you set both limits based on the value of the vehicles you typically handle, from everyday sedans to high-value trucks and equipment.",
+          "Garagekeepers legal liability covers vehicles stored on your lot or in your impound yard. The legal liability form pays when you are found legally responsible for the damage, and a direct primary form is also available for perils such as fire, theft, vandalism, and weather regardless of fault. We help you set both limits based on the value of the vehicles you typically handle, from everyday sedans to high-value trucks and equipment.",
         ],
       },
       {
@@ -144,7 +144,7 @@ export const services: Service[] = [
         heading: "Virginia Filing and Compliance Requirements",
         body: [
           "Tow businesses in Virginia generally register with the DMV, and operators who perform police-ordered or municipal towing are usually required by the locality to carry specific liability limits and to name the city or county as an additional insured on a certificate of insurance.",
-          "Operators who tow across state lines or for hire may also need federal filings. We structure your policy and issue the certificates your contracts and jurisdictions require, so you can stay on rotation lists and keep working. Our tow truck insurance requirements guide covers these filings in detail.",
+          "Interstate for-hire tow operators may also need federal filings. We structure your policy and issue the certificates your contracts and jurisdictions require, so you can stay on rotation lists and keep working. Our tow truck insurance requirements guide covers these filings in detail.",
         ],
       },
       {
@@ -167,6 +167,93 @@ export const services: Service[] = [
     relatedResourceSlugs: ["tow-truck-insurance-requirements", "virginia-commercial-auto-insurance-guide"],
     relatedVehicleSlugs: ["car-carrier-insurance", "flatbed-truck-insurance", "auto-hauler-trailer-insurance"],
     image: image("tow-truck-insurance", "Tow truck recovering a vehicle in Virginia"),
+    updated: "2026-06-11",
+  },
+  {
+    slug: "semi-truck-insurance",
+    name: "Semi Truck Insurance",
+    category: "industry",
+    navLabel: "Semi Truck Insurance",
+    shortDescription:
+      "Semi truck insurance for Virginia owner-operators and motor carriers. Primary liability, physical damage, cargo, and FMCSA filing support from licensed advisors in Manassas, VA.",
+    heroHeadline: "Virginia Semi Truck Insurance",
+    heroSubheadline:
+      "Whether you run under your own authority or lease to a carrier, we write Virginia semi truck coverage with the liability limits, filings, and physical damage protection your operation requires.",
+    semanticEntities: [
+      "semi-truck",
+      "truck tractor",
+      "owner-operator",
+      "motor carrier",
+      "FMCSA",
+      "primary liability",
+      "bobtail liability",
+    ],
+    sections: [
+      {
+        heading: "What Semi Truck Insurance Covers in Virginia",
+        body: [
+          "Semi truck insurance starts with primary auto liability, which pays for bodily injury and property damage you cause to others while operating your tractor on Virginia roads and beyond. For interstate for-hire carriers, FMCSA minimum primary liability is $750,000 for general freight and higher for oil, hazmat, and other regulated commodities.",
+          "Most operators also carry physical damage on the tractor itself, motor truck cargo for the freight in the trailer, and bobtail or unladen liability for miles when you are not under dispatch. Owner-operators leased to a motor carrier need to understand which policy is primary during loaded, empty, and bobtail travel.",
+        ],
+        bullets: [
+          "Primary auto liability meeting FMCSA minimums",
+          "Physical damage: collision and comprehensive on the tractor",
+          "Motor truck cargo for freight in the trailer",
+          "Bobtail liability for unladen travel",
+        ],
+      },
+      {
+        heading: "Owner-Operators and Motor Carriers We Insure",
+        body: [
+          "We write coverage for Virginia owner-operators running day cabs and sleepers, motor carriers with their own FMCSA authority, and leased operators working under a carrier's dispatch. Whether you haul dry van, reefer, flatbed, or heavy haul, we structure the policy around how you actually run.",
+          "We also insure small fleets adding tractors and trailers, regional carriers operating along the I-95 and I-81 corridors, and operators transitioning from intrastate to interstate authority who need federal filings in place before their first load.",
+        ],
+      },
+      {
+        heading: "FMCSA Filings and Compliance for Semi Trucks",
+        body: [
+          "Interstate for-hire motor carriers operating semi trucks need FMCSA operating authority, a USDOT number, and a BOC-3 process agent filing. The MCS-90 endorsement guarantees public liability on your policy. Primary liability minimums depend on commodity: $750,000 for general freight, $1 million for oil, and up to $5 million for certain hazmat.",
+          "Virginia also requires liability on every registered commercial vehicle. Property carriers operating tractors with a gross vehicle weight rating over 10,001 pounds must carry at least $750,000 under Virginia motor carrier rules, well above the 50/100/25 baseline for general registration effective January 1, 2025. In practice, shippers, brokers, and lease agreements almost always require substantially higher limits. Our advisors confirm the filings and certificates your contracts demand.",
+        ],
+      },
+      {
+        heading: "What Affects Your Semi Truck Insurance Premium",
+        body: [
+          "Premiums reflect the real risk of trucking. Tractor value, haul radius, commodity class, years in business, driver CDL experience, MVR history, and whether you operate under your own authority or a lease all factor into pricing.",
+        ],
+        bullets: [
+          "Tractor value, configuration, and model year",
+          "Commodity: general freight, reefer, flatbed, hazmat, heavy haul",
+          "Owned authority vs. lease arrangement",
+          "Driver CDL class, experience, and MVR history",
+        ],
+      },
+      {
+        heading: "How to Get a Semi Truck Insurance Quote",
+        body: [
+          "Have your tractor details (year, make, model, and VIN), your USDOT and MC numbers if applicable, the commodity you haul, trailer type, radius of operation, and any prior loss history ready when you reach out.",
+          "Call (703) 551-2000 or request a quote online. A licensed advisor will review your operation and walk you through liability limits, filings, and physical damage options. Many semi truck policies can be quoted the same day.",
+        ],
+      },
+    ],
+    coverageHighlights: [
+      "Primary auto liability",
+      "Physical damage on the tractor",
+      "MCS-90 endorsement",
+      "Bobtail liability",
+    ],
+    faqIds: ["semi-truck-bobtail", "semi-truck-fmcsa", "general-cost", "general-requirements"],
+    relatedServiceSlugs: ["commercial-auto-insurance", "commercial-fleet-insurance"],
+    relatedLocationSlugs: DEFAULT_LOCATIONS,
+    relatedResourceSlugs: ["virginia-commercial-auto-insurance-guide", "commercial-fleet-insurance-guide"],
+    relatedVehicleSlugs: [
+      "truck-tractor-insurance",
+      "dry-freight-trailer-insurance",
+      "refrigerated-trailer-insurance",
+      "flatbed-trailer-insurance",
+      "lowboy-trailer-insurance",
+    ],
+    image: image("semi-truck-insurance", "Semi truck on a Virginia interstate"),
     updated: "2026-06-11",
   },
   {
@@ -459,7 +546,7 @@ export const services: Service[] = [
     heroHeadline: "Virginia Commercial Fleet Insurance",
     heroSubheadline:
       "Once you run two or more trucks or vans, a fleet policy simplifies coverage and can lower your cost. We insure mixed fleets of dump trucks, work vans, and trailers across Virginia.",
-    semanticEntities: ["fleet policy", "telematics", "experience modification", "multi-vehicle"],
+    semanticEntities: ["fleet policy", "telematics", "experience-rating", "multi-vehicle"],
     sections: [
       {
         heading: "How Commercial Fleet Coverage Works",
@@ -478,7 +565,7 @@ export const services: Service[] = [
         heading: "Fleet Pricing and Discounts",
         body: [
           "Insuring vehicles together often prices better than covering each one separately, and carriers reward operations that manage risk well. A clean loss history, driver screening, and a documented safety program can all improve your rates.",
-          "Larger fleets may also be evaluated on an experience modification basis, where your own loss record directly shapes your premium. As an independent agency, we shop your fleet across multiple carriers and help you build the practices that earn the best pricing over time.",
+          "Larger fleets may also be evaluated on an experience-rating basis, where your own loss record directly shapes your premium. As an independent agency, we shop your fleet across multiple carriers and help you build the practices that earn the best pricing over time.",
         ],
       },
       {
@@ -516,36 +603,36 @@ export const services: Service[] = [
     category: "coverage",
     navLabel: "Uber Black Insurance",
     shortDescription:
-      "Uber Black and livery insurance for Virginia for-hire drivers. Commercial livery liability that meets DMV and platform requirements, from licensed advisors in Manassas, VA.",
+      "Uber Black insurance for Virginia TNC drivers. Commercial coverage that meets Virginia and platform requirements, from licensed advisors in Manassas, VA.",
     heroHeadline: "Virginia Uber Black Insurance",
     heroSubheadline:
-      "Uber Black is for-hire livery work, not standard rideshare, and it needs commercial coverage to match. We write livery and black-car policies that keep Virginia drivers compliant and earning.",
+      "Uber Black is premium TNC driving with higher vehicle and coverage standards than standard rideshare. We write commercial policies that keep Virginia Uber Black drivers compliant and earning.",
     semanticEntities: ["livery", "TNC", "black car", "for-hire transportation"],
     sections: [
       {
         heading: "Uber Black and Livery Coverage in Virginia",
         body: [
-          "Uber Black and other black-car work is classified as for-hire livery transportation in Virginia, which is different from rideshare driving on a personal vehicle. A personal auto policy will not cover it, and a standard rideshare endorsement is not enough.",
-          "Livery coverage provides the commercial liability limits this work requires, along with physical damage for your vehicle and uninsured/underinsured motorist protection. We build the policy to satisfy both Virginia requirements and the limits Uber expects while you carry a passenger.",
+          "Uber Black in Virginia operates under the Transportation Network Company (TNC) framework. Drivers provide prearranged rides through a digital platform using a personal vehicle, not as a traditional for-hire motor carrier with for-hire license plates. A personal auto policy will not cover platform work, and a standard rideshare endorsement is typically not enough for Uber Black's commercial coverage expectations.",
+          "Commercial coverage provides the liability limits this work requires, along with physical damage for your vehicle and uninsured/underinsured motorist protection. We build the policy to satisfy Virginia TNC insurance requirements and the limits the platform expects while you carry a passenger.",
         ],
         bullets: [
           "Commercial livery liability",
           "Physical damage (collision and comprehensive)",
           "Uninsured and underinsured motorist coverage",
-          "Limits that meet platform and DMV requirements",
+          "Limits that meet Virginia TNC and platform requirements",
         ],
       },
       {
         heading: "Livery vs. Rideshare: Why It Matters",
         body: [
-          "Rideshare and livery are not the same in the eyes of Virginia regulators or insurers. Transportation Network Company (TNC) rideshare relies on the platform's coverage layered over a personal policy, but pre-arranged black-car and limousine service is for-hire livery that requires its own commercial coverage.",
-          "Driving Uber Black on a personal or rideshare policy can leave you uninsured at exactly the wrong moment. We make sure you are written correctly as a livery operator so your coverage actually responds to a claim.",
+          "Uber Black and standard rideshare both fall under Virginia's TNC rules, but the premium tier carries higher vehicle standards and often stricter insurance expectations from the platform. Virginia requires primary TNC insurance with at least $1,000,000 in liability while a passenger is in the vehicle during a prearranged ride, and personal auto policies generally do not cover TNC platform work unless the policy expressly provides that coverage.",
+          "Driving Uber Black on a personal policy or a basic rideshare endorsement can leave you uninsured at exactly the wrong moment. We make sure you carry commercial or TNC-compatible coverage so your policy actually responds to a claim.",
         ],
       },
       {
         heading: "Staying Compliant and on the Road",
         body: [
-          "For-hire operators in Virginia generally need a for-hire vehicle registration and commercial liability limits high enough to satisfy the platform, often $1,000,000 while a passenger is in the vehicle.",
+          "For-hire motor carriers such as independent limousine operators generally need a for-hire vehicle registration and different operating authority. Uber Black drivers on a TNC platform use personal vehicle registration instead. Virginia still requires TNC insurance with at least $1,000,000 in liability while a passenger is in the vehicle, which the platform's coverage may combine with a driver-maintained policy.",
           "We help you carry the right limits and documentation so you stay eligible to drive. Our Uber Black insurance requirements guide explains the rules in plain language.",
         ],
       },
@@ -561,7 +648,7 @@ export const services: Service[] = [
       "Commercial livery liability",
       "Physical damage: collision & comprehensive",
       "Uninsured & underinsured motorist",
-      "For-hire / livery compliance",
+      "Virginia TNC compliance",
     ],
     faqIds: ["uber-black-requirements", "general-cost", "general-requirements", "general-quote-speed"],
     relatedServiceSlugs: ["commercial-auto-insurance", "commercial-fleet-insurance"],
@@ -696,7 +783,7 @@ export const services: Service[] = [
         heading: "Virginia Minimum Limits and Filing Requirements",
         body: [
           "Every vehicle registered in Virginia must carry liability coverage, and as of January 1, 2025 the state minimum is 50/100/25 ($50,000 bodily injury per person, $100,000 per accident, $25,000 property damage). Commercial operators typically carry higher limits to satisfy contracts and protect business assets.",
-          "Businesses that haul for hire or operate in interstate commerce may need additional federal filings such as the MCS-90 endorsement. Our full Virginia commercial auto insurance guide explains these requirements in plain language.",
+          "Businesses operating in interstate for-hire commerce may need additional federal filings such as the MCS-90 endorsement. Our full Virginia commercial auto insurance guide explains these requirements in plain language.",
         ],
       },
       {

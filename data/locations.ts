@@ -109,8 +109,8 @@ const pageContent: Record<string, LocationContent> = {
       {
         heading: "Livery and Black-Car Coverage in Arlington",
         body: [
-          "Arlington has one of the region's strongest markets for Uber Black and professional black-car service, and that work is for-hire livery, not standard rideshare. It requires commercial livery coverage with limits high enough to satisfy both Virginia and the platform.",
-          "We write livery policies that keep Arlington drivers compliant and earning, and we cover the corporate and delivery fleets that move through the county. For drivers, our Uber Black insurance page explains the coverage in detail.",
+          "Arlington has one of the region's strongest markets for Uber Black and professional black-car service. Uber Black operates under Virginia's Transportation Network Company (TNC) rules using a personal vehicle, not as a traditional for-hire motor carrier. It requires commercial or TNC-compatible coverage with limits that satisfy Virginia TNC insurance requirements and the platform.",
+          "We write coverage for TNC and traditional livery operators that keeps Arlington drivers compliant and earning, and we cover the corporate and delivery fleets that move through the county. For drivers, our Uber Black insurance page explains the coverage in detail.",
         ],
       },
       {

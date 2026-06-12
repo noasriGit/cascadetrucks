@@ -47,7 +47,19 @@ export const faqs: Faq[] = [
     id: "tow-truck-filings",
     question: "Do tow truck operators need special filings in Virginia?",
     answer:
-      "Many tow operations do. Tow businesses in Virginia generally register with the DMV, and operators who perform police-ordered or municipal towing are usually required by the locality to carry specific liability limits and to name the city or county as an additional insured on a certificate of insurance. Operators crossing state lines or towing for hire may also need federal filings. We make sure your policy is structured to satisfy the filings your contracts and jurisdictions require.",
+      "Many tow operations do. Tow businesses in Virginia generally register with the DMV, and operators who perform police-ordered or municipal towing are usually required by the locality to carry specific liability limits and to name the city or county as an additional insured on a certificate of insurance. Interstate for-hire tow operators may also need federal filings. We make sure your policy is structured to satisfy the filings your contracts and jurisdictions require.",
+  },
+  {
+    id: "semi-truck-bobtail",
+    question: "Do I need bobtail insurance as a semi truck owner-operator?",
+    answer:
+      "If you drive your tractor without a trailer or outside a carrier's dispatch, bobtail (unladen liability) coverage matters. Leased owner-operators are often covered under the motor carrier's policy while under dispatch, but empty miles between loads, deadheading to pick up a trailer, or personal use of the tractor may fall outside that coverage. Bobtail liability fills the gap when you are not hauling under the carrier's policy. We help you confirm when your lease agreement requires your own bobtail and when the carrier's policy applies.",
+  },
+  {
+    id: "semi-truck-fmcsa",
+    question: "What FMCSA filings do semi truck operators need?",
+    answer:
+      "Interstate for-hire motor carriers operating semi trucks need FMCSA operating authority, a USDOT number, and a BOC-3 process agent filing. Your insurance policy must include an MCS-90 endorsement that guarantees public liability. Minimum primary liability depends on what you haul: $750,000 for general freight, $1 million for oil, and up to $5 million for certain hazmat commodities. We structure your policy and issue the certificates brokers, shippers, and lease agreements require.",
   },
   {
     id: "contractor-tools",
@@ -89,7 +101,7 @@ export const faqs: Faq[] = [
     id: "uber-black-requirements",
     question: "What insurance do Uber Black drivers need in Virginia?",
     answer:
-      "Uber Black and other black-car work is considered for-hire livery transportation in Virginia, not standard rideshare, so it requires commercial livery coverage rather than a personal auto policy. Operators generally need a for-hire vehicle registration and commercial liability limits high enough to satisfy both Virginia requirements and the platform, often $1,000,000 while a passenger is in the vehicle. We write livery and black-car policies that keep you compliant and on the road.",
+      "Uber Black in Virginia operates under the Transportation Network Company (TNC) framework. Drivers use a personal vehicle, not for-hire license plates, so a personal auto policy will not cover platform work and a standard rideshare endorsement is typically not enough. Virginia requires primary TNC insurance with at least $1,000,000 in liability while a passenger is in the vehicle during a prearranged ride. We write commercial or TNC-compatible policies that keep Virginia Uber Black drivers compliant and on the road.",
   },
   {
     id: "location-service",

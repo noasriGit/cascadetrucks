@@ -50,7 +50,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Box Truck Configurations and GVW Classes",
         body: [
-          "Box trucks, also called straight trucks or cube trucks, range from Class 3 light-duty units around 12,000 lbs GVW to Class 7 trucks pushing 33,000 lbs. The weight class determines insurance requirements, federal filing thresholds, and the type of cargo you can legally haul.",
+          "Box trucks, also called straight trucks or cube trucks, span Class 3 through Class 7 under the federal GVWR system, typically from about 10,001 lbs to 33,000 lbs. The weight class determines insurance requirements, federal filing thresholds, and the type of cargo you can legally haul.",
           "We insure standard dry-freight box trucks, refrigerated box trucks used for food and pharmaceutical delivery, liftgate-equipped units, and moving trucks. Whether you run one unit or a delivery fleet, we match coverage to your actual configuration.",
         ],
       },
@@ -58,7 +58,7 @@ export const vehicles: VehicleType[] = [
         heading: "Virginia and Federal Requirements for Box Trucks",
         body: [
           "Virginia requires commercial auto liability on every registered vehicle. Box trucks operating in interstate commerce with a GVW over 10,001 lbs are subject to FMCSA regulations and may require a DOT number and operating authority depending on the cargo and crossing of state lines.",
-          "For-hire carriers hauling regulated commodities need an MCS-90 endorsement. Intrastate-only operations generally need just Virginia liability coverage, though cargo limits are set by contract rather than regulation.",
+          "For-hire carriers subject to FMCSA financial responsibility rules typically need an MCS-90 endorsement. Intrastate-only operations generally need just Virginia liability coverage, though cargo limits are set by contract rather than regulation.",
         ],
       },
       {
@@ -225,7 +225,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia and FMCSA Requirements for Auto Haulers",
         body: [
-          "Auto haulers operating in interstate commerce typically need FMCSA operating authority and must file proof of liability with FMCSA. The minimum financial responsibility for hauling up to three vehicles is $75,000; hauling four or more requires $750,000 per incident under federal rules.",
+          "Auto haulers operating in interstate commerce typically need FMCSA operating authority and must file proof of liability with FMCSA. Because transported vehicles contain fuel systems classified as hazardous materials under federal rules, interstate auto haulers generally need at least $1,000,000 in public liability coverage.",
           "Intrastate car carriers operating only within Virginia work under Virginia DMV requirements. Our advisors verify which filings apply to your specific operation.",
         ],
       },
@@ -391,8 +391,8 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia and FMCSA Requirements for Ready-Mix Haulers",
         body: [
-          "Cement mixers typically operate at gross vehicle weights of 66,000 to 80,000 lbs, making them subject to FMCSA regulations when operating in interstate commerce. Virginia also enforces specific axle weight and permit requirements for overweight operations.",
-          "For-hire ready-mix carriers need FMCSA operating authority and must maintain the required financial responsibility filings. Our advisors confirm which federal and state requirements apply to your specific routes.",
+          "Fully loaded tri-axle and quad-axle mixers can reach gross weights up to 80,000 lbs on interstate routes, subject to federal bridge formula limits, which puts them within FMCSA jurisdiction when operating in interstate commerce. Virginia also enforces specific axle weight and permit requirements for overweight operations.",
+          "For-hire ready-mix carriers operating in interstate commerce need FMCSA operating authority and must maintain the required financial responsibility filings. Our advisors confirm which federal and state requirements apply to your specific routes.",
         ],
       },
       {
@@ -468,7 +468,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Delivery and Step Van Types We Insure",
         body: [
-          "We insure P-series step vans (Grumman, Morgan Olson), cargo conversion vans, Sprinter-style high-roof vans, and purpose-built parcel delivery units. These range from Class 2 cargo vans at 6,000 lbs GVW to Class 5 walk-in step vans at 19,500 lbs.",
+          "We insure P-series step vans (Grumman, Morgan Olson), cargo conversion vans, Sprinter-style high-roof vans, and purpose-built parcel delivery units. These range from Class 1 and 2 cargo vans up to Class 5 walk-in step vans at 19,500 lbs GVWR.",
           "Route delivery for grocery, beverage, linen, uniform, and parcel operations each have slightly different risk profiles. We understand the distinctions and write accordingly.",
         ],
       },
@@ -560,8 +560,8 @@ export const vehicles: VehicleType[] = [
       {
         heading: "FMCSA and Virginia Requirements for Flatbed Haulers",
         body: [
-          "Interstate flatbed carriers operating in for-hire commerce need FMCSA operating authority and must file proof of financial responsibility (MCS-90 endorsement for carriers hauling regulated commodities). The standard minimum for general freight is $750,000.",
-          "Oversize and overweight permits are managed separately by VDOT, but carriers should verify their cargo limits are adequate for the value of oversized loads before accepting a load.",
+          "Interstate flatbed carriers operating in for-hire commerce need FMCSA operating authority and must file proof of financial responsibility, including an MCS-90 endorsement on the liability policy. The standard minimum for general freight is $750,000.",
+          "Oversize and overweight hauling permits are issued separately through Virginia DMV, but carriers should verify their cargo limits are adequate for the value of oversized loads before accepting a load.",
         ],
       },
       {
@@ -730,7 +730,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia and FMCSA Requirements",
         body: [
-          "Pump trucks over 26,001 lbs GVW require a CDL for the driver. Interstate operation in for-hire commerce triggers FMCSA requirements. Virginia also has specific permitting requirements for oversize pump trucks with extended boom assemblies.",
+          "Pump trucks over 26,001 lbs GVWR require a CDL for the driver. Interstate operation in for-hire commerce triggers FMCSA requirements. Virginia also has hauling permit requirements for oversize pump trucks with extended boom assemblies.",
         ],
       },
       {
@@ -981,7 +981,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "FMCSA and Virginia Hazmat Requirements",
         body: [
-          "Tank trucks hauling regulated hazardous materials in interstate commerce need a Hazmat Safety Permit and must maintain FMCSA operating authority with higher financial responsibility minimums (up to $5,000,000 for certain hazardous materials). Virginia also enforces VDOT hazmat routing requirements.",
+          "Tank trucks hauling certain high-risk hazardous materials in interstate commerce need a Hazmat Safety Permit and must maintain FMCSA operating authority with higher financial responsibility minimums (up to $5,000,000 for certain hazardous materials). Virginia also restricts hazmat travel through select state-owned tunnels and designated truck routes.",
           "Our advisors confirm which placard classes apply to your commodity and what insurance and permit requirements follow.",
         ],
       },
@@ -1103,7 +1103,7 @@ export const vehicles: VehicleType[] = [
       "lowboy-trailer-insurance",
       "dry-freight-trailer-insurance",
     ],
-    relatedServiceSlugs: ["commercial-auto-insurance", "commercial-fleet-insurance"],
+    relatedServiceSlugs: ["semi-truck-insurance", "commercial-auto-insurance", "commercial-fleet-insurance"],
     relatedLocationSlugs: DEFAULT_LOCATIONS,
     relatedResourceSlugs: ["virginia-commercial-auto-insurance-guide"],
     image: image("truck-tractor-insurance", "Semi-truck tractor on a Virginia interstate"),
@@ -1133,7 +1133,7 @@ export const vehicles: VehicleType[] = [
         heading: "What Auto Hauler Trailer Insurance Covers",
         body: [
           "An auto hauler trailer policy combines trailer physical damage with on-hook coverage, which pays for damage to vehicles on the trailer while in transit. Standard commercial auto liability covers the combination unit on the road.",
-          "Auto hauler operations are regulated at the federal level, and the FMCSA minimum financial responsibility for hauling four or more vehicles is $750,000. Many auto auction and manufacturer contracts require higher limits.",
+          "Auto hauler operations are regulated at the federal level. Interstate for-hire carriers must maintain FMCSA operating authority and minimum financial responsibility, typically $750,000 for non-hazardous freight or $1,000,000 when transporting fueled vehicles. Many auto auction and manufacturer contracts require higher limits.",
         ],
         bullets: [
           "Trailer physical damage",
@@ -1151,7 +1151,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "FMCSA and Virginia Requirements",
         body: [
-          "Auto haulers transporting four or more vehicles in interstate commerce need FMCSA operating authority. The liability minimum is $750,000. Enclosed carriers transporting high-value vehicles for hire may carry higher cargo limits per load by contract.",
+          "Interstate for-hire auto haulers generally need FMCSA operating authority. FMCSA treats transported vehicles as hazardous materials because they contain fuel, which typically requires $1,000,000 in public liability. Enclosed carriers transporting high-value vehicles for hire may carry higher cargo limits per load by contract.",
         ],
       },
       {
@@ -1206,7 +1206,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "What Dump Trailer Insurance Covers",
         body: [
-          "Trailer physical damage covers the dump body against collision and comprehensive losses. Motor truck cargo covers the material in the trailer. Commercial auto liability for the combination unit (tractor plus trailer) must meet FMCSA minimums for for-hire carriers.",
+          "Trailer physical damage covers the dump body against collision and comprehensive losses. Motor truck cargo covers the material in the trailer. Commercial auto liability for the combination unit (tractor plus trailer) must meet FMCSA minimums for interstate for-hire carriers.",
           "Bottom and side dump trailers often operate at high GVW in train configurations, and the liability exposure reflects that.",
         ],
         bullets: [
@@ -1225,7 +1225,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia and FMCSA Requirements",
         body: [
-          "For-hire bulk carriers operating interstate need FMCSA authority and MCS-90 endorsement. Virginia intrastate bulk haulers must carry minimum state liability limits. Overweight operations require VDOT permits.",
+          "For-hire bulk carriers operating interstate need FMCSA authority and MCS-90 endorsement. Virginia for-hire property carriers with vehicles over 10,000 pounds GVWR must carry $750,000 in liability, and every registered vehicle must meet Virginia's current minimum liability limits (50/100/25 as of January 1, 2025). Overweight loads require hauling permits through Virginia DMV.",
         ],
       },
       {
@@ -1282,7 +1282,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "What Bulk Commodity Trailer Insurance Covers",
         body: [
-          "Trailer physical damage covers the bulk trailer against collision and comprehensive losses. Motor truck cargo covers the commodity inside. Commercial auto liability for the combination unit must meet FMCSA minimums for for-hire carriers.",
+          "Trailer physical damage covers the bulk trailer against collision and comprehensive losses. Motor truck cargo covers the commodity inside. Commercial auto liability for the combination unit must meet FMCSA minimums for interstate for-hire carriers.",
           "Pneumatic trailers used for dry bulk discharge may have specific equipment endorsements depending on the pressurized delivery system.",
         ],
         bullets: [
@@ -1431,7 +1431,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "What Dry Freight Trailer Insurance Covers",
         body: [
-          "Trailer physical damage covers the dry van against collision, fire, theft, and other covered losses. Motor truck cargo covers the freight inside. Commercial auto liability for the combination unit must meet FMCSA minimums.",
+          "Trailer physical damage covers the dry van against collision, fire, theft, and other covered losses. Motor truck cargo covers the freight inside. Commercial auto liability for the combination unit must meet FMCSA minimums for interstate for-hire carriers.",
           "Many carriers insure trailers on a separate trailer-interchange or non-owned trailer policy when operating under a lease arrangement with a motor carrier.",
         ],
         bullets: [
@@ -1506,7 +1506,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "What Transfer Dump Trailer Insurance Covers",
         body: [
-          "Trailer physical damage covers the transfer dump body. Motor truck cargo covers the aggregate or earth material. Commercial auto liability for the tractor-trailer combination must meet regulatory minimums for for-hire carriers.",
+          "Trailer physical damage covers the transfer dump body. Motor truck cargo covers the aggregate or earth material. Commercial auto liability for the tractor-trailer combination must meet FMCSA minimums for interstate for-hire carriers.",
           "Transfer dump operations often run at maximum legal weight, and the liability exposure from a braking or handling incident with that mass is substantial.",
         ],
         bullets: [
@@ -1525,7 +1525,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia and FMCSA Requirements",
         body: [
-          "For-hire aggregate carriers operating interstate need FMCSA authority and MCS-90 endorsement. Overweight operations require VDOT permits. Virginia intrastate dump truck and trailer operations are regulated under state commercial vehicle rules.",
+          "For-hire aggregate carriers operating interstate need FMCSA authority and MCS-90 endorsement. Overweight operations require DMV hauling permits. Virginia intrastate dump truck and trailer operations are regulated under state commercial vehicle rules.",
         ],
       },
       {
@@ -1600,7 +1600,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia and FMCSA Requirements",
         body: [
-          "Pole trailers operating interstate in for-hire commerce need FMCSA authority. Oversize loads require VDOT oversize/overweight permits. Log hauling may be subject to specific Virginia forestry transport regulations.",
+          "Pole trailers operating interstate in for-hire commerce need FMCSA authority. Oversize loads require DMV hauling permits. Log hauling may be subject to specific Virginia forestry transport regulations.",
         ],
       },
       {
@@ -1675,7 +1675,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "FMCSA and Virginia Requirements",
         body: [
-          "For-hire interstate reefer carriers need FMCSA operating authority and MCS-90 endorsement. Pharmaceutical carriers may have additional requirements under GDP (Good Distribution Practice) regulations affecting coverage minimums.",
+          "For-hire interstate reefer carriers need FMCSA operating authority and MCS-90 endorsement. Pharmaceutical shippers may require GDP-aligned carrier qualifications and higher contractual cargo limits.",
         ],
       },
       {
@@ -1751,7 +1751,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "FMCSA and Hazmat Requirements",
         body: [
-          "Tank trailer carriers hauling hazmat need FMCSA authority with elevated financial responsibility ($1M–$5M depending on hazmat class) and may need a Hazmat Safety Permit for certain materials. Virginia VDOT hazmat routing regulations also apply to specific corridors.",
+          "Tank trailer carriers hauling hazmat need FMCSA authority with elevated financial responsibility ($1M–$5M depending on hazmat class) and may need a Hazmat Safety Permit for certain materials. Virginia tunnel restrictions and designated truck routes may also apply to certain hazmat moves.",
         ],
       },
       {
@@ -1823,7 +1823,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia and FMCSA Requirements",
         body: [
-          "Oversize cargo hauls may require VDOT oversize permits. For-hire interstate carriers need FMCSA authority and MCS-90 endorsement.",
+          "Oversize cargo hauls may require Virginia DMV hauling permits. For-hire interstate carriers need FMCSA authority and MCS-90 endorsement.",
         ],
       },
       {
@@ -1895,7 +1895,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "FMCSA and Virginia Requirements",
         body: [
-          "For-hire interstate flatbed carriers need FMCSA operating authority and MCS-90 endorsement. Oversize and overweight loads require VDOT permits. Load securement regulations under 49 CFR 393 apply to all flatbed operations.",
+          "For-hire interstate flatbed carriers need FMCSA operating authority and MCS-90 endorsement. Oversize and overweight loads require Virginia DMV hauling permits. Load securement regulations under 49 CFR 393 apply to all flatbed operations.",
         ],
       },
       {
@@ -1969,7 +1969,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia and FMCSA Requirements",
         body: [
-          "Equipment haulers operating interstate in for-hire commerce need FMCSA authority and MCS-90 endorsement. Overweight and oversize loads require VDOT permits. Equipment values often require higher cargo limits than standard motor truck cargo policies provide by default.",
+          "Equipment haulers operating interstate in for-hire commerce need FMCSA authority and MCS-90 endorsement. Overweight and oversize loads require Virginia DMV hauling permits. Equipment values often require higher cargo limits than standard motor truck cargo policies provide by default.",
         ],
       },
       {
@@ -2043,7 +2043,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia Requirements",
         body: [
-          "Virginia requires commercial auto liability for business-use tow vehicles. For-hire animal transport may require a USDA animal transport registration. Virginia Horse Center and major competition venues typically require minimum liability limits in vendor and hauler contracts.",
+          "Virginia requires commercial auto liability for business-use tow vehicles. Interstate horse transport must meet importing state animal health entry requirements, including certificates of veterinary inspection where required. Virginia Horse Center and major competition venues typically require minimum liability limits in vendor and hauler contracts.",
         ],
       },
       {
@@ -2100,7 +2100,7 @@ export const vehicles: VehicleType[] = [
         heading: "What Livestock Trailer Insurance Covers",
         body: [
           "Commercial auto liability is the primary road coverage. Motor truck cargo or a livestock mortality rider covers the animals themselves during transport. Trailer physical damage covers the trailer body, dividers, and ventilation systems.",
-          "Livestock transport is regulated under the Twenty-Eight Hour Law and USDA animal welfare standards, which affect what coverage terms are relevant for your operation.",
+          "Livestock transport is regulated under the federal Twenty-Eight Hour Law, which limits consecutive confinement on interstate hauls and affects rest, feed, and water planning.",
         ],
         bullets: [
           "Commercial auto liability",
@@ -2118,7 +2118,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "FMCSA and Virginia Agricultural Requirements",
         body: [
-          "For-hire interstate livestock haulers need FMCSA authority. Virginia also has agricultural inspection requirements for animals entering the state. Agricultural vehicle exemptions apply to some intrastate farm-to-farm moves.",
+          "For-hire interstate livestock haulers with a combined GVWR over 10,001 pounds typically need FMCSA operating authority and MCS-90 endorsement. Virginia also has agricultural inspection requirements for animals entering the state. Agricultural vehicle exemptions apply to some intrastate farm-to-farm moves.",
         ],
       },
       {
@@ -2192,7 +2192,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "FMCSA and Virginia Forestry Transport Requirements",
         body: [
-          "For-hire interstate log haulers need FMCSA authority and MCS-90 endorsement. Virginia enforces specific log truck regulations including load limits and seasonal weight restrictions on unpaved forest roads.",
+          "For-hire interstate log haulers with a combined GVWR over 10,001 pounds typically need FMCSA operating authority and MCS-90 endorsement. Virginia enforces specific log truck regulations including forest product overweight permits and tree-length log length permits.",
         ],
       },
       {
@@ -2242,14 +2242,14 @@ export const vehicles: VehicleType[] = [
       "heavy equipment transport",
       "FMCSA",
       "Virginia DMV",
-      "VDOT oversize permit",
+      "DMV hauling permit",
     ],
     sections: [
       {
         heading: "What Lowboy Trailer Insurance Covers",
         body: [
           "Trailer physical damage covers the lowboy trailer structure, axles, and removable neck components. Motor truck cargo covers the heavy equipment loaded on the trailer, often construction machinery worth hundreds of thousands of dollars. Commercial auto liability for the combination unit must be adequate for the mass involved.",
-          "Oversize and overweight operations routinely trigger VDOT permit requirements, and carriers should confirm their liability limits satisfy both state requirements and equipment owner contracts.",
+          "Oversize and overweight operations require DMV hauling permits, and carriers should confirm their liability limits satisfy both state requirements and equipment owner contracts.",
         ],
         bullets: [
           "Trailer physical damage including removable neck",
@@ -2267,7 +2267,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "FMCSA and Virginia Heavy Haul Requirements",
         body: [
-          "For-hire heavy haulers operating interstate need FMCSA authority and MCS-90 endorsement. Oversize loads require VDOT permits, and loads over 100,000 lbs typically need engineered route surveys. Cargo limits should reflect the actual replacement value of the equipment.",
+          "For-hire heavy haulers operating interstate with a combined GVWR over 10,001 pounds typically need FMCSA operating authority and MCS-90 endorsement. Oversize and overweight loads require DMV hauling permits, and configurations exceeding routine weight allowances may require superload review with VDOT structure and bridge analysis. Cargo limits should reflect the actual replacement value of the equipment.",
         ],
       },
       {
@@ -2481,7 +2481,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia Requirements",
         body: [
-          "Virginia requires liability coverage on the tow vehicle. Trailers under 10,001 lbs GVW typically do not require separate registration in Virginia unless they're commercial.",
+          "Virginia requires liability coverage on the tow vehicle. Every trailer must be registered separately before it is operated on a Virginia highway.",
         ],
       },
       {
@@ -2551,7 +2551,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia Requirements",
         body: [
-          "Virginia requires liability coverage on the tow vehicle. Large utility trailers over 10,001 lbs GVW need separate registration as commercial trailers.",
+          "Virginia requires liability coverage on the tow vehicle and separate registration for the trailer. Trailers over 10,001 lbs GVWR used in interstate for-hire commerce may also fall under FMCSA financial responsibility rules.",
         ],
       },
       {
@@ -2893,7 +2893,7 @@ export const vehicles: VehicleType[] = [
       "Limousine insurance for Virginia livery operators, limo companies, and black-car services. Commercial livery liability, physical damage, and for-hire compliance coverage from licensed advisors in Manassas, VA.",
     heroHeadline: "Virginia Limousine Insurance",
     heroSubheadline:
-      "Limousine and stretch limo operations are classified as for-hire livery in Virginia, requiring commercial coverage that a personal policy can't provide. We write coverage that keeps Virginia limo operators compliant and protected.",
+      "Traditional limousine and stretch limo operations are classified as contract passenger carriers in Virginia, requiring commercial coverage that a personal policy can't provide. We write coverage that keeps Virginia limo operators compliant and protected.",
     semanticEntities: [
       "limousine insurance",
       "livery insurance",
@@ -2907,7 +2907,7 @@ export const vehicles: VehicleType[] = [
         heading: "What Limousine Insurance Covers",
         body: [
           "Commercial livery liability is the core coverage, paying for bodily injury and property damage during for-hire passenger transport. Physical damage covers the limousine body and chassis. Uninsured and underinsured motorist coverage protects passengers injured by uninsured drivers.",
-          "Virginia classifies limousine service as for-hire livery transportation, which requires specific limits and a for-hire vehicle registration. Note: for-hire livery availability may vary by state under Progressive's program.",
+          "Virginia classifies traditional limousine service as contract passenger carrier transportation, which requires intrastate operating authority, minimum liability limits based on seating capacity, and for-hire vehicle registration. Note: for-hire passenger carrier availability may vary by state under Progressive's program.",
         ],
         bullets: [
           "Commercial livery liability",
@@ -2925,7 +2925,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia Requirements for Livery Operations",
         body: [
-          "For-hire livery operators in Virginia need a for-hire vehicle registration and must carry minimum commercial liability limits. Operators transporting passengers for platform-based apps like Uber Black are also classified as livery and need commercial coverage.",
+          "Contract passenger carriers and other for-hire motor carriers in Virginia need intrastate operating authority, for-hire vehicle registration, and minimum commercial liability limits based on vehicle seating capacity. Platform-based premium rideshare such as Uber Black follows Virginia's separate TNC rules instead.",
         ],
       },
       {
@@ -3073,7 +3073,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia Requirements for Passenger Transport",
         body: [
-          "Passenger vans operating for hire in Virginia need a for-hire vehicle registration and must carry higher minimum liability limits. FMCSA regulates for-hire passenger carriers operating interstate under 49 CFR 365. Church and nonprofit vans transporting members may have specific exemptions.",
+          "Passenger vans operating for hire in Virginia need intrastate operating authority, for-hire vehicle registration, and minimum liability limits based on seating capacity. FMCSA regulates interstate for-hire passenger carriers under Parts 365 and 387, including vans designed to transport 9 to 15 passengers for compensation. Church and nonprofit vans transporting members may follow separate permit rules under Virginia law.",
         ],
       },
       {
@@ -3367,7 +3367,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia Requirements",
         body: [
-          "Luxury SUVs used for for-hire passenger transport in Virginia need a for-hire vehicle registration and commercial livery liability coverage. As with all commercial vehicles, minimum state liability limits apply but are rarely adequate for high-value vehicle operations.",
+          "Traditional contract passenger carrier and livery operations need intrastate operating authority, for-hire vehicle registration, and minimum liability limits based on seating capacity (for example, $350,000 for vehicles designed for one to six passengers). Platform-based executive transport such as Uber Black follows Virginia's separate TNC framework instead of traditional motor carrier livery rules.",
         ],
       },
       {
@@ -3516,7 +3516,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "FMCSA and Virginia Requirements for Bus Operations",
         body: [
-          "For-hire bus operators in interstate commerce are regulated by FMCSA under 49 CFR 365. Large bus operators (16+ passengers) need operating authority and must maintain $5 million in liability. Smaller for-hire buses (9–15 passengers) need $1.5 million. Virginia also requires a for-hire vehicle registration and may have additional requirements for intrastate operations.",
+          "For-hire bus operators in interstate commerce are regulated by FMCSA under 49 CFR 365. Buses designed for 16 or more passengers need operating authority and must maintain $5 million in liability. Buses designed for 15 or fewer passengers need $1.5 million. Virginia intrastate for-hire passenger carriers follow tiered minimums of $350,000 for one to six passengers, $1.5 million for seven to 15, and $5 million for 16 or more, plus for-hire vehicle registration.",
         ],
       },
       {
@@ -3663,7 +3663,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia Requirements for School Bus Operations",
         body: [
-          "Virginia has specific vehicle inspection and driver requirements for school buses. Private school operators must comply with VDOT regulations. Federal regulations apply to for-hire operators, and FMCSA requires higher liability minimums for larger buses. Contact our advisors to confirm which rules apply to your specific operation.",
+          "Virginia has specific vehicle inspection and driver requirements for school buses under VDOE pupil transportation regulations. Private school operators must meet the same driver qualification standards as public school bus operators. Federal regulations can apply to interstate for-hire school transport, but school-sponsored extracurricular trips organized, sponsored, and paid for by a school district are excepted from FMCSA financial responsibility minimums. Contact our advisors to confirm which rules apply to your specific operation.",
         ],
       },
       {
@@ -3740,7 +3740,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia and FMCSA Requirements",
         body: [
-          "Waste haulers operating interstate need FMCSA authority. Virginia Department of Environmental Quality regulates waste transport and may impose specific insurance requirements for hazardous waste haulers. Municipal contracts typically specify minimum liability limits.",
+          "For-hire waste haulers operating interstate in commerce with vehicles over 10,000 pounds GVWR typically need FMCSA authority and $750,000 minimum liability for general freight. Intrastate for-hire haulers over 10,000 pounds GVWR face a $750,000 Virginia motor carrier minimum. Virginia Department of Environmental Quality regulates waste transport and may impose specific insurance requirements for hazardous waste haulers. Municipal contracts typically specify minimum liability limits.",
         ],
       },
       {
@@ -3815,7 +3815,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia and FMCSA Requirements",
         body: [
-          "Virginia waste haulers operating interstate or handling regulated materials under RCRA need FMCSA authority and may need elevated financial responsibility limits. Virginia DEQ may also impose specific requirements for solid waste transporters.",
+          "For-hire Virginia waste haulers operating interstate in commerce with vehicles over 10,000 pounds GVWR typically need FMCSA authority. Intrastate for-hire haulers over 10,000 pounds GVWR face a $750,000 Virginia motor carrier minimum. Regulated hazardous waste may trigger additional DEQ and federal financial responsibility requirements beyond standard commercial auto minimums.",
         ],
       },
       {
@@ -3890,7 +3890,7 @@ export const vehicles: VehicleType[] = [
       {
         heading: "Virginia and FMCSA Requirements",
         body: [
-          "Roll-off trucks operating interstate and in for-hire commerce need FMCSA authority. Virginia's solid waste regulations and local ordinances govern debris disposal and transport. Construction and demolition waste may require manifesting for certain materials.",
+          "For-hire roll-off trucks operating interstate in commerce with vehicles over 10,000 pounds GVWR typically need FMCSA authority. Virginia solid waste regulations and local ordinances govern debris disposal and transport. Regulated hazardous or medical wastes carry separate documentation and compliance requirements.",
         ],
       },
       {
