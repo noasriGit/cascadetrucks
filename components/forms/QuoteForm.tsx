@@ -2,7 +2,7 @@
 
 import { useActionState, useId } from "react";
 import { useFormStatus } from "react-dom";
-import { CheckCircle2, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import { submitQuoteRequest } from "@/app/actions/quote";
 import { initialQuoteState, quoteCoverageCategories, resolveQuoteCoverageCategory } from "@/lib/quote";
 import { Field, FieldError, Input, Label, Select, Textarea } from "@/components/ui/Field";
@@ -31,18 +31,6 @@ export function QuoteForm({
   const [state, formAction] = useActionState(submitQuoteRequest, initialQuoteState);
   const uid = useId();
   const coverageDefault = resolveQuoteCoverageCategory(defaultCoverage);
-
-  if (state.status === "success") {
-    return (
-      <div className="rounded-3xl border border-line bg-white p-6 text-ink shadow-elevated ring-1 ring-white/10 sm:p-8" role="status">
-        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-green-700">
-          <CheckCircle2 className="h-7 w-7" aria-hidden="true" />
-        </span>
-        <h2 className="mt-4 text-xl font-bold text-brand-800">Thank you!</h2>
-        <p className="mt-2 text-muted">{state.message}</p>
-      </div>
-    );
-  }
 
   return (
     <div className="rounded-3xl border border-line bg-white p-6 text-ink shadow-elevated ring-1 ring-white/10 sm:p-8">

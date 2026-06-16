@@ -1,6 +1,10 @@
 "use server";
 
+import { redirect } from "next/navigation";
+import { sendQuoteLeadEmail } from "@/lib/email/quote-lead";
 import type { QuoteFormState } from "@/lib/quote";
+import { QUOTE_CONFIRMATION_PATH } from "@/lib/quote";
+import { site } from "@/data/site";
 
 function asString(value: FormDataEntryValue | null): string {
   return typeof value === "string" ? value.trim() : "";
@@ -14,7 +18,7 @@ export async function submitQuoteRequest(
 ): Promise<QuoteFormState> {
   // Honeypot: ignore bots that fill the hidden field.
   if (asString(formData.get("company_website"))) {
-    return { status: "success", message: "Thanks! We'll be in touch shortly.", errors: {} };
+    redirect(QUOTE_CONFIRMATION_PATH);
   }
 
   const name = asString(formData.get("name"));
@@ -35,22 +39,20 @@ export async function submitQuoteRequest(
     return { status: "error", message: "Please fix the highlighted fields.", errors };
   }
 
-  // TODO: deliver this lead to a real destination (CRM, email via Resend/SMTP,
-  // or a webhook). For now we validate and log on the server.
-  console.info("[quote-request] new lead", {
-    name,
-    phone,
-    email,
-    coverage,
-    city,
-    vehicles,
-    message,
-    receivedAt: new Date().toISOString(),
-  });
+  const receivedAt = new Date().toISOString();
+  const lead = { name, phone, email, coverage, city, vehicles, message, receivedAt };
 
-  return {
-    status: "success",
-    message: "Thanks! A licensed Cascade advisor will contact you shortly.",
-    errors: {},
-  };
+  const result = await sendQuoteLeadEmail(lead);
+  if (!result.ok) {
+    console.error("[quote-request] email delivery failed", { error: result.error, lead });
+    return {
+      status: "error",
+      message: `We couldn't send your request. Please call us at ${site.phoneDisplay}.`,
+      errors: {},
+    };
+  }
+
+  console.info("[quote-request] lead emailed", { name, coverage, receivedAt });
+
+  redirect(QUOTE_CONFIRMATION_PATH);
 }

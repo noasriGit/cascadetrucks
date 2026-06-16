@@ -14,6 +14,10 @@ export const heroImages: Record<string, HeroImage> = {
     src: "https://images.unsplash.com/photo-1730514785075-b065c757b653?w=1920&q=80&auto=format&fit=crop",
     alt: "Flatbed tow truck carrying a vehicle on the roadside",
   },
+  "semi-truck-insurance": {
+    src: "https://images.unsplash.com/photo-1778016187983-c3a44eee1f46?w=1920&q=80&auto=format&fit=crop",
+    alt: "Semi truck tractor on a Virginia interstate",
+  },
   "contractor-vehicle-insurance": {
     src: "https://images.unsplash.com/photo-1776493929304-dfe4d50ae96b?w=1920&q=80&auto=format&fit=crop",
     alt: "Contractor work van and forklift at a construction supply yard",

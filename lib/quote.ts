@@ -1,3 +1,6 @@
+/** Shared thank-you page for all quote form submissions (conversion tracking). */
+export const QUOTE_CONFIRMATION_PATH = "/quote/confirmation";
+
 export interface QuoteFormState {
   status: "idle" | "success" | "error";
   message: string;

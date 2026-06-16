@@ -67,6 +67,7 @@ export const footerNav: { heading: string; items: NavItem[] }[] = [
     heading: "Industries",
     items: [
       { label: "Dump Truck Insurance", href: "/coverage/dump-truck-insurance" },
+      { label: "Semi Truck Insurance", href: "/coverage/semi-truck-insurance" },
       { label: "Tow Truck Insurance", href: "/coverage/tow-truck-insurance" },
       { label: "Contractor Vehicle Insurance", href: "/coverage/contractor-vehicle-insurance" },
       { label: "Plumbing Vehicle Insurance", href: "/coverage/plumbing-vehicle-insurance" },

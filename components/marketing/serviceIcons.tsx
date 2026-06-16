@@ -16,6 +16,7 @@ import {
 const iconBySlug: Record<string, LucideIcon> = {
   "dump-truck-insurance": Truck,
   "tow-truck-insurance": Truck,
+  "semi-truck-insurance": Truck,
   "contractor-vehicle-insurance": Wrench,
   "plumbing-vehicle-insurance": Droplets,
   "hvac-vehicle-insurance": Wind,
