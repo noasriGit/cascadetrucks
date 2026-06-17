@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { CheckCircle2 } from "lucide-react";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Section } from "@/components/layout/Section";
@@ -22,6 +23,15 @@ export function generateMetadata(): Metadata {
 export default function QuoteConfirmationPage() {
   return (
     <>
+      <Script id="google-ads-lead-conversion" strategy="afterInteractive">
+        {`
+          gtag('event', 'conversion', {
+            'send_to': 'AW-18231331009/gRQpCNn1qMAcEMGRsPVD',
+            'value': 1.0,
+            'currency': 'USD'
+          });
+        `}
+      </Script>
       <Section tone="brand" className="pt-10 pb-16 sm:pt-14 sm:pb-20">
         <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Quote received", path }]} />
         <div className="mx-auto mt-10 max-w-2xl text-center">
