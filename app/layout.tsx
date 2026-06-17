@@ -48,6 +48,18 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-surface">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18231331009"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18231331009');
+          `}
+        </Script>
         <Script id="splash-boot-script" strategy="beforeInteractive">
           {SPLASH_BOOT_SCRIPT}
         </Script>
