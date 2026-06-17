@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "./Container";
 import { LogoMark } from "./Logo";
+import { PhoneLink } from "./PhoneLink";
 import { footerNav, ctaNav } from "@/data/navigation";
 import { site } from "@/data/site";
 
@@ -29,13 +30,10 @@ export function Footer() {
                   {site.address.city}, {site.address.regionCode} {site.address.postalCode}
                 </span>
               </span>
-              <a
-                href={`tel:${site.phoneHref}`}
-                className="flex items-center gap-2.5 font-semibold text-accent-400 transition-colors hover:text-accent-300"
-              >
+              <PhoneLink className="flex items-center gap-2.5 font-semibold text-accent-400 transition-colors hover:text-accent-300">
                 <Phone className="h-4 w-4 flex-none" aria-hidden="true" />
                 {site.phoneDisplay}
-              </a>
+              </PhoneLink>
               <a
                 href={`mailto:${site.email}`}
                 className="flex items-center gap-2.5 transition-colors hover:text-white"
@@ -74,13 +72,10 @@ export function Footer() {
             </p>
           </div>
           <div className="flex flex-none flex-wrap items-center gap-3">
-            <a
-              href={`tel:${site.phoneHref}`}
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
-            >
+            <PhoneLink className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10">
               <Phone className="h-4 w-4" aria-hidden="true" />
               {site.phoneDisplay}
-            </a>
+            </PhoneLink>
             <Link
               href={ctaNav.href}
               className="inline-flex items-center justify-center rounded-full bg-accent-500 px-4 py-2 text-sm font-semibold text-brand-950 transition-colors hover:bg-accent-400"

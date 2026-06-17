@@ -60,6 +60,25 @@ export default function RootLayout({
             gtag('config', 'AW-18231331009');
           `}
         </Script>
+        <Script id="google-ads-click-to-call" strategy="afterInteractive">
+          {`
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                'send_to': 'AW-18231331009/QdFfCIPf2MAcEMGRsPVD',
+                'value': 1.0,
+                'currency': 'USD',
+                'event_callback': callback
+              });
+              return false;
+            }
+            window.gtag_report_conversion = gtag_report_conversion;
+          `}
+        </Script>
         <Script id="splash-boot-script" strategy="beforeInteractive">
           {SPLASH_BOOT_SCRIPT}
         </Script>

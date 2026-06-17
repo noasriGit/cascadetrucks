@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { HeroBrandLogo } from "@/components/layout/Logo";
 import { TrustIndicators } from "@/components/marketing/TrustIndicators";
 import { CallToActionBar } from "@/components/marketing/CallToActionBar";
+import { PhoneLink } from "@/components/layout/PhoneLink";
 import { buildMetadata } from "@/lib/metadata";
 import { media } from "@/data/media";
 import { site } from "@/data/site";
@@ -112,9 +113,9 @@ export default function AboutPage() {
               {site.address.city}, {site.address.regionCode} {site.address.postalCode}
             </address>
             <p className="mt-4 text-sm text-muted">
-              <a href={`tel:${site.phoneHref}`} className="font-semibold text-brand-700 hover:underline">
+              <PhoneLink className="font-semibold text-brand-700 hover:underline">
                 {site.phoneDisplay}
-              </a>
+              </PhoneLink>
               {" · "}
               <a href={`mailto:${site.email}`} className="font-semibold text-brand-700 hover:underline">
                 {site.email}

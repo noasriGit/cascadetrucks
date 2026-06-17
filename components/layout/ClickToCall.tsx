@@ -1,4 +1,7 @@
+"use client";
+
 import { Phone } from "lucide-react";
+import { PhoneLink } from "@/components/layout/PhoneLink";
 import { cn } from "@/lib/cn";
 import { site } from "@/data/site";
 
@@ -19,13 +22,12 @@ const variants: Record<NonNullable<ClickToCallProps["variant"]>, string> = {
 
 export function ClickToCall({ variant = "solid", className = "", label }: ClickToCallProps) {
   return (
-    <a
-      href={`tel:${site.phoneHref}`}
+    <PhoneLink
       className={cn(base, variants[variant], className)}
       aria-label={`Call ${site.brandName} at ${site.phoneDisplay}`}
     >
       <Phone className="h-5 w-5" aria-hidden="true" />
       <span>{label ?? `Call ${site.phoneDisplay}`}</span>
-    </a>
+    </PhoneLink>
   );
 }

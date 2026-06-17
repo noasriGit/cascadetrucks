@@ -4,6 +4,7 @@ import { CheckCircle2 } from "lucide-react";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Section } from "@/components/layout/Section";
 import { ClickToCall } from "@/components/layout/ClickToCall";
+import { PhoneLink } from "@/components/layout/PhoneLink";
 import { Button } from "@/components/ui/Button";
 import { buildMetadata } from "@/lib/metadata";
 import { QUOTE_CONFIRMATION_PATH } from "@/lib/quote";
@@ -51,9 +52,9 @@ export default function QuoteConfirmationPage() {
           </div>
           <p className="mt-6 text-sm text-brand-200">
             Need help sooner? Call{" "}
-            <a href={`tel:${site.phoneHref}`} className="font-semibold text-white underline-offset-2 hover:underline">
+            <PhoneLink className="font-semibold text-white underline-offset-2 hover:underline">
               {site.phoneDisplay}
-            </a>{" "}
+            </PhoneLink>{" "}
             or email{" "}
             <a href={`mailto:${site.email}`} className="font-semibold text-white underline-offset-2 hover:underline">
               {site.email}

@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import Link from "next/link";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { PhoneLink } from "@/components/layout/PhoneLink";
 import { cn } from "@/lib/cn";
 import { mainNav, ctaNav } from "@/data/navigation";
 import { site } from "@/data/site";
@@ -191,14 +192,13 @@ export function MobileNav({ pathname }: { pathname: string }) {
                   <Button href={ctaNav.href} className="w-full" size="lg" onClick={() => setOpen(false)}>
                     {ctaNav.label}
                   </Button>
-                  <a
-                    href={`tel:${site.phoneHref}`}
+                  <PhoneLink
                     onClick={() => setOpen(false)}
                     className="flex items-center justify-center gap-2 rounded-full border border-white/20 px-4 py-3 text-base font-semibold text-accent-300 transition-colors hover:bg-white/10"
                   >
                     <Phone className="h-5 w-5" aria-hidden="true" />
                     Call {site.phoneDisplay}
-                  </a>
+                  </PhoneLink>
                 </div>
               </div>
             </div>,

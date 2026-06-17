@@ -8,6 +8,7 @@ import { Container } from "./Container";
 import { Logo } from "./Logo";
 import { MobileNav } from "./MobileNav";
 import { Button } from "@/components/ui/Button";
+import { PhoneLink } from "@/components/layout/PhoneLink";
 import { cn } from "@/lib/cn";
 import { mainNav, ctaNav, type MainNavEntry } from "@/data/navigation";
 import { site } from "@/data/site";
@@ -138,13 +139,12 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <a
-            href={`tel:${site.phoneHref}`}
+          <PhoneLink
             className="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold text-accent-400 transition-colors hover:bg-white/10 hover:text-accent-300"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
             {site.phoneDisplay}
-          </a>
+          </PhoneLink>
           <Button href={ctaNav.href} size="sm">
             {ctaNav.label}
           </Button>

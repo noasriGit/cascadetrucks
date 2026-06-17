@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Section } from "@/components/layout/Section";
 import { ClickToCall } from "@/components/layout/ClickToCall";
+import { PhoneLink } from "@/components/layout/PhoneLink";
 import { DetailHero } from "@/components/marketing/DetailHero";
 import { QuoteForm } from "@/components/forms/QuoteForm";
 import { buildMetadata } from "@/lib/metadata";
@@ -50,9 +51,9 @@ export default function ContactPage() {
               <div>
                 <dt className="text-sm font-semibold uppercase tracking-wide text-brand-600">Phone</dt>
                 <dd className="mt-1">
-                  <a href={`tel:${site.phoneHref}`} className="font-semibold text-brand-800 hover:underline">
+                  <PhoneLink className="font-semibold text-brand-800 hover:underline">
                     {site.phoneDisplay}
-                  </a>
+                  </PhoneLink>
                 </dd>
               </div>
               <div>
