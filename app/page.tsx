@@ -140,7 +140,7 @@ export default function HomePage() {
         </div>
         <p className="mt-6 text-sm text-muted">
           <Link href="/locations" className="font-semibold text-brand-600 hover:underline">
-            View all service areas &rarr;
+            View all Virginia service areas <span aria-hidden="true">&rarr;</span>
           </Link>
         </p>
       </Section>

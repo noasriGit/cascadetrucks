@@ -65,8 +65,15 @@ export function Button(props: ButtonAsButton | ButtonAsLink) {
   if ("href" in props && props.href !== undefined) {
     const isExternal = props.external || /^(tel:|mailto:|https?:)/.test(props.href);
     if (isExternal) {
+      const openInNewTab = Boolean(props.external && /^https?:/.test(props.href));
       return (
-        <a href={props.href} className={classes} aria-label={props["aria-label"]} onClick={props.onClick}>
+        <a
+          href={props.href}
+          className={classes}
+          aria-label={props["aria-label"]}
+          onClick={props.onClick}
+          {...(openInNewTab ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        >
           {props.children}
         </a>
       );

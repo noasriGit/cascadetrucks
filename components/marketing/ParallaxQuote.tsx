@@ -30,6 +30,8 @@ export function ParallaxQuote({
     const el = imgRef.current;
     if (!el) return;
 
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     let ticking = false;
     function onScroll() {
       if (ticking) return;
@@ -38,9 +40,8 @@ export function ParallaxQuote({
         if (!el) return;
         const rect = el.getBoundingClientRect();
         const vh = window.innerHeight;
-        /* Map element visibility [-1 … 1] to a translate offset. */
         const progress = (rect.top + rect.height / 2 - vh / 2) / (vh + rect.height / 2);
-        const offset = progress * 40; /* px, subtle, keeps image in frame */
+        const offset = progress * 40;
         el.style.transform = `translateY(${offset}px)`;
         ticking = false;
       });
@@ -52,14 +53,12 @@ export function ParallaxQuote({
   }, []);
 
   return (
-    <div
-      aria-label={author ? `${quote} — ${author}` : quote}
+    <figure
       className={cn(
         "relative h-64 overflow-hidden sm:h-72 lg:h-80",
         className,
       )}
     >
-      {/* Parallax image layer, slightly taller than container so it can shift. */}
       <div
         ref={imgRef}
         aria-hidden="true"
@@ -71,19 +70,17 @@ export function ParallaxQuote({
           alt=""
           className={cn("h-full w-full object-cover", imagePosition)}
         />
-        {/* Dark scrim for text legibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-950/70 to-brand-950/50" />
         <div className="absolute inset-0 bg-brand-950/30" />
       </div>
 
-      {/* Quote content */}
       <div className="relative flex h-full items-center">
         <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             {rating > 0 ? (
-              <div className="mb-4 flex items-center gap-1" aria-hidden="true">
+              <div className="mb-4 flex items-center gap-1" aria-label={`${rating} out of 5 stars`}>
                 {Array.from({ length: rating }).map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-accent-500 text-accent-500" />
+                  <Star key={i} className="h-5 w-5 fill-accent-500 text-accent-500" aria-hidden="true" />
                 ))}
               </div>
             ) : null}
@@ -101,6 +98,6 @@ export function ParallaxQuote({
           </div>
         </div>
       </div>
-    </div>
+    </figure>
   );
 }

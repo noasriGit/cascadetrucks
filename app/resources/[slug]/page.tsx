@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Section, SectionHeading } from "@/components/layout/Section";
@@ -86,9 +87,9 @@ export default async function ResourcePage(props: PageProps<"/resources/[slug]">
               <ul className="mt-4 space-y-2.5 text-sm">
                 {relatedServices.map((s) => (
                   <li key={s.slug}>
-                    <a href={`/coverage/${s.slug}`} className="font-medium text-brand-700 transition-colors hover:text-brand-900 hover:underline">
+                    <Link href={`/coverage/${s.slug}`} className="font-medium text-brand-700 transition-colors hover:text-brand-900 hover:underline">
                       {s.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

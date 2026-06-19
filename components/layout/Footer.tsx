@@ -30,12 +30,16 @@ export function Footer() {
                   {site.address.city}, {site.address.regionCode} {site.address.postalCode}
                 </span>
               </span>
-              <PhoneLink className="flex items-center gap-2.5 font-semibold text-accent-400 transition-colors hover:text-accent-300">
+              <PhoneLink
+                aria-label={`Call ${site.brandName} at ${site.phoneDisplay}`}
+                className="flex items-center gap-2.5 font-semibold text-accent-400 transition-colors hover:text-accent-300"
+              >
                 <Phone className="h-4 w-4 flex-none" aria-hidden="true" />
                 {site.phoneDisplay}
               </PhoneLink>
               <a
                 href={`mailto:${site.email}`}
+                aria-label={`Email ${site.brandName} at ${site.email}`}
                 className="flex items-center gap-2.5 transition-colors hover:text-white"
               >
                 <Mail className="h-4 w-4 flex-none text-brand-400" aria-hidden="true" />
@@ -72,7 +76,10 @@ export function Footer() {
             </p>
           </div>
           <div className="flex flex-none flex-wrap items-center gap-3">
-            <PhoneLink className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10">
+            <PhoneLink
+              aria-label={`Call ${site.brandName} at ${site.phoneDisplay}`}
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+            >
               <Phone className="h-4 w-4" aria-hidden="true" />
               {site.phoneDisplay}
             </PhoneLink>

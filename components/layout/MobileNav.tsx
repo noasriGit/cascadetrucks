@@ -20,6 +20,15 @@ export function MobileNav({ pathname }: { pathname: string }) {
   const [expanded, setExpanded] = useState<string | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const openButtonRef = useRef<HTMLButtonElement | null>(null);
+  const wasOpenRef = useRef(false);
+
+  useEffect(() => {
+    if (wasOpenRef.current && !open) {
+      openButtonRef.current?.focus();
+    }
+    wasOpenRef.current = open;
+  }, [open]);
 
   useEffect(() => {
     if (!open) return;
@@ -71,6 +80,7 @@ export function MobileNav({ pathname }: { pathname: string }) {
   return (
     <div className="lg:hidden">
       <button
+        ref={openButtonRef}
         type="button"
         onClick={() => setOpen(true)}
         aria-expanded={open}
@@ -135,11 +145,14 @@ export function MobileNav({ pathname }: { pathname: string }) {
                       }
 
                       const isExpanded = expanded === entry.href;
+                      const submenuId = `mobile-submenu-${entry.href.replace(/\//g, "")}`;
+
                       return (
                         <li key={entry.href}>
                           <button
                             type="button"
                             aria-expanded={isExpanded}
+                            aria-controls={submenuId}
                             onClick={() => setExpanded((cur) => (cur === entry.href ? null : entry.href))}
                             className={cn(
                               "flex w-full items-center justify-between rounded-xl px-3 py-3 text-base font-medium transition-colors",
@@ -153,7 +166,7 @@ export function MobileNav({ pathname }: { pathname: string }) {
                             />
                           </button>
                           {isExpanded ? (
-                            <ul className="mt-1 space-y-0.5 border-l border-white/10 pl-3">
+                            <ul id={submenuId} className="mt-1 space-y-0.5 border-l border-white/10 pl-3">
                               <li>
                                 <Link
                                   href={entry.menu.overview.href}
@@ -194,6 +207,7 @@ export function MobileNav({ pathname }: { pathname: string }) {
                   </Button>
                   <PhoneLink
                     onClick={() => setOpen(false)}
+                    aria-label={`Call ${site.brandName} at ${site.phoneDisplay}`}
                     className="flex items-center justify-center gap-2 rounded-full border border-white/20 px-4 py-3 text-base font-semibold text-accent-300 transition-colors hover:bg-white/10"
                   >
                     <Phone className="h-5 w-5" aria-hidden="true" />

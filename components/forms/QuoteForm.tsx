@@ -11,7 +11,12 @@ import { buttonClasses } from "@/components/ui/Button";
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <button type="submit" disabled={pending} className={buttonClasses({ size: "lg", className: "w-full" })}>
+    <button
+      type="submit"
+      disabled={pending}
+      aria-busy={pending}
+      className={buttonClasses({ size: "lg", className: "w-full" })}
+    >
       {pending ? "Sending..." : "Request my quote"}
     </button>
   );

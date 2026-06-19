@@ -24,7 +24,14 @@ export function Label({
   return (
     <label className={cn("block text-sm font-semibold text-ink", className)} {...rest}>
       {children}
-      {required ? <span className="ml-0.5 text-red-600">*</span> : null}
+      {required ? (
+        <>
+          <span aria-hidden="true" className="ml-0.5 text-red-600">
+            *
+          </span>
+          <span className="sr-only"> (required)</span>
+        </>
+      ) : null}
     </label>
   );
 }
@@ -65,7 +72,7 @@ export function Select({
 export function FieldError({ id, message }: { id: string; message?: string }) {
   if (!message) return null;
   return (
-    <p id={id} className="mt-1.5 text-sm font-medium text-red-600">
+    <p id={id} role="alert" className="mt-1.5 text-sm font-medium text-red-600">
       {message}
     </p>
   );

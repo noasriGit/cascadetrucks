@@ -12,6 +12,7 @@ export function CoverageGrid({ services }: { services: Service[] }) {
           <li key={service.slug}>
             <Link
               href={`/coverage/${service.slug}`}
+              aria-label={`${service.name}: view coverage details`}
               className="group flex h-full flex-col rounded-2xl border border-line bg-surface p-6 shadow-card transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-card-hover"
             >
               <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition-colors group-hover:bg-brand-100">

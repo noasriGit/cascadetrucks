@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Phone } from "lucide-react";
@@ -21,6 +21,9 @@ function isActivePath(pathname: string, href: string) {
 function NavEntry({ entry, pathname }: { entry: MainNavEntry; pathname: string }) {
   const [open, setOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const menuId = useId();
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   if (!entry.menu) {
     const active = isActivePath(pathname, entry.href);
@@ -48,16 +51,54 @@ function NavEntry({ entry, pathname }: { entry: MainNavEntry; pathname: string }
     closeTimer.current = setTimeout(() => setOpen(false), 120);
   }
 
+  function closeMenu(returnFocus = true) {
+    setOpen(false);
+    if (returnFocus) buttonRef.current?.focus();
+  }
+
+  function focusFirstLink() {
+    requestAnimationFrame(() => {
+      menuRef.current?.querySelector<HTMLElement>("a")?.focus();
+    });
+  }
+
+  function onButtonKeyDown(e: React.KeyboardEvent<HTMLButtonElement>) {
+    if (e.key === "Escape") {
+      if (open) {
+        e.preventDefault();
+        closeMenu();
+      }
+      return;
+    }
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      if (!open) {
+        setOpen(true);
+        focusFirstLink();
+      } else {
+        focusFirstLink();
+      }
+    }
+  }
+
+  function onMenuKeyDown(e: React.KeyboardEvent<HTMLDivElement>) {
+    if (e.key === "Escape") {
+      e.preventDefault();
+      closeMenu();
+    }
+  }
+
   return (
     <div className="relative" onMouseEnter={() => { cancelClose(); setOpen(true); }} onMouseLeave={scheduleClose}>
       <button
+        ref={buttonRef}
         type="button"
         aria-expanded={open}
-        aria-haspopup="menu"
+        aria-haspopup="true"
+        aria-controls={menuId}
+        aria-label={`${entry.label} submenu`}
         onClick={() => setOpen((v) => !v)}
-        onKeyDown={(e) => {
-          if (e.key === "Escape") setOpen(false);
-        }}
+        onKeyDown={onButtonKeyDown}
         className={cn(
           "inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
           active || open ? "bg-white/10 text-white" : "text-brand-100 hover:bg-white/10 hover:text-white",
@@ -69,12 +110,13 @@ function NavEntry({ entry, pathname }: { entry: MainNavEntry; pathname: string }
 
       {open ? (
         <div
-          role="menu"
+          id={menuId}
+          ref={menuRef}
+          onKeyDown={onMenuKeyDown}
           className="animate-menu-in absolute left-0 top-full z-50 mt-2 w-72 overflow-hidden rounded-2xl border border-line bg-white p-2 text-ink shadow-elevated"
         >
           <Link
             href={entry.menu.overview.href}
-            role="menuitem"
             onClick={() => setOpen(false)}
             className="flex items-center justify-between rounded-xl bg-brand-50 px-3 py-2.5 text-sm font-semibold text-brand-800 hover:bg-brand-100"
           >
@@ -86,7 +128,6 @@ function NavEntry({ entry, pathname }: { entry: MainNavEntry; pathname: string }
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  role="menuitem"
                   onClick={() => setOpen(false)}
                   aria-current={pathname === item.href ? "page" : undefined}
                   className={cn(
@@ -140,6 +181,7 @@ export function Header() {
 
         <div className="hidden items-center gap-2 lg:flex">
           <PhoneLink
+            aria-label={`Call ${site.brandName} at ${site.phoneDisplay}`}
             className="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold text-accent-400 transition-colors hover:bg-white/10 hover:text-accent-300"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />

@@ -35,7 +35,7 @@ export default function QuoteConfirmationPage() {
       </Script>
       <Section tone="brand" className="pt-10 pb-16 sm:pt-14 sm:pb-20">
         <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Quote received", path }]} />
-        <div className="mx-auto mt-10 max-w-2xl text-center">
+        <div className="mx-auto mt-10 max-w-2xl text-center" role="status" aria-live="polite">
           <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-700">
             <CheckCircle2 className="h-9 w-9" aria-hidden="true" />
           </span>

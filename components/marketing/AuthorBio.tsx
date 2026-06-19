@@ -3,7 +3,7 @@ import type { Author } from "@/lib/types";
 
 export function AuthorBio({ author, reviewedDate }: { author: Author; reviewedDate?: string }) {
   return (
-    <div className="flex flex-col gap-4 rounded-2xl border border-line bg-surface-soft p-6 shadow-card sm:flex-row sm:items-start">
+    <aside aria-label="About the author" className="flex flex-col gap-4 rounded-2xl border border-line bg-surface-soft p-6 shadow-card sm:flex-row sm:items-start">
       <Image
         src={author.image}
         alt={`${author.name} avatar`}
@@ -31,6 +31,6 @@ export function AuthorBio({ author, reviewedDate }: { author: Author; reviewedDa
           <p className="mt-3 text-xs text-muted">Last reviewed: {reviewedDate}</p>
         ) : null}
       </div>
-    </div>
+    </aside>
   );
 }

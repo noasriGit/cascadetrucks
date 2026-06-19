@@ -84,6 +84,15 @@ a {
   border-radius: 2px;
 }
 
+/* Higher-contrast focus on dark brand surfaces. */
+header :focus-visible,
+.bg-brand-700 :focus-visible,
+.bg-brand-800 :focus-visible,
+.bg-brand-900 :focus-visible,
+.bg-brand-950 :focus-visible {
+  outline-color: var(--color-accent-400);
+}
+
 /* Skip-link helper. */
 .skip-link {
   position: absolute;
@@ -94,6 +103,7 @@ a {
 .skip-link:focus {
   left: 0.5rem;
   top: 0.5rem;
+  outline-color: var(--color-accent-400);
 }
 
 /* Subtle grid texture used behind dark hero/CTA surfaces. */
