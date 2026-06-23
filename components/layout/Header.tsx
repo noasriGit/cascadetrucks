@@ -22,6 +22,7 @@ function NavEntry({ entry, pathname }: { entry: MainNavEntry; pathname: string }
   const [open, setOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const menuId = useId();
+  const containerRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -78,6 +79,11 @@ function NavEntry({ entry, pathname }: { entry: MainNavEntry; pathname: string }
       } else {
         focusFirstLink();
       }
+      return;
+    }
+    if (e.key === "Tab" && open && !e.shiftKey) {
+      e.preventDefault();
+      focusFirstLink();
     }
   }
 
@@ -85,11 +91,44 @@ function NavEntry({ entry, pathname }: { entry: MainNavEntry; pathname: string }
     if (e.key === "Escape") {
       e.preventDefault();
       closeMenu();
+      return;
+    }
+
+    const links = menuRef.current ? Array.from(menuRef.current.querySelectorAll<HTMLAnchorElement>("a")) : [];
+    if (links.length === 0) return;
+
+    const currentIndex = links.indexOf(document.activeElement as HTMLAnchorElement);
+
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      links[(currentIndex + 1) % links.length]?.focus();
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      links[(currentIndex <= 0 ? links.length : currentIndex) - 1]?.focus();
+    } else if (e.key === "Home") {
+      e.preventDefault();
+      links[0]?.focus();
+    } else if (e.key === "End") {
+      e.preventDefault();
+      links[links.length - 1]?.focus();
+    }
+  }
+
+  function onContainerBlur(e: React.FocusEvent<HTMLDivElement>) {
+    const next = e.relatedTarget as Node | null;
+    if (!containerRef.current?.contains(next)) {
+      setOpen(false);
     }
   }
 
   return (
-    <div className="relative" onMouseEnter={() => { cancelClose(); setOpen(true); }} onMouseLeave={scheduleClose}>
+    <div
+      ref={containerRef}
+      className="relative"
+      onMouseEnter={() => { cancelClose(); setOpen(true); }}
+      onMouseLeave={scheduleClose}
+      onBlur={onContainerBlur}
+    >
       <button
         ref={buttonRef}
         type="button"

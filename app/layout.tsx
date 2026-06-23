@@ -91,8 +91,15 @@ export default function RootLayout({
         </Script>
         <JsonLd data={organizationSchema()} />
         <JsonLd data={insuranceAgencySchema()} />
-        <div id="splash-boot" aria-hidden="true">
-          <div className="splash-boot-curtain">
+        <div id="splash-boot">
+          <button
+            type="button"
+            id="splash-skip"
+            className="splash-skip fixed right-4 top-4 z-[110] hidden rounded-md bg-brand-950/95 px-4 py-2.5 text-sm font-semibold text-white shadow-elevated"
+          >
+            Skip intro
+          </button>
+          <div className="splash-boot-curtain" aria-hidden="true">
             <img
               src="/images/cascadelogo.png"
               alt=""
@@ -105,7 +112,7 @@ export default function RootLayout({
         <SkipLink />
         <SplashScreen />
         <Header />
-        <main id="main-content" className="flex-1">
+        <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
           {children}
         </main>
         <Footer />

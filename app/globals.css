@@ -98,7 +98,7 @@ header :focus-visible,
   position: absolute;
   left: -9999px;
   top: 0;
-  z-index: 100;
+  z-index: 110;
 }
 .skip-link:focus {
   left: 0.5rem;
@@ -230,4 +230,24 @@ header :focus-visible,
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
   }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Long-form accessibility statement typography. */
+.prose-accessibility p + p {
+  margin-top: 1.25rem;
+}
+
+.prose-accessibility a {
+  font-weight: 500;
+  color: var(--color-brand-700);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-accessibility a:hover {
+  color: var(--color-brand-800);
 }

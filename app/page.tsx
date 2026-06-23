@@ -57,10 +57,7 @@ export default function HomePage() {
           "Commercial fleets",
           "Uber Black & livery",
         ]}
-        backgroundImage={{
-          src: "/images/hero-banner.png",
-          alt: "Commercial trucks on a Virginia highway",
-        }}
+        backgroundImage={{ src: "/images/hero-banner.png" }}
         aside={<QuoteForm />}
       />
 

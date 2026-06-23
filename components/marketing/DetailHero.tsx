@@ -12,7 +12,7 @@ interface DetailHeroProps {
   actions?: ReactNode;
   /** Right-hand content: an image, quote form, etc. */
   aside?: ReactNode;
-  backgroundImage?: { src: string; alt: string };
+  backgroundImage?: { src: string };
 }
 
 export function DetailHero({

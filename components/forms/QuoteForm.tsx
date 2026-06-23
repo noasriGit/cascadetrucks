@@ -1,12 +1,14 @@
 "use client";
 
-import { useActionState, useId } from "react";
+import { useActionState, useEffect, useId } from "react";
 import { useFormStatus } from "react-dom";
 import { ShieldCheck } from "lucide-react";
 import { submitQuoteRequest } from "@/app/actions/quote";
 import { initialQuoteState, quoteCoverageCategories, resolveQuoteCoverageCategory } from "@/lib/quote";
 import { Field, FieldError, Input, Label, Select, Textarea } from "@/components/ui/Field";
 import { buttonClasses } from "@/components/ui/Button";
+
+const quoteErrorFieldOrder = ["name", "phone", "email", "coverage"] as const;
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -36,6 +38,18 @@ export function QuoteForm({
   const [state, formAction] = useActionState(submitQuoteRequest, initialQuoteState);
   const uid = useId();
   const coverageDefault = resolveQuoteCoverageCategory(defaultCoverage);
+
+  useEffect(() => {
+    if (state.status !== "error") return;
+
+    const firstInvalid = quoteErrorFieldOrder.find((field) => state.errors[field]);
+    if (!firstInvalid) return;
+
+    const input = document.getElementById(`${uid}-${firstInvalid}`);
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    input?.focus();
+    input?.scrollIntoView({ block: "nearest", behavior: reduceMotion ? "auto" : "smooth" });
+  }, [state, uid]);
 
   return (
     <div className="rounded-3xl border border-line bg-white p-6 text-ink shadow-elevated ring-1 ring-white/10 sm:p-8">
@@ -90,7 +104,9 @@ export function QuoteForm({
         </div>
 
         <Field>
-          <Label htmlFor={`${uid}-email`}>Email</Label>
+          <Label htmlFor={`${uid}-email`}>
+            Email <span className="font-normal text-muted">(optional)</span>
+          </Label>
           <Input
             id={`${uid}-email`}
             name="email"

@@ -18,7 +18,7 @@ export function Footer() {
               <LogoMark />
               <div className="leading-tight">
                 <p className="text-base font-extrabold text-white">{site.brandName}</p>
-                <p className="text-xs text-brand-300">A division of {site.parentName}</p>
+                <p className="text-xs text-brand-200">A division of {site.parentName}</p>
               </div>
             </div>
             <address className="mt-5 space-y-2.5 not-italic text-sm leading-6">
@@ -65,7 +65,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
-          <div className="text-xs text-brand-300">
+          <div className="text-xs text-brand-200">
             <p>
               &copy; {year} {site.legalName}. All rights reserved.
             </p>

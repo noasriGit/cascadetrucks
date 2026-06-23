@@ -46,7 +46,7 @@ export default function ContactPage() {
                 className="h-auto w-full object-cover"
               />
             </figure>
-            <h3 className="text-xl font-bold text-brand-800">Get in touch</h3>
+            <h2 className="text-xl font-bold text-brand-800">Get in touch</h2>
             <dl className="mt-6 space-y-5 text-base">
               <div>
                 <dt className="text-sm font-semibold uppercase tracking-wide text-brand-600">Phone</dt>

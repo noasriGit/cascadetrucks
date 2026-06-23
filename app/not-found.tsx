@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
 import { ClickToCall } from "@/components/layout/ClickToCall";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { site } from "@/data/site";
+
+export const metadata: Metadata = {
+  title: "Page not found",
+  description: `The page you requested could not be found on ${site.brandName}. Return home or contact us for Virginia commercial vehicle insurance help.`,
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

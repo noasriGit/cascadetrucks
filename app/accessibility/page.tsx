@@ -105,7 +105,7 @@ export default function AccessibilityPage() {
           <p>
             Some third-party services, embedded content, or carrier-provided tools linked from this site may not
             be fully under our control. Those experiences may require separate accessibility review by their
-            providers.
+            providers. This includes analytics and advertising scripts such as Google Tag Manager and Google Ads.
           </p>
           <p className="text-sm">
             Last updated: June 2026. We will update this page as we continue accessibility improvements.

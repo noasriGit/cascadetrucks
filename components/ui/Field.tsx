@@ -9,7 +9,7 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/cn";
 
 const controlBase =
-  "mt-1.5 w-full rounded-xl border bg-white px-3.5 py-2.5 text-base text-ink shadow-sm transition-colors duration-150 placeholder:text-slate-400 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/15 focus:outline-none aria-[invalid=true]:border-red-400 aria-[invalid=true]:focus:ring-red-500/15";
+  "mt-1.5 w-full rounded-xl border bg-white px-3.5 py-2.5 text-base text-ink shadow-sm transition-colors duration-150 placeholder:text-slate-400 focus:outline-none focus-visible:border-brand-500 focus-visible:ring-4 focus-visible:ring-brand-500/15 aria-[invalid=true]:border-red-400 aria-[invalid=true]:focus-visible:ring-red-500/15";
 
 export function Field({ children, className }: { children: ReactNode; className?: string }) {
   return <div className={className}>{children}</div>;

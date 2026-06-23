@@ -15,7 +15,7 @@ interface HeroProps {
   aside?: ReactNode;
   breadcrumbs?: ReactNode;
   showQuoteButton?: boolean;
-  backgroundImage?: { src: string; alt: string };
+  backgroundImage?: { src: string };
 }
 
 export function Hero({
