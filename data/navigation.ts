@@ -80,10 +80,14 @@ export const footerNav: { heading: string; items: NavItem[] }[] = [
     heading: "Locations",
     items: [
       { label: "All Service Areas", href: "/locations" },
+      { label: "Manassas, VA", href: "/locations/manassas-va" },
       { label: "Fairfax, VA", href: "/locations/fairfax-va" },
       { label: "Arlington, VA", href: "/locations/arlington-va" },
+      { label: "Alexandria, VA", href: "/locations/alexandria-va" },
+      { label: "Tysons, VA", href: "/locations/tysons-va" },
       { label: "Chantilly, VA", href: "/locations/chantilly-va" },
       { label: "Richmond, VA", href: "/locations/richmond-va" },
+      { label: "Henrico, VA", href: "/locations/henrico-va" },
     ],
   },
   {

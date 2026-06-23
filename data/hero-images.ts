@@ -296,6 +296,78 @@ export const heroImages: Record<string, HeroImage> = {
     src: "https://images.unsplash.com/photo-1575474007145-7bc306677fa4?auto=format&fit=crop&w=1920&q=80",
     alt: "Richmond, Virginia downtown skyline along the James River waterfront",
   },
+  "alexandria-va": {
+    src: "https://images.unsplash.com/photo-1762460099595-8b49a090dd9f?auto=format&fit=crop&w=1920&q=80",
+    alt: "Potomac River waterfront and urban skyline near Alexandria, Virginia",
+  },
+  "reston-va": {
+    src: "https://images.unsplash.com/photo-1555192881-d1bee8bdfedf?auto=format&fit=crop&w=1920&q=80",
+    alt: "Suburban Northern Virginia neighborhood with tree-lined streets near Reston",
+  },
+  "ashburn-va": {
+    src: "https://images.unsplash.com/photo-1597974380476-fbf652dfe188?auto=format&fit=crop&w=1920&q=80",
+    alt: "Construction site with commercial trucks near Ashburn, Virginia",
+  },
+  "leesburg-va": {
+    src: "https://images.unsplash.com/photo-1761850648640-2ee5870ee883?auto=format&fit=crop&w=1920&q=80",
+    alt: "Historic downtown main street in Leesburg, Loudoun County, Virginia",
+  },
+  "manassas-va": {
+    src: "https://images.unsplash.com/photo-1555192881-d1bee8bdfedf?auto=format&fit=crop&w=1920&q=80",
+    alt: "Suburban commercial corridor in Manassas, Prince William County, Virginia",
+  },
+  "woodbridge-va": {
+    src: "https://images.unsplash.com/photo-1571800325137-ab3dddb48308?auto=format&fit=crop&w=1920&q=80",
+    alt: "Scenic river valley landscape near Woodbridge, Prince William County, Virginia",
+  },
+  "henrico-va": {
+    src: "https://images.unsplash.com/photo-1575474007145-7bc306677fa4?auto=format&fit=crop&w=1920&q=80",
+    alt: "Richmond metro skyline visible from Henrico County, Virginia",
+  },
+  "glen-allen-va": {
+    src: "https://images.unsplash.com/photo-1555192881-d1bee8bdfedf?auto=format&fit=crop&w=1920&q=80",
+    alt: "Suburban neighborhood in Glen Allen, Henrico County, Virginia",
+  },
+  "short-pump-va": {
+    src: "https://images.unsplash.com/photo-1555192881-d1bee8bdfedf?auto=format&fit=crop&w=1920&q=80",
+    alt: "Commercial retail corridor in Short Pump, Richmond West End, Virginia",
+  },
+  "mechanicsville-va": {
+    src: "https://images.unsplash.com/photo-1555192881-d1bee8bdfedf?auto=format&fit=crop&w=1920&q=80",
+    alt: "Suburban residential area in Mechanicsville, Hanover County, Virginia",
+  },
+  "spotsylvania-va": {
+    src: "https://images.unsplash.com/photo-1571800325137-ab3dddb48308?auto=format&fit=crop&w=1920&q=80",
+    alt: "Rolling countryside along the I-95 corridor in Spotsylvania County, Virginia",
+  },
+  "ashland-va": {
+    src: "https://images.unsplash.com/photo-1761850648640-2ee5870ee883?auto=format&fit=crop&w=1920&q=80",
+    alt: "Small town main street in Ashland, Hanover County, Virginia",
+  },
+  "herndon-va": {
+    src: "https://images.unsplash.com/photo-1555192881-d1bee8bdfedf?auto=format&fit=crop&w=1920&q=80",
+    alt: "Suburban office park in Herndon along the Dulles Tech Corridor, Virginia",
+  },
+  "sterling-va": {
+    src: "https://images.unsplash.com/photo-1724556271642-e9acaf03ac23?auto=format&fit=crop&w=1920&q=80",
+    alt: "Commercial fleet vehicles parked near Sterling, Loudoun County, Virginia",
+  },
+  "tysons-va": {
+    src: "https://images.unsplash.com/photo-1762460099595-8b49a090dd9f?auto=format&fit=crop&w=1920&q=80",
+    alt: "Urban commercial skyline in Tysons Corner, Fairfax County, Virginia",
+  },
+  "mclean-va": {
+    src: "https://images.unsplash.com/photo-1656918418546-a14236806c09?auto=format&fit=crop&w=1920&q=80",
+    alt: "Tree-lined suburban road in McLean, Fairfax County, Virginia",
+  },
+  "springfield-va": {
+    src: "https://images.unsplash.com/photo-1779583074717-e60fa13131ce?auto=format&fit=crop&w=1920&q=80",
+    alt: "Commercial truck on a Virginia highway near the Springfield interchange",
+  },
+  "centreville-va": {
+    src: "https://images.unsplash.com/photo-1555192881-d1bee8bdfedf?auto=format&fit=crop&w=1920&q=80",
+    alt: "Suburban neighborhood in Centreville, western Fairfax County, Virginia",
+  },
 
   // ─── Resources ──────────────────────────────────────────────────────────────
   "virginia-commercial-auto-insurance-guide": {

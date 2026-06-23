@@ -8,6 +8,24 @@ const PAGE_LOCATIONS = [
   "fredericksburg-va",
   "winchester-va",
   "richmond-va",
+  "alexandria-va",
+  "reston-va",
+  "ashburn-va",
+  "leesburg-va",
+  "manassas-va",
+  "woodbridge-va",
+  "henrico-va",
+  "glen-allen-va",
+  "short-pump-va",
+  "mechanicsville-va",
+  "spotsylvania-va",
+  "ashland-va",
+  "herndon-va",
+  "sterling-va",
+  "tysons-va",
+  "mclean-va",
+  "springfield-va",
+  "centreville-va",
 ];
 
 function nearby(slug: string): string[] {
@@ -34,12 +52,24 @@ const seeds: LocationSeed[] = [
   { slug: "fredericksburg-va", city: "Fredericksburg", region: "Central Virginia", hasPage: true, geo: { latitude: 38.3032, longitude: -77.4605 } },
   { slug: "winchester-va", city: "Winchester", region: "Shenandoah Valley", hasPage: true, geo: { latitude: 39.1857, longitude: -78.1633 } },
   { slug: "richmond-va", city: "Richmond", region: "Central Virginia", hasPage: true, geo: { latitude: 37.5407, longitude: -77.436 } },
-  { slug: "alexandria-va", city: "Alexandria", region: "Northern Virginia", hasPage: false },
-  { slug: "reston-va", city: "Reston", region: "Northern Virginia", hasPage: false },
-  { slug: "ashburn-va", city: "Ashburn", region: "Northern Virginia", hasPage: false },
-  { slug: "leesburg-va", city: "Leesburg", region: "Northern Virginia", hasPage: false },
-  { slug: "manassas-va", city: "Manassas", region: "Northern Virginia", hasPage: false },
-  { slug: "woodbridge-va", city: "Woodbridge", region: "Northern Virginia", hasPage: false },
+  { slug: "alexandria-va", city: "Alexandria", region: "Northern Virginia", hasPage: true, geo: { latitude: 38.8048, longitude: -77.0469 } },
+  { slug: "reston-va", city: "Reston", region: "Northern Virginia", hasPage: true, geo: { latitude: 38.9586, longitude: -77.357 } },
+  { slug: "ashburn-va", city: "Ashburn", region: "Northern Virginia", hasPage: true, geo: { latitude: 39.0438, longitude: -77.4874 } },
+  { slug: "leesburg-va", city: "Leesburg", region: "Northern Virginia", hasPage: true, geo: { latitude: 39.1157, longitude: -77.5636 } },
+  { slug: "manassas-va", city: "Manassas", region: "Northern Virginia", hasPage: true, geo: { latitude: 38.7509, longitude: -77.4753 } },
+  { slug: "woodbridge-va", city: "Woodbridge", region: "Northern Virginia", hasPage: true, geo: { latitude: 38.6582, longitude: -77.2497 } },
+  { slug: "henrico-va", city: "Henrico", region: "Central Virginia", hasPage: true, geo: { latitude: 37.55, longitude: -77.3199 } },
+  { slug: "glen-allen-va", city: "Glen Allen", region: "Central Virginia", hasPage: true, geo: { latitude: 37.664, longitude: -77.4878 } },
+  { slug: "short-pump-va", city: "Short Pump", region: "Central Virginia", hasPage: true, geo: { latitude: 37.6504, longitude: -77.6411 } },
+  { slug: "mechanicsville-va", city: "Mechanicsville", region: "Central Virginia", hasPage: true, geo: { latitude: 37.6085, longitude: -77.3733 } },
+  { slug: "spotsylvania-va", city: "Spotsylvania", region: "Central Virginia", hasPage: true, geo: { latitude: 38.2014, longitude: -77.589 } },
+  { slug: "ashland-va", city: "Ashland", region: "Central Virginia", hasPage: true, geo: { latitude: 37.7596, longitude: -77.4703 } },
+  { slug: "herndon-va", city: "Herndon", region: "Northern Virginia", hasPage: true, geo: { latitude: 38.9695, longitude: -77.3861 } },
+  { slug: "sterling-va", city: "Sterling", region: "Northern Virginia", hasPage: true, geo: { latitude: 39.0062, longitude: -77.4286 } },
+  { slug: "tysons-va", city: "Tysons", region: "Northern Virginia", hasPage: true, geo: { latitude: 38.9189, longitude: -77.23 } },
+  { slug: "mclean-va", city: "McLean", region: "Northern Virginia", hasPage: true, geo: { latitude: 38.9339, longitude: -77.1773 } },
+  { slug: "springfield-va", city: "Springfield", region: "Northern Virginia", hasPage: true, geo: { latitude: 38.7893, longitude: -77.1872 } },
+  { slug: "centreville-va", city: "Centreville", region: "Northern Virginia", hasPage: true, geo: { latitude: 38.8404, longitude: -77.4289 } },
 ];
 
 interface LocationContent {
@@ -293,6 +323,636 @@ const pageContent: Record<string, LocationContent> = {
         body: [
           "Our Manassas office serves the entire Commonwealth, and our advisors regularly write coverage for Richmond-area operators. As an independent agency, we shop multiple carriers to match your operation with the right policy.",
           "Call (703) 551-2000 to discuss coverage for your Richmond business or fleet.",
+        ],
+      },
+    ],
+  },
+  "alexandria-va": {
+    heroSubheadline:
+      "Old Town waterfront traffic, dense urban streets, and a strong livery market make Alexandria a demanding place to run commercial vehicles. We insure fleets, black-car operators, and contractor vans across the city.",
+    shortDescription:
+      "Commercial vehicle and livery insurance in Alexandria, VA. Coverage for Uber Black operators, delivery fleets, and contractor vans in Old Town and the Potomac corridor.",
+    semanticEntities: ["Alexandria", "Old Town", "Potomac River", "livery", "Uber Black", "urban commercial auto"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Alexandria",
+        body: [
+          "Alexandria packs a lot of commercial activity into a compact, historic footprint. Delivery vans and contractor trucks navigate narrow Old Town streets, while livery and black-car operators serve Reagan National Airport and corporate clients along the Route 1 and I-395 corridors.",
+          "Urban density means more stops, more pedestrians, and more exposure per mile than suburban routes. Alexandria operators typically carry liability limits above the state minimum, and we help them match coverage to the routes they actually run.",
+        ],
+        bullets: [
+          "Uber Black and livery vehicles for airport and corporate service",
+          "Delivery and contractor vans in Old Town and the West End",
+          "Commercial fleets serving the Potomac corridor",
+        ],
+      },
+      {
+        heading: "Livery and Fleet Coverage in Alexandria",
+        body: [
+          "Alexandria shares the region's strong market for Uber Black and professional black-car service. TNC operators need coverage that satisfies Virginia's Transportation Network Company requirements and the platform, and we write policies that keep drivers compliant.",
+          "For delivery and contractor operations, we pair commercial auto liability with tools and equipment coverage when trades haul gear, and fleet policies when operators run multiple vehicles across the city.",
+        ],
+      },
+      {
+        heading: "Serving Alexandria from Manassas",
+        body: [
+          "From our Manassas office, our licensed advisors serve Alexandria operators who work urban routes every day. As an independent agency, we compare multiple carriers to find competitive, right-sized protection.",
+          "Call (703) 551-2000 to discuss coverage for your Alexandria vehicles or fleet.",
+        ],
+      },
+    ],
+  },
+  "reston-va": {
+    heroSubheadline:
+      "Reston's tech campuses, corporate parks, and Dulles corridor logistics put steady commercial traffic on Route 7 and the Toll Road. We insure the vans, box trucks, and fleets that keep this planned community running.",
+    shortDescription:
+      "Commercial vehicle insurance in Reston, VA. Coverage for tech corridor fleets, contractor vans, and logistics operators near Dulles, from licensed advisors in Manassas.",
+    semanticEntities: ["Reston", "Dulles Toll Road", "Route 7", "tech corridor", "corporate fleets", "logistics"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Reston",
+        body: [
+          "Reston sits along the Dulles corridor where tech companies, corporate campuses, and professional services drive steady demand for commercial vehicles. Contractor vans serve ongoing development, while box trucks and delivery fleets move goods between warehouses and Reston Town Center.",
+          "The mix of suburban office parks and active construction means operators here often run mixed fleets: service vans during the week and heavier trucks when job sites call for it. We size coverage to that kind of varied operation.",
+        ],
+        bullets: [
+          "Contractor and service vans for Reston job sites",
+          "Box trucks and delivery fleets for corridor logistics",
+          "Corporate and mixed commercial fleets",
+        ],
+      },
+      {
+        heading: "Coverage for Reston Contractors and Fleets",
+        body: [
+          "Contractors working Reston projects frequently need additional-insured certificates and liability limits that match owner requirements. We issue those documents and structure policies so you stay eligible for the work.",
+          "Growing fleets benefit from combining vehicles under one commercial fleet program, and logistics operators often add motor truck cargo coverage for the goods they haul along Route 7 and the Dulles Toll Road.",
+        ],
+      },
+      {
+        heading: "Local Service Along the Dulles Corridor",
+        body: [
+          "Our Manassas office is a short drive from Reston, and our advisors work with operators throughout the Dulles corridor. As an independent agency, we shop multiple carriers for the best fit.",
+          "Call (703) 551-2000 to talk through coverage for your Reston operation.",
+        ],
+      },
+    ],
+  },
+  "ashburn-va": {
+    heroSubheadline:
+      "Ashburn's data center alley and Loudoun County growth have made it one of the busiest logistics and construction markets in Virginia. We insure the trucks, vans, and fleets building and supplying this corridor.",
+    shortDescription:
+      "Commercial truck and vehicle insurance in Ashburn, VA. Coverage for logistics, construction, and fleet operators in Loudoun County's data center corridor.",
+    semanticEntities: ["Ashburn", "Loudoun County", "data centers", "Route 7", "logistics", "construction fleets"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Ashburn and Loudoun",
+        body: [
+          "Ashburn has become synonymous with data center construction and the logistics network that supports it. Dump trucks, box trucks, and contractor vans move constantly along Route 7, Route 28, and the surrounding Loudoun County roads.",
+          "Heavy construction cycles and round-the-clock logistics mean vehicles here accumulate miles fast. Operators need coverage that accounts for highway commuting between job sites, warehouses, and supplier yards across the county.",
+        ],
+        bullets: [
+          "Construction and dump trucks for data center and commercial builds",
+          "Box trucks and delivery vans for logistics operations",
+          "Contractor fleets serving Loudoun County projects",
+        ],
+      },
+      {
+        heading: "Coverage for Ashburn Logistics and Construction",
+        body: [
+          "Construction operators in Ashburn often need higher liability limits and additional-insured status for general contractor requirements. We structure policies and issue certificates to keep you on the job.",
+          "Logistics fleets hauling between Ashburn warehouses and regional distribution points benefit from motor truck cargo coverage alongside commercial auto liability, and multi-vehicle operators can consolidate on a fleet policy.",
+        ],
+      },
+      {
+        heading: "Serving Ashburn from Manassas",
+        body: [
+          "From our Manassas office, our licensed advisors serve Ashburn and Loudoun County operators daily. As an independent agency, we compare carriers to find competitive coverage for demanding corridor work.",
+          "Call (703) 551-2000 to discuss coverage for your Ashburn vehicles or fleet.",
+        ],
+      },
+    ],
+  },
+  "leesburg-va": {
+    heroSubheadline:
+      "As the seat of Loudoun County, Leesburg anchors western Northern Virginia's growth along Route 7 and the Route 15 corridor. We insure the contractor, agricultural, and fleet operators keeping this market moving.",
+    shortDescription:
+      "Commercial vehicle insurance in Leesburg, VA. Coverage for contractors, haulers, and fleets in western Loudoun County along Route 7, from licensed Virginia advisors.",
+    semanticEntities: ["Leesburg", "Loudoun County", "Route 7", "Route 15", "western NoVA", "contractor vehicles"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Leesburg",
+        body: [
+          "Leesburg blends historic downtown character with one of Virginia's fastest-growing suburban markets. Residential and commercial development along Route 7 and Route 15 keeps contractor and construction vehicles busy, while agricultural and distribution operators serve the western Loudoun countryside.",
+          "Operators here often cover a wider radius than a typical suburban business, running between Leesburg job sites, Ashburn warehouses, and points west. Coverage needs to match that reach.",
+        ],
+        bullets: [
+          "Dump and construction trucks for county development",
+          "Contractor and service vans for the building trades",
+          "Commercial fleets running Route 7 and Route 15",
+        ],
+      },
+      {
+        heading: "Coverage for Leesburg Contractors and Operators",
+        body: [
+          "With active building throughout Loudoun County, Leesburg contractors regularly need liability limits and certificates that satisfy owner and GC requirements. We issue additional-insured documentation and tailor limits to your contracts.",
+          "Operators running multiple vehicles can combine them on a fleet policy, and haulers moving materials along Route 7 often benefit from motor truck cargo coverage alongside their liability protection.",
+        ],
+      },
+      {
+        heading: "Serving Leesburg from Manassas",
+        body: [
+          "Our Manassas office serves Leesburg and western Loudoun operators across the Route 7 corridor. As an independent agency, we compare multiple carriers for competitive, right-sized coverage.",
+          "Call (703) 551-2000 to talk through coverage for your Leesburg-area business.",
+        ],
+      },
+    ],
+  },
+  "manassas-va": {
+    heroSubheadline:
+      "Cascade Trucks Insurance is headquartered in Manassas, at the crossroads of Route 28 and I-66. We know Prince William County's contractor, logistics, and fleet market because this is home.",
+    shortDescription:
+      "Commercial truck and vehicle insurance in Manassas, VA. Local coverage for Prince William County contractors, fleets, and trucking businesses from our Manassas office.",
+    semanticEntities: ["Manassas", "Prince William County", "Route 28", "I-66", "headquarters", "commercial auto"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Manassas and Prince William",
+        body: [
+          "Manassas sits where Route 28 meets I-66, making it a natural hub for commercial traffic across Prince William County and beyond. Contractor vans, dump trucks, and delivery fleets move between Manassas job sites, Fairfax projects, and corridor warehouses every day.",
+          "As our home market, we see the full mix of vehicles that keep this county working: trades hauling tools, builders moving equipment, and logistics operators running the Route 28 spine north and south.",
+        ],
+        bullets: [
+          "Contractor and dump trucks for Prince William development",
+          "Delivery and box trucks along the Route 28 corridor",
+          "Commercial fleets based in Manassas and the county",
+        ],
+      },
+      {
+        heading: "Coverage for Manassas Contractors and Fleet Operators",
+        body: [
+          "Prince William contractors face the same certificate and liability requirements as the rest of Northern Virginia, and we issue additional-insured documentation from our local office. For trades carrying tools, we pair commercial auto with tools and equipment coverage.",
+          "Fleet operators running several vehicles from a Manassas base benefit from a single commercial fleet policy with simplified administration and competitive pricing across carriers.",
+        ],
+      },
+      {
+        heading: "Your Local Manassas Insurance Agency",
+        body: [
+          "Cascade Trucks Insurance is based right here in Manassas. Our licensed advisors live and work in this market, and as an independent agency we compare multiple carriers rather than offering a single quote.",
+          "Call (703) 551-2000 or visit us to discuss coverage for your Manassas operation. No one knows this corridor better.",
+        ],
+      },
+    ],
+  },
+  "woodbridge-va": {
+    heroSubheadline:
+      "Woodbridge's I-95 corridor and Prince William County growth put contractor, delivery, and fleet vehicles on the road in volume. We insure the commercial operators building and supplying this busy market.",
+    shortDescription:
+      "Commercial vehicle insurance in Woodbridge, VA. Coverage for contractors, delivery fleets, and trucking businesses along the I-95 corridor in Prince William County.",
+    semanticEntities: ["Woodbridge", "Prince William County", "I-95 corridor", "Potomac", "construction", "delivery fleets"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Woodbridge",
+        body: [
+          "Woodbridge anchors the southern end of Prince William County along the I-95 corridor, where residential and commercial development keeps contractor and construction activity high. Delivery vans and box trucks serve retail and logistics operations near the Potomac, while dump trucks move materials to job sites across the county.",
+          "I-95 traffic and the commute connection to Northern Virginia and Richmond mean many Woodbridge operators run significant highway miles. We size coverage for that kind of corridor operation.",
+        ],
+        bullets: [
+          "Dump and construction trucks for county development",
+          "Delivery and box trucks for retail and logistics",
+          "Contractor vans for the building trades",
+        ],
+      },
+      {
+        heading: "Coverage for Woodbridge Contractors and Fleets",
+        body: [
+          "Active construction in Woodbridge means contractors regularly need specific liability limits and additional-insured certificates before starting work. We structure policies and issue documentation to keep you eligible.",
+          "Operators running multiple vehicles can consolidate on a fleet policy, and delivery businesses hauling goods along I-95 often add motor truck cargo coverage for the freight they carry.",
+        ],
+      },
+      {
+        heading: "Serving Woodbridge from Manassas",
+        body: [
+          "From our Manassas office, our licensed advisors serve Woodbridge and southern Prince William operators every day. As an independent agency, we compare carriers for competitive coverage.",
+          "Call (703) 551-2000 to discuss coverage for your Woodbridge vehicles or fleet.",
+        ],
+      },
+    ],
+  },
+  "henrico-va": {
+    heroSubheadline:
+      "Henrico County's West End corridors and Innsbrook business district run on contractor vans, delivery fleets, and commercial trucks. We insure the vehicles keeping Richmond's largest suburb working.",
+    shortDescription:
+      "Commercial truck and vehicle insurance in Henrico, VA. Coverage for contractors, fleets, and delivery operators across Henrico County and the Richmond West End.",
+    semanticEntities: ["Henrico", "Henrico County", "West End", "Innsbrook", "Richmond metro", "contractor fleets"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Henrico County",
+        body: [
+          "Henrico wraps around Richmond's north and west sides, and its commercial vehicle market reflects that scale. The West End's retail and office corridors, the Innsbrook business park, and ongoing residential development keep contractor vans, dump trucks, and delivery fleets on the road daily.",
+          "Many Henrico operators serve both the county and the city of Richmond, which means coverage needs to account for urban and suburban driving across the metro.",
+        ],
+        bullets: [
+          "Contractor and service vans for West End job sites",
+          "Dump and construction trucks for county development",
+          "Delivery and commercial fleets across the metro",
+        ],
+      },
+      {
+        heading: "Coverage for Henrico Contractors and Fleet Operators",
+        body: [
+          "Contractors working Henrico projects often need liability limits and additional-insured certificates that match owner requirements. We issue those documents and tailor policies to your contract terms.",
+          "Fleet operators running several vehicles across the Richmond metro benefit from a commercial fleet policy that simplifies administration and can improve pricing as the fleet grows.",
+        ],
+      },
+      {
+        heading: "Serving Henrico from Manassas",
+        body: [
+          "Our Manassas office serves Henrico and the broader Richmond metro area. As an independent agency, we compare multiple carriers to find competitive, right-sized coverage for Central Virginia operators.",
+          "Call (703) 551-2000 to discuss coverage for your Henrico business or fleet.",
+        ],
+      },
+    ],
+  },
+  "glen-allen-va": {
+    heroSubheadline:
+      "Glen Allen's suburban growth north of Richmond has fueled steady demand for contractor, service, and fleet vehicles along Route 1 and I-295. We insure the trades and businesses building this market.",
+    shortDescription:
+      "Commercial vehicle insurance in Glen Allen, VA. Coverage for contractors, service fleets, and delivery operators in northern Henrico County, from licensed Virginia advisors.",
+    semanticEntities: ["Glen Allen", "Henrico County", "Route 1", "I-295", "Richmond north", "contractor vans"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Glen Allen",
+        body: [
+          "Glen Allen has grown into one of the Richmond metro's busiest suburban commercial markets. Residential development along Route 1 and the I-295 beltway keeps contractor and construction vehicles active, while service vans for HVAC, plumbing, and electrical trades run daily routes through the area.",
+          "Operators here typically serve Glen Allen, Short Pump, and points across northern Henrico, so coverage radius and fleet size both matter when we structure a policy.",
+        ],
+        bullets: [
+          "Contractor and service vans for residential and commercial work",
+          "Dump and construction trucks for area development",
+          "Commercial fleets serving northern Henrico",
+        ],
+      },
+      {
+        heading: "Coverage for Glen Allen Contractors and Trades",
+        body: [
+          "Trades working Glen Allen job sites often carry valuable tools and equipment in their vans. We pair commercial auto liability with tools and equipment coverage so your gear is protected alongside your vehicle.",
+          "Contractors facing certificate requirements get additional-insured documentation from our advisors, and operators with multiple trucks can combine them on a fleet policy for simpler management.",
+        ],
+      },
+      {
+        heading: "Serving Glen Allen and Central Virginia",
+        body: [
+          "From our Manassas office, our licensed advisors write coverage for Glen Allen and the Richmond metro. As an independent agency, we shop multiple carriers to match your operation with the right policy.",
+          "Call (703) 551-2000 to talk through coverage for your Glen Allen vehicles.",
+        ],
+      },
+    ],
+  },
+  "short-pump-va": {
+    heroSubheadline:
+      "Short Pump's West End retail hub and surrounding commercial corridors generate heavy trade van and delivery traffic. We insure the contractor and fleet operators serving one of Richmond's busiest suburban markets.",
+    shortDescription:
+      "Commercial vehicle insurance in Short Pump, VA. Coverage for contractor vans, delivery fleets, and commercial trucks in Richmond's West End retail corridor.",
+    semanticEntities: ["Short Pump", "West End", "Richmond metro", "retail corridor", "contractor vans", "delivery fleets"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Short Pump",
+        body: [
+          "Short Pump sits at the heart of Richmond's West End, where major retail corridors, medical offices, and ongoing commercial development create steady demand for contractor and delivery vehicles. Service vans for the trades and box trucks for logistics move through the area every day.",
+          "The concentration of commercial activity in a suburban setting means operators here face busy parking lots, tight delivery windows, and the accident exposure that comes with high-traffic retail zones.",
+        ],
+        bullets: [
+          "Contractor and service vans for West End job sites",
+          "Delivery and box trucks for retail and logistics",
+          "Commercial fleets serving Short Pump and Henrico",
+        ],
+      },
+      {
+        heading: "Coverage for Short Pump Contractors and Delivery Operators",
+        body: [
+          "Contractors working Short Pump commercial projects need liability limits and certificates that satisfy owner requirements, and we issue additional-insured documentation routinely. Delivery operators benefit from commercial auto paired with motor truck cargo when they haul goods between warehouses and retail locations.",
+          "Growing fleets can consolidate multiple vehicles on a single policy for better administration and pricing across carriers.",
+        ],
+      },
+      {
+        heading: "Serving Short Pump from Manassas",
+        body: [
+          "Our Manassas office serves Short Pump and the Richmond West End metro. As an independent agency, we compare carriers to find competitive coverage for Central Virginia operators.",
+          "Call (703) 551-2000 to discuss coverage for your Short Pump business or fleet.",
+        ],
+      },
+    ],
+  },
+  "mechanicsville-va": {
+    heroSubheadline:
+      "Mechanicsville's residential boom in Hanover County keeps contractor vans, dump trucks, and service fleets busy along the Route 360 and I-295 corridors north of Richmond. We insure the trades building this market.",
+    shortDescription:
+      "Commercial truck and vehicle insurance in Mechanicsville, VA. Coverage for contractors, builders, and fleet operators in Hanover County north of Richmond.",
+    semanticEntities: ["Mechanicsville", "Hanover County", "Route 360", "I-295", "residential construction", "contractor vans"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Mechanicsville",
+        body: [
+          "Mechanicsville has been one of the Richmond metro's fastest-growing areas, with residential and commercial development driving strong demand for contractor and construction vehicles. Dump trucks, work vans, and service fleets move between Hanover County job sites and supplier yards along Route 360 daily.",
+          "Many Mechanicsville operators also serve Richmond and Henrico, which adds highway miles and a wider coverage radius than a strictly local operation.",
+        ],
+        bullets: [
+          "Dump and construction trucks for Hanover County builds",
+          "Contractor and service vans for the building trades",
+          "Commercial fleets serving the Richmond north corridor",
+        ],
+      },
+      {
+        heading: "Coverage for Mechanicsville Contractors and Builders",
+        body: [
+          "Residential builders in Mechanicsville regularly need liability limits and additional-insured status for developer and GC requirements. We structure policies and issue certificates to keep you on the job.",
+          "Trades carrying tools and equipment benefit from pairing commercial auto with tools coverage, and operators running multiple vehicles can combine them on a fleet policy.",
+        ],
+      },
+      {
+        heading: "Serving Mechanicsville and Central Virginia",
+        body: [
+          "From our Manassas office, our licensed advisors serve Mechanicsville and the Richmond metro north corridor. As an independent agency, we compare multiple carriers for the best fit.",
+          "Call (703) 551-2000 to talk through coverage for your Mechanicsville operation.",
+        ],
+      },
+    ],
+  },
+  "spotsylvania-va": {
+    heroSubheadline:
+      "Spotsylvania County's growth south of Fredericksburg along I-95 and Route 3 keeps contractor and construction fleets on the move. We insure the commercial vehicles building this expanding corridor.",
+    shortDescription:
+      "Commercial vehicle insurance in Spotsylvania, VA. Coverage for contractors, construction fleets, and haulers along the I-95 corridor south of Fredericksburg.",
+    semanticEntities: ["Spotsylvania", "Spotsylvania County", "I-95 corridor", "Route 3", "Fredericksburg south", "construction"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Spotsylvania County",
+        body: [
+          "Spotsylvania County has grown steadily along the I-95 corridor south of Fredericksburg, with residential and commercial development putting contractor vans, dump trucks, and service fleets on county roads in volume. Many operators here also serve Stafford and Fredericksburg, running the corridor in both directions.",
+          "Highway miles between job sites and the dual-market reach of Fredericksburg-area operators mean coverage needs to account for a wider radius than a single-county business.",
+        ],
+        bullets: [
+          "Dump and construction trucks for county development",
+          "Contractor and service vans for the building trades",
+          "Commercial fleets running the I-95 and Route 3 corridors",
+        ],
+      },
+      {
+        heading: "Coverage for Spotsylvania Contractors and Operators",
+        body: [
+          "Active construction means Spotsylvania contractors regularly face certificate and liability requirements from owners and general contractors. We issue additional-insured documentation and tailor limits to your contracts.",
+          "Operators running multiple vehicles benefit from a fleet policy, and haulers moving materials along I-95 often add motor truck cargo coverage for the freight they carry.",
+        ],
+      },
+      {
+        heading: "Serving Spotsylvania from Manassas",
+        body: [
+          "Our Manassas office serves Spotsylvania and the Fredericksburg corridor. As an independent agency, we compare carriers to find competitive coverage for Central Virginia operators.",
+          "Call (703) 551-2000 to discuss coverage for your Spotsylvania-area business.",
+        ],
+      },
+    ],
+  },
+  "ashland-va": {
+    heroSubheadline:
+      "Ashland sits at the midpoint of the I-95 and Route 1 corridors between Richmond and Fredericksburg, where small businesses, trades, and regional haulers keep commercial vehicles on the road daily.",
+    shortDescription:
+      "Commercial vehicle insurance in Ashland, VA. Coverage for contractors, haulers, and small fleets at the I-95 midpoint between Richmond and Fredericksburg.",
+    semanticEntities: ["Ashland", "Hanover County", "I-95", "Route 1", "Richmond-Fredericksburg corridor", "regional haulers"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Ashland",
+        body: [
+          "Ashland is a small town with an outsized role on the I-95 and Route 1 corridors. Local contractors and trades serve Hanover County, while regional haulers and delivery operators use Ashland as a waypoint between Richmond and Fredericksburg markets.",
+          "That corridor position means many Ashland-area operators run longer routes than a typical local business, with real highway exposure between job sites north and south.",
+        ],
+        bullets: [
+          "Contractor and service vans for local and county work",
+          "Regional haulers running the I-95 corridor",
+          "Delivery and commercial fleets between Richmond and Fredericksburg",
+        ],
+      },
+      {
+        heading: "Coverage for Ashland Contractors and Haulers",
+        body: [
+          "Local contractors need commercial auto with liability limits that satisfy job requirements, and we issue additional-insured certificates when contracts require them. Haulers running the corridor often benefit from motor truck cargo coverage alongside their liability protection.",
+          "Operators with multiple vehicles can consolidate on a fleet policy for simpler administration and better pricing across carriers.",
+        ],
+      },
+      {
+        heading: "Serving Ashland and the Corridor",
+        body: [
+          "From our Manassas office, our licensed advisors write coverage for Ashland and the Richmond-Fredericksburg corridor. As an independent agency, we shop multiple carriers for the right fit.",
+          "Call (703) 551-2000 to talk through coverage for your Ashland-area operation.",
+        ],
+      },
+    ],
+  },
+  "herndon-va": {
+    heroSubheadline:
+      "Herndon's position along the Dulles corridor and Route 28 puts contractor vans, logistics fleets, and service trucks in constant motion. We insure the commercial operators serving this tech-heavy market.",
+    shortDescription:
+      "Commercial vehicle insurance in Herndon, VA. Coverage for contractor vans, logistics fleets, and service trucks in the Dulles Tech Corridor.",
+    semanticEntities: ["Herndon", "Dulles corridor", "Route 28", "tech corridor", "logistics", "contractor vans"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Herndon",
+        body: [
+          "Herndon sits along Route 28 in the heart of the Dulles Tech Corridor, where data centers, corporate parks, and ongoing construction create steady demand for commercial vehicles. Contractor vans serve job sites, box trucks move goods between warehouses, and service fleets support the area's tech infrastructure.",
+          "The corridor's mix of suburban office parks and heavy construction means operators here often run varied routes between Herndon, Reston, and Sterling job sites.",
+        ],
+        bullets: [
+          "Contractor and service vans for Dulles corridor job sites",
+          "Box trucks and delivery fleets for logistics operations",
+          "Commercial fleets serving Herndon and Fairfax County",
+        ],
+      },
+      {
+        heading: "Coverage for Herndon Contractors and Fleets",
+        body: [
+          "Contractors working Herndon projects frequently need additional-insured certificates and liability limits that match GC requirements. We issue documentation and structure policies to keep you eligible for the work.",
+          "Logistics operators benefit from motor truck cargo coverage alongside commercial auto liability, and growing fleets can combine vehicles on a single policy.",
+        ],
+      },
+      {
+        heading: "Serving Herndon from Manassas",
+        body: [
+          "Our Manassas office is a short drive from Herndon along Route 28, and our advisors work with corridor operators daily. As an independent agency, we compare carriers for competitive coverage.",
+          "Call (703) 551-2000 to discuss coverage for your Herndon vehicles or fleet.",
+        ],
+      },
+    ],
+  },
+  "sterling-va": {
+    heroSubheadline:
+      "Sterling's warehouses, logistics yards, and Dulles-area construction put box trucks, dump trucks, and fleet vehicles on Route 28 and the surrounding Loudoun roads every day. We insure this corridor market.",
+    shortDescription:
+      "Commercial truck and vehicle insurance in Sterling, VA. Coverage for logistics, warehouse, and construction fleets in the Dulles corridor.",
+    semanticEntities: ["Sterling", "Loudoun County", "Route 28", "logistics", "warehousing", "Dulles corridor"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Sterling",
+        body: [
+          "Sterling is a logistics and warehousing hub along the Route 28 corridor, with distribution centers, supplier yards, and data center construction driving heavy commercial traffic. Box trucks, delivery vans, and dump trucks move goods and materials through Sterling daily.",
+          "Operators here often run tight schedules between warehouses, job sites, and Dulles-area destinations, which means high annual mileage and the exposure that comes with it.",
+        ],
+        bullets: [
+          "Box trucks and delivery vans for logistics and distribution",
+          "Dump and construction trucks for corridor development",
+          "Commercial fleets based in Sterling and Loudoun County",
+        ],
+      },
+      {
+        heading: "Coverage for Sterling Logistics and Construction Fleets",
+        body: [
+          "Logistics operators in Sterling often need motor truck cargo coverage alongside commercial auto liability for the goods they haul. Construction fleets working data center and commercial projects need higher limits and additional-insured certificates.",
+          "We build coverage around the specific mix of vehicles your Sterling operation runs, from a single box truck to a full distribution fleet.",
+        ],
+      },
+      {
+        heading: "Serving Sterling from Manassas",
+        body: [
+          "From our Manassas office, our licensed advisors serve Sterling and the Route 28 corridor. As an independent agency, we shop multiple carriers to find competitive, right-sized protection.",
+          "Call (703) 551-2000 to talk through coverage for your Sterling operation.",
+        ],
+      },
+    ],
+  },
+  "tysons-va": {
+    heroSubheadline:
+      "Tysons is one of the largest commercial centers in Virginia, where corporate fleets, construction cranes, and delivery vehicles share some of the region's busiest roads. We insure the commercial operators working this market.",
+    shortDescription:
+      "Commercial vehicle insurance in Tysons, VA. Coverage for corporate fleets, contractor vehicles, and delivery operators in Fairfax County's largest business district.",
+    semanticEntities: ["Tysons", "Tysons Corner", "Fairfax County", "corporate fleets", "Route 7", "Route 123"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Tysons",
+        body: [
+          "Tysons Corner has transformed into a dense urban commercial district where corporate fleets, contractor vans, and delivery trucks navigate Route 7, Route 123, and the Capital Beltway interchange daily. Ongoing tower construction and infrastructure work add dump trucks and heavy equipment to the mix.",
+          "High traffic density and constant construction mean Tysons operators face elevated accident exposure, and liability limits above the Virginia minimum are common here.",
+        ],
+        bullets: [
+          "Corporate and delivery fleets in the Tysons business district",
+          "Contractor and dump trucks for ongoing development",
+          "Service vans for trades working Tysons job sites",
+        ],
+      },
+      {
+        heading: "Coverage for Tysons Corporate and Contractor Fleets",
+        body: [
+          "Corporate fleet operators in Tysons benefit from a commercial fleet policy that combines vehicles under one program and can be experience-rated for better pricing. Contractors working development projects need additional-insured certificates and limits that satisfy owner requirements.",
+          "We tailor coverage to the vehicle mix and driving patterns your Tysons operation actually runs, whether that is a corporate sedan fleet or a construction truck lineup.",
+        ],
+      },
+      {
+        heading: "Serving Tysons from Manassas",
+        body: [
+          "Our Manassas office serves Tysons and Fairfax County operators with coverage suited to high-traffic commercial routes. As an independent agency, we compare multiple carriers for the best fit.",
+          "Call (703) 551-2000 to discuss coverage for your Tysons vehicles or fleet.",
+        ],
+      },
+    ],
+  },
+  "mclean-va": {
+    heroSubheadline:
+      "McLean's corporate campuses, embassy corridor, and Tysons-adjacent development put executive fleets, contractor vans, and service vehicles on some of Northern Virginia's most traveled roads.",
+    shortDescription:
+      "Commercial vehicle insurance in McLean, VA. Coverage for corporate fleets, contractor vans, and service vehicles along the Georgetown Pike and Chain Bridge corridors.",
+    semanticEntities: ["McLean", "Fairfax County", "Georgetown Pike", "corporate fleets", "Chain Bridge Road", "executive vehicles"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in McLean",
+        body: [
+          "McLean is home to corporate headquarters, diplomatic missions, and affluent residential development that together create steady demand for commercial vehicles. Executive fleet cars, contractor vans, and service trucks move along Georgetown Pike, Chain Bridge Road, and the corridors connecting McLean to Tysons and Arlington.",
+          "The mix of corporate and construction activity means operators here often need coverage that spans executive vehicles and heavier work trucks within the same business.",
+        ],
+        bullets: [
+          "Corporate and executive fleet vehicles",
+          "Contractor and service vans for McLean job sites",
+          "Commercial fleets serving the Tysons-McLean corridor",
+        ],
+      },
+      {
+        heading: "Coverage for McLean Corporate and Contractor Operators",
+        body: [
+          "Corporate fleet operators benefit from a commercial auto or fleet policy that covers multiple vehicles under one program. Contractors working McLean projects need liability limits and additional-insured certificates that match the high standards common in this market.",
+          "We structure coverage for the specific vehicle types and routes your McLean operation runs, from executive sedans to work vans hauling tools.",
+        ],
+      },
+      {
+        heading: "Serving McLean from Manassas",
+        body: [
+          "From our Manassas office, our licensed advisors serve McLean and Fairfax County operators. As an independent agency, we compare carriers to find competitive, right-sized protection.",
+          "Call (703) 551-2000 to talk through coverage for your McLean business or fleet.",
+        ],
+      },
+    ],
+  },
+  "springfield-va": {
+    heroSubheadline:
+      "Springfield's Mixing Bowl interchange puts more commercial vehicles through I-95, I-395, and I-495 than almost anywhere in Virginia. We insure the delivery, contractor, and fleet operators navigating this hub.",
+    shortDescription:
+      "Commercial vehicle insurance in Springfield, VA. Coverage for delivery fleets, contractor vans, and commercial trucks at the I-95, I-395, and I-495 interchange.",
+    semanticEntities: ["Springfield", "Mixing Bowl", "I-95", "I-395", "I-495", "delivery fleets"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Springfield",
+        body: [
+          "Springfield sits at the Mixing Bowl, where I-95, I-395, and I-495 converge into one of the busiest interchange systems on the East Coast. Delivery vans, box trucks, and contractor fleets pass through Springfield constantly, serving Fairfax County and points across Northern Virginia.",
+          "That interchange density means heavy traffic, frequent stops, and elevated accident exposure for commercial operators who route through Springfield daily.",
+        ],
+        bullets: [
+          "Delivery and box trucks routing through the Mixing Bowl",
+          "Contractor and service vans for Fairfax County job sites",
+          "Commercial fleets serving the Springfield hub",
+        ],
+      },
+      {
+        heading: "Coverage for Springfield Delivery and Contractor Fleets",
+        body: [
+          "Delivery operators routing through Springfield often need motor truck cargo coverage alongside commercial auto liability for the goods they haul. Contractors working area projects need additional-insured certificates and liability limits that satisfy owner requirements.",
+          "Fleet operators running multiple vehicles through the interchange benefit from a single commercial fleet policy with simplified administration.",
+        ],
+      },
+      {
+        heading: "Serving Springfield from Manassas",
+        body: [
+          "Our Manassas office serves Springfield and Fairfax County operators who work the Mixing Bowl corridors daily. As an independent agency, we shop multiple carriers for competitive coverage.",
+          "Call (703) 551-2000 to discuss coverage for your Springfield vehicles or fleet.",
+        ],
+      },
+    ],
+  },
+  "centreville-va": {
+    heroSubheadline:
+      "Centreville's position at the western edge of Fairfax County along Route 28 and I-66 makes it a crossroads for contractor, logistics, and fleet operators heading toward Manassas, Chantilly, and beyond.",
+    shortDescription:
+      "Commercial vehicle insurance in Centreville, VA. Coverage for contractors, logistics fleets, and commercial trucks at the Route 28 and I-66 crossroads in western Fairfax.",
+    semanticEntities: ["Centreville", "Fairfax County", "Route 28", "I-66", "western Fairfax", "contractor fleets"],
+    sections: [
+      {
+        heading: "Commercial Vehicles in Centreville",
+        body: [
+          "Centreville marks the western gateway to Fairfax County, where Route 28 and I-66 carry contractor vans, box trucks, and fleet vehicles between Manassas, Chantilly, and the broader Northern Virginia market. Residential and commercial development keeps construction and service fleets active throughout the area.",
+          "Operators based in Centreville often cover a wide radius, running between western Fairfax job sites, Manassas suppliers, and Dulles corridor warehouses.",
+        ],
+        bullets: [
+          "Contractor and service vans for western Fairfax projects",
+          "Box trucks and delivery fleets along Route 28",
+          "Commercial fleets connecting Centreville to the corridor",
+        ],
+      },
+      {
+        heading: "Coverage for Centreville Contractors and Fleet Operators",
+        body: [
+          "Contractors working Centreville projects need liability limits and additional-insured certificates that match owner and GC requirements. We issue documentation and tailor policies to your contract terms.",
+          "Operators running multiple vehicles across western Fairfax and Prince William County benefit from a fleet policy that combines coverage under one program with competitive pricing.",
+        ],
+      },
+      {
+        heading: "Serving Centreville from Manassas",
+        body: [
+          "Our Manassas office is just minutes from Centreville along Route 28, and our advisors work with operators throughout western Fairfax daily. As an independent agency, we compare carriers for the best fit.",
+          "Call (703) 551-2000 to talk through coverage for your Centreville operation.",
         ],
       },
     ],
