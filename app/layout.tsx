@@ -48,6 +48,11 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <head>
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="a62/B7Ff6BMyc5ZDNDVu7g"
+          async
+        />
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
