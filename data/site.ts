@@ -20,7 +20,7 @@ export const site: SiteConfig = {
     country: "US",
   },
   geo: { latitude: 38.7422, longitude: -77.5203 },
-  hours: ["Mo-Fr 08:00-18:00", "Sa 09:00-13:00"],
+  hours: ["Mo-Fr 09:00-18:00"],
   socials: [
     "https://www.facebook.com/cascadeinsurancegroup",
     "https://www.linkedin.com/company/cascade-insurance-group",

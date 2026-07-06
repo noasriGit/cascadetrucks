@@ -76,7 +76,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <dt className="text-sm font-semibold uppercase tracking-wide text-brand-600">Hours</dt>
-                <dd className="mt-1 text-muted">Monday&ndash;Friday 8am&ndash;6pm, Saturday 9am&ndash;1pm</dd>
+                <dd className="mt-1 text-muted">Monday&ndash;Friday 9am&ndash;6pm, closed weekends</dd>
               </div>
             </dl>
             <div className="mt-8">
