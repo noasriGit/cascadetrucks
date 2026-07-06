@@ -121,7 +121,7 @@ export default function AboutPage() {
                 {site.email}
               </a>
             </p>
-            <p className="mt-2 text-sm text-muted">Monday–Friday 8am–6pm, Saturday 9am–1pm</p>
+            <p className="mt-2 text-sm text-muted">Monday–Friday 9am–6pm, closed weekends</p>
           </div>
         </div>
       </Section>
