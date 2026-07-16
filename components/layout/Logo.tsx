@@ -2,22 +2,14 @@ import Link from "next/link";
 import { cn } from "@/lib/cn";
 import { site } from "@/data/site";
 
-/** Compact brand mark: a stylized truck inside a rounded badge. */
+/** Compact brand mark using the site favicon. */
 export function LogoMark({ className }: { className?: string }) {
   return (
     <span
-      className={cn(
-        "flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-accent-500 text-brand-950 shadow-sm",
-        className,
-      )}
+      className={cn("flex h-10 w-10 flex-none items-center justify-center overflow-hidden rounded-xl shadow-sm", className)}
       aria-hidden="true"
     >
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 6h11v9H3z" />
-        <path d="M14 9h4l3 3v3h-7z" />
-        <circle cx="7" cy="17.5" r="1.6" fill="currentColor" stroke="none" />
-        <circle cx="17.5" cy="17.5" r="1.6" fill="currentColor" stroke="none" />
-      </svg>
+      <img src="/favicon.svg" alt="" width={40} height={40} className="h-full w-full object-cover" />
     </span>
   );
 }
