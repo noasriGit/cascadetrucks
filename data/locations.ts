@@ -111,7 +111,7 @@ const pageContent: Record<string, LocationContent> = {
       {
         heading: "Serving Fairfax from Nearby Manassas",
         body: [
-          "Cascade Trucks Insurance is based in Manassas, a short drive down Route 28 from Fairfax, so we know this market firsthand. As an independent agency, we compare multiple carriers to find competitive, right-sized coverage rather than quoting a single rate.",
+          "Cascade Truck Insurance is based in Manassas, a short drive down Route 28 from Fairfax, so we know this market firsthand. As an independent agency, we compare multiple carriers to find competitive, right-sized coverage rather than quoting a single rate.",
           "Call (703) 551-2000 to speak with a licensed advisor who understands Fairfax County operating conditions.",
         ],
       },
@@ -469,7 +469,7 @@ const pageContent: Record<string, LocationContent> = {
   },
   "manassas-va": {
     heroSubheadline:
-      "Cascade Trucks Insurance is headquartered in Manassas, at the crossroads of Route 28 and I-66. We know Prince William County's contractor, logistics, and fleet market because this is home.",
+      "Cascade Truck Insurance is headquartered in Manassas, at the crossroads of Route 28 and I-66. We know Prince William County's contractor, logistics, and fleet market because this is home.",
     shortDescription:
       "Commercial truck and vehicle insurance in Manassas, VA. Local coverage for Prince William County contractors, fleets, and trucking businesses from our Manassas office.",
     semanticEntities: ["Manassas", "Prince William County", "Route 28", "I-66", "headquarters", "commercial auto"],
@@ -496,7 +496,7 @@ const pageContent: Record<string, LocationContent> = {
       {
         heading: "Your Local Manassas Insurance Agency",
         body: [
-          "Cascade Trucks Insurance is based right here in Manassas. Our licensed advisors live and work in this market, and as an independent agency we compare multiple carriers rather than offering a single quote.",
+          "Cascade Truck Insurance is based right here in Manassas. Our licensed advisors live and work in this market, and as an independent agency we compare multiple carriers rather than offering a single quote.",
           "Call (703) 551-2000 or visit us to discuss coverage for your Manassas operation. No one knows this corridor better.",
         ],
       },
@@ -961,14 +961,14 @@ const pageContent: Record<string, LocationContent> = {
 
 function fallbackContent(city: string, region: string): LocationContent {
   return {
-    heroSubheadline: `Commercial truck and vehicle insurance for ${city} and the surrounding ${region} area, from licensed advisors at Cascade Trucks Insurance in Manassas.`,
+    heroSubheadline: `Commercial truck and vehicle insurance for ${city} and the surrounding ${region} area, from licensed advisors at Cascade Truck Insurance in Manassas.`,
     shortDescription: `Commercial truck and vehicle insurance for ${city}, ${region}. Coverage for contractors, trucking businesses, and fleets from licensed Virginia advisors.`,
     semanticEntities: [city, region, "commercial auto", "trucking insurance", "Virginia DMV"],
     sections: [
       {
         heading: `Commercial Vehicle Coverage for ${city} Businesses`,
         body: [
-          `Cascade Trucks Insurance writes commercial auto, trucking, and fleet coverage for businesses in ${city} and across ${region}. From dump trucks and contractor vans to multi-vehicle fleets, we tailor coverage to how you operate.`,
+          `Cascade Truck Insurance writes commercial auto, trucking, and fleet coverage for businesses in ${city} and across ${region}. From dump trucks and contractor vans to multi-vehicle fleets, we tailor coverage to how you operate.`,
           `As an independent agency based in Manassas, we compare multiple carriers to find competitive, right-sized protection. Call (703) 551-2000 or request a quote online to get started.`,
         ],
       },

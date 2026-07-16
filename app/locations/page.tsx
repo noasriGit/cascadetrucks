@@ -13,7 +13,7 @@ export function generateMetadata(): Metadata {
   return buildMetadata({
     title: "Commercial Vehicle Insurance Service Areas in Virginia",
     description:
-      "Cascade Trucks Insurance serves commercial vehicle and trucking businesses across Northern Virginia, Richmond, and statewide.",
+      "Cascade Truck Insurance serves commercial vehicle and trucking businesses across Northern Virginia, Richmond, and statewide.",
     path,
   });
 }

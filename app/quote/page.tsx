@@ -16,7 +16,7 @@ export function generateMetadata(): Metadata {
   return buildMetadata({
     title: "Request a Commercial Vehicle Insurance Quote",
     description:
-      "Get a fast, no-obligation commercial truck and vehicle insurance quote in Virginia from Cascade Trucks Insurance.",
+      "Get a fast, no-obligation commercial truck and vehicle insurance quote in Virginia from Cascade Truck Insurance.",
     path,
   });
 }

@@ -1,12 +1,12 @@
 import type { SiteConfig } from "@/lib/types";
 
 export const site: SiteConfig = {
-  brandName: "Cascade Trucks Insurance",
-  legalName: "Cascade Insurance Group",
+  brandName: "Cascade Truck Insurance",
+  legalName: "Cascade Insurance Group LLC",
   parentName: "Cascade Insurance Group",
   tagline: "Virginia Commercial Truck & Vehicle Insurance",
   description:
-    "Cascade Trucks Insurance helps Virginia businesses insure dump trucks, tow trucks, contractor vehicles, and commercial fleets. Get fast quotes from licensed advisors in Manassas, VA.",
+    "Cascade Truck Insurance helps Virginia businesses insure dump trucks, tow trucks, contractor vehicles, and commercial fleets. Get fast quotes from licensed advisors in Manassas, VA.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.cascadetruckinsurance.com",
   phoneDisplay: "(703) 551-2000",
   phoneHref: "+17035512000",

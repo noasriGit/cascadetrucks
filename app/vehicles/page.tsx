@@ -14,7 +14,7 @@ export function generateMetadata(): Metadata {
   return buildMetadata({
     title: "Commercial Vehicle Types We Insure in Virginia",
     description:
-      "Browse all commercial vehicle types insured by Cascade Trucks Insurance in Virginia, trucks, trailers, vans, buses, and debris removal vehicles. Get a quote from licensed advisors.",
+      "Browse all commercial vehicle types insured by Cascade Truck Insurance in Virginia, trucks, trailers, vans, buses, and debris removal vehicles. Get a quote from licensed advisors.",
     path,
   });
 }

@@ -14,9 +14,9 @@ const path = "/contact";
 
 export function generateMetadata(): Metadata {
   return buildMetadata({
-    title: "Contact Cascade Trucks Insurance",
+    title: `Contact ${site.brandName}`,
     description:
-      "Contact Cascade Trucks Insurance for Virginia commercial vehicle and trucking insurance. Call, email, or request a quote online.",
+      `Contact ${site.brandName} for Virginia commercial vehicle and trucking insurance. Call, email, or request a quote online.`,
     path,
   });
 }

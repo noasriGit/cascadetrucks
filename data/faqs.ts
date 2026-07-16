@@ -107,7 +107,7 @@ export const faqs: Faq[] = [
     id: "location-service",
     question: "Do you write commercial vehicle policies in this area?",
     answer:
-      "Yes. Cascade Trucks Insurance is based in Manassas and writes commercial vehicle policies for businesses throughout Virginia, with a strong concentration across Northern Virginia and the I-95 and I-81 corridors. Our advisors are licensed in Virginia and work with operators in your area every week. Call (703) 551-2000 to speak with someone who knows your market.",
+      "Yes. Cascade Truck Insurance is based in Manassas and writes commercial vehicle policies for businesses throughout Virginia, with a strong concentration across Northern Virginia and the I-95 and I-81 corridors. Our advisors are licensed in Virginia and work with operators in your area every week. Call (703) 551-2000 to speak with someone who knows your market.",
   },
   {
     id: "location-local-rules",

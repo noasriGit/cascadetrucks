@@ -12,7 +12,7 @@ export interface QuoteLead {
   receivedAt: string;
 }
 
-const DEFAULT_FROM = "Cascade Trucks Insurance <quotes@cascadetruckinsurance.com>";
+const DEFAULT_FROM = `${site.brandName} <quotes@cascadetruckinsurance.com>`;
 
 function getResendClient(): Resend | null {
   const apiKey = process.env.RESEND_API_KEY;

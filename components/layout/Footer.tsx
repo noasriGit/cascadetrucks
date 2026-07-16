@@ -70,7 +70,7 @@ export function Footer() {
               &copy; {year} {site.legalName}. All rights reserved.
             </p>
             <p className="mt-2 max-w-3xl">
-              Cascade Trucks Insurance is a commercial vehicle insurance brand of {site.parentName}, serving
+              {site.brandName} is a commercial vehicle insurance brand of {site.parentName}, serving
               businesses across Northern Virginia and the Commonwealth of Virginia. Coverage is subject to policy
               terms, conditions, and underwriting approval.
             </p>

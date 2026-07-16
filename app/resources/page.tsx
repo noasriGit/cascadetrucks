@@ -14,7 +14,7 @@ export function generateMetadata(): Metadata {
   return buildMetadata({
     title: "Virginia Commercial Vehicle Insurance Resources & Guides",
     description:
-      "Expert guides on Virginia commercial auto, dump truck, tow truck, fleet, and Uber Black insurance from Cascade Trucks Insurance.",
+      "Expert guides on Virginia commercial auto, dump truck, tow truck, fleet, and Uber Black insurance from Cascade Truck Insurance.",
     path,
   });
 }

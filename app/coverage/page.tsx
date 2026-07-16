@@ -15,7 +15,7 @@ export function generateMetadata(): Metadata {
   return buildMetadata({
     title: "Commercial Vehicle Insurance Coverage in Virginia",
     description:
-      "Explore commercial truck and vehicle insurance coverage types from Cascade Trucks Insurance, serving businesses across Virginia.",
+      "Explore commercial truck and vehicle insurance coverage types from Cascade Truck Insurance, serving businesses across Virginia.",
     path,
   });
 }

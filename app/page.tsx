@@ -11,8 +11,6 @@ import { CallToActionBar } from "@/components/marketing/CallToActionBar";
 import { ParallaxQuote } from "@/components/marketing/ParallaxQuote";
 import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { JsonLd } from "@/components/seo/JsonLd";
-import { insuranceAgencySchema } from "@/lib/schema";
 import { services, coverageServices, industryServices } from "@/data/services";
 import { locations } from "@/data/locations";
 import { getFaqs } from "@/data/faqs";
@@ -44,9 +42,6 @@ const whyCascade = [
 export default function HomePage() {
   return (
     <>
-      {/* Re-enable withReviews once real, attributable reviews are added to data/reviews.ts. */}
-      <JsonLd data={insuranceAgencySchema()} />
-
       <Hero
         eyebrow={site.tagline}
         headline="Virginia Commercial Truck & Vehicle Insurance"

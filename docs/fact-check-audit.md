@@ -699,7 +699,7 @@ _Pending_
 
 | Claim | Location | Verdict | Source | Action |
 |-------|----------|---------|--------|--------|
-| Cascade Trucks Insurance writes commercial auto, trucking, and fleet coverage for businesses | `fallbackContent()` § "Commercial Vehicle Coverage for {city} Businesses" body[0] (Alexandria, Reston, Ashburn, Leesburg, Manassas, Woodbridge) | EXEMPT | Product/service offering, not a statutory threshold or coverage definition | None |
+| Cascade Truck Insurance writes commercial auto, trucking, and fleet coverage for businesses | `fallbackContent()` § "Commercial Vehicle Coverage for {city} Businesses" body[0] (Alexandria, Reston, Ashburn, Leesburg, Manassas, Woodbridge) | EXEMPT | Product/service offering, not a statutory threshold or coverage definition | None |
 | Coverage tailored for dump trucks, contractor vans, and multi-vehicle fleets | `fallbackContent()` body[0] | EXEMPT | Vehicle-type marketing, not a regulatory requirement | None |
 | Independent agency compares multiple carriers for competitive protection | `fallbackContent()` body[1] | EXEMPT | Business model / marketing language | None |
 | Licensed Virginia advisors provide coverage | `fallbackContent()` heroSubheadline, shortDescription, body[1] | EXEMPT | Business credential; out of audit scope per project rules | None |
@@ -746,7 +746,7 @@ _Pending_
 | Claim | File | Verdict | Source | Action |
 |-------|------|---------|--------|--------|
 | Coverage is subject to policy terms, conditions, and underwriting approval | Footer.tsx | VERIFIED | NAIC Advertisement Model Regulation (content.naic.org); standard insurance disclaimer practice | None |
-| Cascade Trucks Insurance is a commercial vehicle insurance brand of Cascade Insurance Group | Footer.tsx | EXEMPT | Self-referential business structure, not a regulatory threshold | None |
+| Cascade Truck Insurance is a commercial vehicle insurance brand of Cascade Insurance Group | Footer.tsx | EXEMPT | Self-referential business structure, not a regulatory threshold | None |
 | Serving businesses across Northern Virginia and the Commonwealth of Virginia | Footer.tsx | EXEMPT | Geographic service-area marketing, not a statutory claim | None |
 | Independent agency | TrustIndicators.tsx | VERIFIED | Virginia SCC Insurance Agents & Agencies (scc.virginia.gov); industry usage for agencies representing multiple insurers | None |
 | Backed by Cascade Insurance Group and multiple A-rated carrier partners | TrustIndicators.tsx | UNVERIFIABLE | AM Best rating scale is a recognized standard, but specific carrier appointments and ratings cannot be confirmed from primary sources in this review | None |
@@ -1113,7 +1113,7 @@ _Pending_
 | data/locations.ts | Richmond / Coverage for Richmond Trucking | Freight and haul operators often need motor truck cargo coverage | EXEMPT | Standard coverage product description | None |
 | data/locations.ts | Richmond / Coverage for Richmond Trucking | For interstate work, federal filings such as the MCS-90 endorsement | VERIFIED | 49 CFR § 387.15; FMCSA Form MCS-90 (fmcsa.dot.gov) | None (qualified with "often need" and "such as") |
 | data/locations.ts | Richmond / Coverage for Richmond Trucking | Larger fleet policies can be experience-rated to reward a strong safety record | VERIFIED | NAIC Model Rating Law; Virginia SCC PC filing guidelines (experience rating plans) | None |
-| data/locations.ts | `fallbackContent()` § "Commercial Vehicle Coverage for {city} Businesses" body[0] (Alexandria, Reston, Ashburn, Leesburg, Manassas, Woodbridge) | Cascade Trucks Insurance writes commercial auto, trucking, and fleet coverage for businesses | EXEMPT | Product/service offering, not a statutory threshold or coverage definition | None |
+| data/locations.ts | `fallbackContent()` § "Commercial Vehicle Coverage for {city} Businesses" body[0] (Alexandria, Reston, Ashburn, Leesburg, Manassas, Woodbridge) | Cascade Truck Insurance writes commercial auto, trucking, and fleet coverage for businesses | EXEMPT | Product/service offering, not a statutory threshold or coverage definition | None |
 | data/locations.ts | `fallbackContent()` body[0] | Coverage tailored for dump trucks, contractor vans, and multi-vehicle fleets | EXEMPT | Vehicle-type marketing, not a regulatory requirement | None |
 | data/locations.ts | `fallbackContent()` body[1] | Independent agency compares multiple carriers for competitive protection | EXEMPT | Business model / marketing language | None |
 | data/locations.ts | `fallbackContent()` heroSubheadline, shortDescription, body[1] | Licensed Virginia advisors provide coverage | EXEMPT | Business credential; out of audit scope per project rules | None |
@@ -1134,7 +1134,7 @@ _Pending_
 | app/vehicles/page.tsx | app/vehicles/page.tsx | If you use it for business in Virginia, we can insure it | EXEMPT | Operational sales promise, not a coverage or regulatory definition | None |
 | app/resources/page.tsx | app/resources/page.tsx | Expert guides on Virginia commercial auto, dump truck, tow truck, fleet, and Uber Black insurance (metadata) | EXEMPT | Subjective marketing descriptor | None |
 | Footer.tsx | Footer.tsx | Coverage is subject to policy terms, conditions, and underwriting approval | VERIFIED | NAIC Advertisement Model Regulation (content.naic.org); standard insurance disclaimer practice | None |
-| Footer.tsx | Footer.tsx | Cascade Trucks Insurance is a commercial vehicle insurance brand of Cascade Insurance Group | EXEMPT | Self-referential business structure, not a regulatory threshold | None |
+| Footer.tsx | Footer.tsx | Cascade Truck Insurance is a commercial vehicle insurance brand of Cascade Insurance Group | EXEMPT | Self-referential business structure, not a regulatory threshold | None |
 | Footer.tsx | Footer.tsx | Serving businesses across Northern Virginia and the Commonwealth of Virginia | EXEMPT | Geographic service-area marketing, not a statutory claim | None |
 | TrustIndicators.tsx | TrustIndicators.tsx | Independent agency | VERIFIED | Virginia SCC Insurance Agents & Agencies (scc.virginia.gov); industry usage for agencies representing multiple insurers | None |
 | TrustIndicators.tsx | TrustIndicators.tsx | Backed by Cascade Insurance Group and multiple A-rated carrier partners | UNVERIFIABLE | AM Best rating scale is a recognized standard, but specific carrier appointments and ratings cannot be confirmed from primary sources in this review | None |

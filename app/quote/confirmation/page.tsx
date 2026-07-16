@@ -15,7 +15,7 @@ const path = QUOTE_CONFIRMATION_PATH;
 export function generateMetadata(): Metadata {
   return buildMetadata({
     title: "Quote Request Received",
-    description: "Thank you for requesting a commercial vehicle insurance quote from Cascade Trucks Insurance.",
+    description: "Thank you for requesting a commercial vehicle insurance quote from Cascade Truck Insurance.",
     path,
     noIndex: true,
   });
