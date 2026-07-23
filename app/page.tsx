@@ -7,12 +7,15 @@ import { CoverageGrid } from "@/components/marketing/CoverageGrid";
 import { ServiceAreaGrid } from "@/components/marketing/ServiceAreaGrid";
 import { CarrierLogos } from "@/components/marketing/CarrierLogos";
 import { Faq } from "@/components/marketing/Faq";
+import { Reviews } from "@/components/marketing/Reviews";
 import { CallToActionBar } from "@/components/marketing/CallToActionBar";
 import { ParallaxQuote } from "@/components/marketing/ParallaxQuote";
 import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { services, coverageServices, industryServices } from "@/data/services";
 import { locations } from "@/data/locations";
+import { getVehicles } from "@/data/vehicles";
+import { getResources } from "@/data/resources";
 import { getFaqs } from "@/data/faqs";
 import { site } from "@/data/site";
 import { media } from "@/data/media";
@@ -23,6 +26,24 @@ const homeFaqs = getFaqs([
   "general-quote-speed",
   "general-multi-vehicle",
 ]);
+
+const featuredVehicleSlugs = [
+  "dump-trailer-insurance",
+  "box-truck-insurance",
+  "cargo-van-insurance",
+  "truck-tractor-insurance",
+  "flatbed-truck-insurance",
+  "car-carrier-insurance",
+  "commercial-pickup-insurance",
+  "cement-mixer-truck-insurance",
+  "limousine-insurance",
+];
+
+const featuredResourceSlugs = [
+  "virginia-commercial-auto-insurance-guide",
+  "how-dump-truck-insurance-works",
+  "commercial-fleet-insurance-guide",
+];
 
 const whyCascade = [
   {
@@ -40,6 +61,9 @@ const whyCascade = [
 ];
 
 export default function HomePage() {
+  const featuredVehicles = getVehicles(featuredVehicleSlugs);
+  const featuredResources = getResources(featuredResourceSlugs);
+
   return (
     <>
       <Hero
@@ -86,6 +110,35 @@ export default function HomePage() {
         </div>
       </Section>
 
+      <Section ariaLabelledby="vehicles-heading">
+        <SectionHeading
+          id="vehicles-heading"
+          eyebrow="Vehicle Types"
+          title="Commercial vehicles we insure"
+          description="From dump trailers and box trucks to cargo vans and livery vehicles, browse the equipment we cover across Virginia."
+        />
+        <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {featuredVehicles.map((vehicle) => (
+            <li key={vehicle.slug}>
+              <Link
+                href={`/vehicles/${vehicle.slug}`}
+                className="flex items-center justify-between rounded-xl border border-line bg-surface p-4 shadow-card transition-shadow hover:shadow-elevated"
+              >
+                <span className="text-sm font-medium text-ink">{vehicle.name}</span>
+                <span className="ml-2 flex-none text-brand-500" aria-hidden="true">
+                  →
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-6 text-sm text-muted">
+          <Link href="/vehicles" className="font-semibold text-brand-600 hover:underline">
+            View all vehicle types <span aria-hidden="true">&rarr;</span>
+          </Link>
+        </p>
+      </Section>
+
       <Section tone="brand" ariaLabelledby="about-preview-heading">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div>
@@ -98,8 +151,8 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-brand-100">
               {site.brandName} is the commercial vehicle specialty of {site.parentName}, an independent
-              agency based in Manassas, VA. Our licensed team compares options across multiple A-rated
-              carriers to find coverage built around how your operation actually runs.
+              agency based in Manassas, VA. Our licensed team compares options across multiple
+              carrier partners to find coverage built around how your operation actually runs.
             </p>
             <Link
               href="/about"
@@ -137,7 +190,49 @@ export default function HomePage() {
         </p>
       </Section>
 
-      <Section tone="soft" ariaLabelledby="why-heading">
+      <Section tone="soft" ariaLabelledby="resources-heading">
+        <SectionHeading
+          id="resources-heading"
+          eyebrow="Resources"
+          title="Guides for Virginia commercial operators"
+          description="Plain-language explainers on coverage, requirements, and how to choose the right policy."
+        />
+        <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {featuredResources.map((resource) => (
+            <li key={resource.slug}>
+              <Link
+                href={`/resources/${resource.slug}`}
+                className="flex h-full flex-col rounded-2xl border border-line bg-surface p-6 shadow-card transition-shadow hover:shadow-card-hover"
+              >
+                <h3 className="text-lg font-semibold text-brand-800">{resource.title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{resource.excerpt}</p>
+                <span className="mt-4 text-sm font-semibold text-brand-600">
+                  Read guide <span aria-hidden="true">&rarr;</span>
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-6 text-sm text-muted">
+          <Link href="/resources" className="font-semibold text-brand-600 hover:underline">
+            Browse all resources <span aria-hidden="true">&rarr;</span>
+          </Link>
+        </p>
+      </Section>
+
+      <Section ariaLabelledby="reviews-heading">
+        <SectionHeading
+          id="reviews-heading"
+          eyebrow="Customer reviews"
+          title="What clients say about Cascade"
+          description="A selection of reviews from Virginia customers who worked with our parent agency."
+        />
+        <div className="mt-10">
+          <Reviews />
+        </div>
+      </Section>
+
+      <Section ariaLabelledby="why-heading">
         <SectionHeading
           id="why-heading"
           eyebrow={`A division of ${site.parentName}`}
@@ -145,7 +240,10 @@ export default function HomePage() {
         />
         <ul className="mt-10 grid gap-6 md:grid-cols-3">
           {whyCascade.map((item) => (
-            <li key={item.title} className="rounded-2xl border border-line bg-surface p-6 shadow-card transition-shadow hover:shadow-card-hover">
+            <li
+              key={item.title}
+              className="rounded-2xl border border-line bg-surface p-6 shadow-card transition-shadow hover:shadow-card-hover"
+            >
               <h3 className="text-lg font-semibold text-brand-800">{item.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">{item.body}</p>
             </li>

@@ -7,7 +7,6 @@ import { SitemapAzIndex } from "@/components/sitemap/SitemapAzIndex";
 import { SitemapSearch } from "@/components/sitemap/SitemapSearch";
 import { SitemapSectionBlock } from "@/components/sitemap/SitemapSection";
 import { buildMetadata } from "@/lib/metadata";
-import { breadcrumbSchema } from "@/lib/schema";
 import { buildAzIndex } from "@/lib/sitemap/az-index";
 import {
   getIndexableSitemapEntries,
@@ -22,7 +21,7 @@ const path = "/sitemap";
 export function generateMetadata(): Metadata {
   return buildMetadata({
     title: "Sitemap",
-    description: `Browse every page on the ${site.brandName} website, including coverage types, industries, service areas, vehicle types, and guides.`,
+    description: `Browse every page on the ${site.brandName} website, including coverage, industries, vehicles, locations, and resources.`,
     path,
   });
 }
@@ -39,13 +38,12 @@ export default function SitemapPage() {
 
   return (
     <>
-      <JsonLd data={breadcrumbSchema(breadcrumbs)} />
       <JsonLd data={sitemapPageSchema(entries, path)} />
 
       <Hero
         eyebrow="Sitemap"
         headline="Browse all pages"
-        subheadline={`A complete index of ${entries.length} pages on ${site.brandName}, organized by coverage, industries, locations, vehicles, and guides.`}
+        subheadline={`A complete index of ${entries.length} pages on ${site.brandName}, organized by coverage, industries, vehicles, locations, and resources.`}
         breadcrumbs={<Breadcrumbs items={breadcrumbs} />}
       />
 

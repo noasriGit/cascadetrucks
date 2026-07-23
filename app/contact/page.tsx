@@ -6,7 +6,9 @@ import { ClickToCall } from "@/components/layout/ClickToCall";
 import { PhoneLink } from "@/components/layout/PhoneLink";
 import { DetailHero } from "@/components/marketing/DetailHero";
 import { QuoteForm } from "@/components/forms/QuoteForm";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { buildMetadata } from "@/lib/metadata";
+import { contactPageSchema } from "@/lib/schema";
 import { media } from "@/data/media";
 import { site } from "@/data/site";
 
@@ -24,6 +26,7 @@ export function generateMetadata(): Metadata {
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={contactPageSchema(path)} />
       <DetailHero
         breadcrumbs={<Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Contact", path }]} />}
         eyebrow="Contact"
@@ -72,12 +75,47 @@ export default function ContactPage() {
                     <br />
                     {site.address.city}, {site.address.regionCode} {site.address.postalCode}
                   </address>
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                      `${site.address.street}, ${site.address.city}, ${site.address.regionCode} ${site.address.postalCode}`,
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-block font-medium text-brand-700 hover:underline"
+                  >
+                    Get directions
+                  </a>
                 </dd>
               </div>
               <div>
                 <dt className="text-sm font-semibold uppercase tracking-wide text-brand-600">Hours</dt>
                 <dd className="mt-1 text-muted">Monday&ndash;Friday 9am&ndash;6pm, closed weekends</dd>
               </div>
+              {site.socials.length > 0 ? (
+                <div>
+                  <dt className="text-sm font-semibold uppercase tracking-wide text-brand-600">Social</dt>
+                  <dd className="mt-1 space-y-1">
+                    {site.socials.map((url) => {
+                      const label = url.includes("facebook")
+                        ? "Facebook"
+                        : url.includes("linkedin")
+                          ? "LinkedIn"
+                          : url;
+                      return (
+                        <a
+                          key={url}
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block text-brand-800 hover:underline"
+                        >
+                          {label}
+                        </a>
+                      );
+                    })}
+                  </dd>
+                </div>
+              ) : null}
             </dl>
             <div className="mt-8">
               <ClickToCall variant="solid" />

@@ -1,35 +1,155 @@
-import type { ContentSection, Location } from "@/lib/types";
+import type { ContentSection, GeoPoint, Location } from "@/lib/types";
 
-const PAGE_LOCATIONS = [
-  "fairfax-va",
-  "arlington-va",
-  "chantilly-va",
-  "stafford-va",
-  "fredericksburg-va",
-  "winchester-va",
-  "richmond-va",
-  "alexandria-va",
-  "reston-va",
-  "ashburn-va",
-  "leesburg-va",
-  "manassas-va",
-  "woodbridge-va",
-  "henrico-va",
-  "glen-allen-va",
-  "short-pump-va",
-  "mechanicsville-va",
-  "spotsylvania-va",
-  "ashland-va",
-  "herndon-va",
-  "sterling-va",
-  "tysons-va",
-  "mclean-va",
-  "springfield-va",
-  "centreville-va",
+function haversineMiles(a: GeoPoint, b: GeoPoint): number {
+  const R = 3959;
+  const dLat = ((b.latitude - a.latitude) * Math.PI) / 180;
+  const dLon = ((b.longitude - a.longitude) * Math.PI) / 180;
+  const lat1 = (a.latitude * Math.PI) / 180;
+  const lat2 = (b.latitude * Math.PI) / 180;
+  const h =
+    Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+function nearby(slug: string, count = 4): string[] {
+  const seed = seeds.find((s) => s.slug === slug);
+  if (!seed) return [];
+
+  const candidates = seeds.filter((s) => s.slug !== slug && s.hasPage);
+
+  if (seed.geo) {
+    const withGeo = candidates.filter((s): s is LocationSeed & { geo: GeoPoint } => Boolean(s.geo));
+    if (withGeo.length >= count) {
+      return withGeo
+        .map((s) => ({ slug: s.slug, distance: haversineMiles(seed.geo!, s.geo) }))
+        .sort((a, b) => a.distance - b.distance)
+        .slice(0, count)
+        .map((entry) => entry.slug);
+    }
+  }
+
+  const sameRegion = candidates.filter((s) => s.region === seed.region).map((s) => s.slug);
+  const others = candidates.filter((s) => s.region !== seed.region).map((s) => s.slug);
+  return [...sameRegion, ...others].slice(0, count);
+}
+
+const LOCATION_VEHICLE_POOL = [
+  "box-truck-insurance",
+  "bucket-truck-insurance",
+  "car-carrier-insurance",
+  "catering-truck-insurance",
+  "cement-mixer-truck-insurance",
+  "delivery-van-insurance",
+  "flatbed-truck-insurance",
+  "hotshot-truck-insurance",
+  "pump-truck-insurance",
+  "refrigerated-truck-insurance",
+  "stake-body-truck-insurance",
+  "tank-truck-insurance",
+  "truck-tractor-insurance",
+  "auto-hauler-trailer-insurance",
+  "dump-trailer-insurance",
+  "bulk-commodity-trailer-insurance",
+  "concession-trailer-insurance",
+  "dry-freight-trailer-insurance",
+  "transfer-dump-trailer-insurance",
+  "pole-trailer-insurance",
+  "refrigerated-trailer-insurance",
+  "tank-trailer-insurance",
+  "rag-top-trailer-insurance",
+  "flatbed-trailer-insurance",
+  "gooseneck-trailer-insurance",
+  "horse-trailer-insurance",
+  "livestock-trailer-insurance",
+  "logging-trailer-insurance",
+  "lowboy-trailer-insurance",
+  "tilt-trailer-insurance",
+  "commercial-travel-trailer-insurance",
+  "utility-trailer-insurance",
+  "large-utility-trailer-insurance",
+  "wedge-trailer-insurance",
+  "business-passenger-car-insurance",
+  "cargo-van-insurance",
+  "hearse-insurance",
+  "limousine-insurance",
+  "commercial-minivan-insurance",
+  "passenger-van-insurance",
+  "commercial-pickup-insurance",
+  "commercial-suv-insurance",
+  "wheelchair-van-insurance",
+  "luxury-suv-insurance",
+  "commercial-motorhome-insurance",
+  "bus-insurance",
+  "wheelchair-bus-insurance",
+  "school-bus-insurance",
+  "front-loader-truck-insurance",
+  "garbage-truck-insurance",
+  "roll-off-truck-insurance",
 ];
 
-function nearby(slug: string): string[] {
-  return PAGE_LOCATIONS.filter((s) => s !== slug).slice(0, 4);
+function relatedVehiclesFor(slug: string): string[] {
+  const index = seeds.findIndex((s) => s.slug === slug);
+  const start = index >= 0 ? (index * 4) % LOCATION_VEHICLE_POOL.length : 0;
+  const picked: string[] = [];
+  for (let i = 0; i < 4; i += 1) {
+    picked.push(LOCATION_VEHICLE_POOL[(start + i) % LOCATION_VEHICLE_POOL.length]);
+  }
+  return picked;
+}
+
+function relatedServicesFor(slug: string, region: string): string[] {
+  if (slug === "arlington-va" || slug === "alexandria-va" || slug === "tysons-va") {
+    return [
+      "uber-black-insurance",
+      "commercial-auto-insurance",
+      "business-auto-insurance",
+      "commercial-fleet-insurance",
+      "tow-truck-insurance",
+    ];
+  }
+  if (region === "Central Virginia") {
+    return [
+      "dump-truck-insurance",
+      "commercial-fleet-insurance",
+      "semi-truck-insurance",
+      "contractor-vehicle-insurance",
+      "commercial-auto-insurance",
+    ];
+  }
+  if (region === "Shenandoah Valley") {
+    return [
+      "dump-truck-insurance",
+      "construction-vehicle-insurance",
+      "contractor-vehicle-insurance",
+      "commercial-auto-insurance",
+      "landscaping-vehicle-insurance",
+    ];
+  }
+  return [
+    "dump-truck-insurance",
+    "tow-truck-insurance",
+    "contractor-vehicle-insurance",
+    "commercial-fleet-insurance",
+    "commercial-auto-insurance",
+  ];
+}
+
+function relatedResourcesFor(slug: string): string[] {
+  const specialty: Record<string, string[]> = {
+    "manassas-va": ["virginia-commercial-auto-insurance-guide", "how-dump-truck-insurance-works"],
+    "fairfax-va": ["commercial-fleet-insurance-guide", "virginia-commercial-auto-insurance-guide"],
+    "arlington-va": ["uber-black-insurance-requirements", "virginia-commercial-auto-insurance-guide"],
+    "alexandria-va": ["tow-truck-insurance-requirements", "virginia-commercial-auto-insurance-guide"],
+    "richmond-va": ["virginia-commercial-auto-insurance-guide", "commercial-fleet-insurance-guide"],
+    "henrico-va": ["commercial-fleet-insurance-guide", "how-dump-truck-insurance-works"],
+    "chantilly-va": ["how-dump-truck-insurance-works", "virginia-commercial-auto-insurance-guide"],
+    "woodbridge-va": ["tow-truck-insurance-requirements", "commercial-fleet-insurance-guide"],
+    "stafford-va": ["how-dump-truck-insurance-works", "tow-truck-insurance-requirements"],
+    "fredericksburg-va": ["commercial-fleet-insurance-guide", "how-dump-truck-insurance-works"],
+    "tysons-va": ["uber-black-insurance-requirements", "commercial-fleet-insurance-guide"],
+    "winchester-va": ["how-dump-truck-insurance-works", "virginia-commercial-auto-insurance-guide"],
+  };
+  return specialty[slug] ?? ["virginia-commercial-auto-insurance-guide"];
 }
 
 function image(slug: string, alt: string) {
@@ -989,13 +1109,9 @@ export const locations: Location[] = seeds.map((seed) => {
     semanticEntities: content.semanticEntities,
     sections: content.sections,
     faqIds: ["location-service", "location-local-rules", "general-cost", "general-requirements"],
-    relatedServiceSlugs: [
-      "dump-truck-insurance",
-      "tow-truck-insurance",
-      "contractor-vehicle-insurance",
-      "commercial-fleet-insurance",
-      "commercial-auto-insurance",
-    ],
+    relatedServiceSlugs: relatedServicesFor(seed.slug, seed.region),
+    relatedVehicleSlugs: relatedVehiclesFor(seed.slug),
+    relatedResourceSlugs: relatedResourcesFor(seed.slug),
     nearbyLocationSlugs: nearby(seed.slug),
     image: image(seed.slug, `${seed.city}, Virginia commercial vehicles`),
     geo: seed.geo,

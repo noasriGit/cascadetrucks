@@ -33,7 +33,7 @@ function NavEntry({ entry, pathname }: { entry: MainNavEntry; pathname: string }
         href={entry.href}
         aria-current={active ? "page" : undefined}
         className={cn(
-          "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+          "whitespace-nowrap rounded-lg px-2 py-2 text-sm font-medium transition-colors xl:px-2.5",
           active ? "bg-white/10 text-white" : "text-brand-100 hover:bg-white/10 hover:text-white",
         )}
       >
@@ -139,7 +139,7 @@ function NavEntry({ entry, pathname }: { entry: MainNavEntry; pathname: string }
         onClick={() => setOpen((v) => !v)}
         onKeyDown={onButtonKeyDown}
         className={cn(
-          "inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+          "inline-flex items-center gap-0.5 whitespace-nowrap rounded-lg px-2 py-2 text-sm font-medium transition-colors xl:gap-1 xl:px-2.5",
           active || open ? "bg-white/10 text-white" : "text-brand-100 hover:bg-white/10 hover:text-white",
         )}
       >
@@ -205,23 +205,25 @@ export function Header() {
         scrolled ? "shadow-lg shadow-brand-950/30 supports-[backdrop-filter]:bg-brand-800/90 supports-[backdrop-filter]:backdrop-blur" : "shadow-sm",
       )}
     >
-      <Container className="flex h-16 items-center justify-between gap-4 lg:h-20">
+      <Container className="flex h-16 max-w-7xl items-center justify-between gap-3 lg:h-20 lg:gap-4">
         <Logo />
 
-        <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-0.5">
-            {mainNav.map((entry) => (
-              <li key={entry.href}>
+        <nav aria-label="Primary" className="hidden min-w-0 flex-1 justify-center lg:flex">
+          <ul className="flex flex-nowrap items-center justify-center gap-0">
+            {mainNav
+              .filter((entry) => entry.href !== "/")
+              .map((entry) => (
+              <li key={entry.href} className="shrink-0">
                 <NavEntry entry={entry} pathname={pathname} />
               </li>
             ))}
           </ul>
         </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
+        <div className="hidden shrink-0 items-center gap-1.5 lg:flex xl:gap-2">
           <PhoneLink
             aria-label={`Call ${site.brandName} at ${site.phoneDisplay}`}
-            className="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold text-accent-400 transition-colors hover:bg-white/10 hover:text-accent-300"
+            className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg px-2 py-2 text-sm font-semibold text-accent-400 transition-colors hover:bg-white/10 hover:text-accent-300 xl:px-3"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
             {site.phoneDisplay}

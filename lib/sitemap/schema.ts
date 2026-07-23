@@ -1,6 +1,7 @@
 import { site } from "@/data/site";
 import { absoluteUrl } from "@/lib/url";
 import type { SitemapEntry } from "@/lib/sitemap/types";
+import { WEBSITE_ID } from "@/lib/schema";
 
 type Json = Record<string, unknown>;
 
@@ -11,11 +12,7 @@ export function sitemapPageSchema(entries: SitemapEntry[], path: string): Json {
     name: "Sitemap",
     description: `Browse all pages on the ${site.brandName} website.`,
     url: absoluteUrl(path),
-    isPartOf: {
-      "@type": "WebSite",
-      name: site.brandName,
-      url: absoluteUrl("/"),
-    },
+    isPartOf: { "@id": WEBSITE_ID },
     mainEntity: {
       "@type": "ItemList",
       numberOfItems: entries.length,

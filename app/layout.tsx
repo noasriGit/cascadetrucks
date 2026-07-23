@@ -10,7 +10,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SkipLink } from "@/components/layout/SkipLink";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { organizationSchema, insuranceAgencySchema } from "@/lib/schema";
+import { organizationSchema, insuranceAgencySchema, websiteSchema } from "@/lib/schema";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -96,6 +96,7 @@ export default function RootLayout({
         </Script>
         <JsonLd data={organizationSchema()} />
         <JsonLd data={insuranceAgencySchema()} />
+        <JsonLd data={websiteSchema()} />
         <div id="splash-boot">
           <button
             type="button"

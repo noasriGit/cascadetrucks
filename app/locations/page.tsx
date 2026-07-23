@@ -4,8 +4,10 @@ import { Section, SectionHeading } from "@/components/layout/Section";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ServiceAreaGrid } from "@/components/marketing/ServiceAreaGrid";
 import { CallToActionBar } from "@/components/marketing/CallToActionBar";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { buildMetadata } from "@/lib/metadata";
-import { locations } from "@/data/locations";
+import { collectionPageSchema } from "@/lib/schema";
+import { locations, pageLocations } from "@/data/locations";
 
 const path = "/locations";
 
@@ -21,6 +23,18 @@ export function generateMetadata(): Metadata {
 export default function LocationsPage() {
   return (
     <>
+      <JsonLd
+        data={collectionPageSchema({
+          name: "Virginia Commercial Vehicle Insurance Service Areas",
+          description:
+            "Cascade Truck Insurance serves commercial vehicle and trucking businesses across Northern Virginia, Richmond, and statewide.",
+          path,
+          items: pageLocations.map((l) => ({
+            name: `${l.city}, VA`,
+            url: `/locations/${l.slug}`,
+          })),
+        })}
+      />
       <Hero
         eyebrow="Locations"
         headline="Virginia Commercial Vehicle Insurance Near You"

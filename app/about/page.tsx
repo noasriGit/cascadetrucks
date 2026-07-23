@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Hero } from "@/components/marketing/Hero";
 import { Section, SectionHeading } from "@/components/layout/Section";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { HeroBrandLogo } from "@/components/layout/Logo";
 import { TrustIndicators } from "@/components/marketing/TrustIndicators";
+import { Reviews } from "@/components/marketing/Reviews";
 import { CallToActionBar } from "@/components/marketing/CallToActionBar";
 import { PhoneLink } from "@/components/layout/PhoneLink";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { buildMetadata } from "@/lib/metadata";
+import { aboutPageSchema } from "@/lib/schema";
 import { media } from "@/data/media";
 import { site } from "@/data/site";
 
@@ -40,6 +44,7 @@ const sections = [
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={aboutPageSchema(path)} />
       <Hero
         eyebrow={`A division of ${site.parentName}`}
         headline={`About ${site.brandName}`}
@@ -78,11 +83,43 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section tone="soft" ariaLabelledby="about-trust-heading">
+      <Section tone="soft" ariaLabelledby="about-how-heading">
+        <SectionHeading
+          id="about-how-heading"
+          eyebrow="How we work"
+          title="Licensed advisors, independent advice"
+          description={`${site.brandName} is staffed by Virginia-licensed property and casualty advisors at ${site.parentName}, an independent agency. We help operators compare commercial vehicle options across multiple carrier partners. We do not invent coverage, and quotes are subject to underwriting.`}
+        />
+        <p className="mt-6 max-w-3xl text-base leading-7 text-muted">
+          Read our{" "}
+          <Link href="/editorial-standards" className="font-medium text-brand-700 hover:underline">
+            editorial standards
+          </Link>{" "}
+          for how we research guides, and our{" "}
+          <Link href="/privacy" className="font-medium text-brand-700 hover:underline">
+            privacy policy
+          </Link>{" "}
+          for how quote and contact information is handled.
+        </p>
+      </Section>
+
+      <Section ariaLabelledby="about-trust-heading">
         <h2 id="about-trust-heading" className="sr-only">
           Why clients trust us
         </h2>
         <TrustIndicators />
+      </Section>
+
+      <Section ariaLabelledby="about-reviews-heading">
+        <SectionHeading
+          id="about-reviews-heading"
+          eyebrow="Customer reviews"
+          title="Feedback from Virginia clients"
+          description="Reviews from customers who worked with Cascade Insurance Group."
+        />
+        <div className="mt-10">
+          <Reviews />
+        </div>
       </Section>
 
       <Section ariaLabelledby="about-office-heading">

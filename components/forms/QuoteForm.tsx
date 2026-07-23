@@ -2,6 +2,7 @@
 
 import { useActionState, useEffect, useId } from "react";
 import { useFormStatus } from "react-dom";
+import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
 import { submitQuoteRequest } from "@/app/actions/quote";
 import { initialQuoteState, quoteCoverageCategories, resolveQuoteCoverageCategory } from "@/lib/quote";
@@ -167,9 +168,14 @@ export function QuoteForm({
         </Field>
 
         <SubmitButton />
-        <p className="flex items-center justify-center gap-1.5 text-center text-xs text-muted">
+        <p className="flex flex-wrap items-center justify-center gap-1.5 text-center text-xs text-muted">
           <ShieldCheck className="h-4 w-4 text-brand-400" aria-hidden="true" />
-          No obligation. We never sell your information.
+          <span>
+            No obligation. We never sell your information.{" "}
+            <Link href="/privacy" className="font-medium text-brand-700 underline-offset-2 hover:underline">
+              Privacy policy
+            </Link>
+          </span>
         </p>
       </form>
     </div>

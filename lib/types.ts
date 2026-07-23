@@ -109,6 +109,8 @@ export interface Location {
   sections: ContentSection[];
   faqIds: string[];
   relatedServiceSlugs: string[];
+  relatedVehicleSlugs: string[];
+  relatedResourceSlugs: string[];
   nearbyLocationSlugs: string[];
   image: ServiceImage;
   geo?: GeoPoint;
@@ -125,6 +127,8 @@ export interface Resource {
   faqIds: string[];
   relatedServiceSlugs: string[];
   relatedResourceSlugs: string[];
+  /** Optional outbound citations for YMYL credibility. */
+  sources?: { label: string; url: string }[];
   published: string;
   updated: string;
   image: ServiceImage;

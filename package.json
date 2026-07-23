@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "test": "node --import tsx --test lib/sitemap/*.test.ts",
-    "validate:sitemap": "tsx scripts/validate-sitemap.ts"
+    "validate:sitemap": "tsx scripts/validate-sitemap.ts",
+    "validate:internal-links": "tsx scripts/validate-internal-links.ts",
+    "validate:schema": "tsx scripts/validate-schema.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",

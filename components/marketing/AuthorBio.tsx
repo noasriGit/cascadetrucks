@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Author } from "@/lib/types";
 
 export function AuthorBio({ author, reviewedDate }: { author: Author; reviewedDate?: string }) {
@@ -6,7 +7,7 @@ export function AuthorBio({ author, reviewedDate }: { author: Author; reviewedDa
     <aside aria-label="About the author" className="flex flex-col gap-4 rounded-2xl border border-line bg-surface-soft p-6 shadow-card sm:flex-row sm:items-start">
       <Image
         src={author.image}
-        alt={`${author.name} avatar`}
+        alt=""
         width={72}
         height={72}
         className="h-16 w-16 flex-none rounded-full object-cover"
@@ -15,7 +16,11 @@ export function AuthorBio({ author, reviewedDate }: { author: Author; reviewedDa
         <p className="text-xs font-semibold uppercase tracking-wide text-brand-600">
           Written &amp; reviewed by
         </p>
-        <p className="mt-1 text-base font-bold text-ink">{author.name}</p>
+        <p className="mt-1 text-base font-bold text-ink">
+          <Link href={`/authors/${author.id}`} className="hover:text-brand-700 hover:underline">
+            {author.name}
+          </Link>
+        </p>
         <p className="text-sm text-muted">{author.title}</p>
         <p className="mt-2 text-sm text-muted">{author.bio}</p>
         {author.credentials.length > 0 ? (
@@ -27,9 +32,12 @@ export function AuthorBio({ author, reviewedDate }: { author: Author; reviewedDa
             ))}
           </ul>
         ) : null}
-        {reviewedDate ? (
-          <p className="mt-3 text-xs text-muted">Last reviewed: {reviewedDate}</p>
-        ) : null}
+        <p className="mt-3 text-xs text-muted">
+          {reviewedDate ? <>Last reviewed: {reviewedDate}. </> : null}
+          <Link href="/editorial-standards" className="font-medium text-brand-700 hover:underline">
+            Editorial standards
+          </Link>
+        </p>
       </div>
     </aside>
   );
