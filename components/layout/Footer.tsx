@@ -46,6 +46,29 @@ export function Footer() {
                 {site.email}
               </a>
             </address>
+            {site.socials.length > 0 ? (
+              <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                {site.socials.map((url) => {
+                  const label = url.includes("facebook")
+                    ? "Facebook"
+                    : url.includes("linkedin")
+                      ? "LinkedIn"
+                      : "Social";
+                  return (
+                    <li key={url}>
+                      <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-brand-200 transition-colors hover:text-white"
+                      >
+                        {label}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : null}
           </div>
 
           {footerNav.map((group) => (

@@ -25,7 +25,7 @@ export function buildSitemapSections(): SitemapSection[] {
     sections.push({
       id: "featured",
       title: "Start here",
-      description: "Key pages for coverage, quotes, and service areas across Virginia.",
+      description: "Key pages for coverage, vehicles, quotes, and service areas across Virginia.",
       entries: featured,
     });
   }
@@ -45,7 +45,7 @@ export function buildSitemapSections(): SitemapSection[] {
   if (coverageHub || coverageEntries.length > 0) {
     sections.push({
       id: "coverage",
-      title: "Coverage types",
+      title: "Coverage",
       description: "Commercial auto, fleet, and specialty coverage pages.",
       hub: coverageHub,
       entries: coverageEntries,
@@ -64,12 +64,25 @@ export function buildSitemapSections(): SitemapSection[] {
     });
   }
 
+  const vehiclesHub = findHub("/vehicles");
+  const vehicleSubsections = getVehicleSitemapSubsections();
+  if (vehiclesHub || vehicleSubsections.length > 0) {
+    sections.push({
+      id: "vehicles",
+      title: "Vehicles",
+      description: "Commercial trucks, trailers, vans, buses, and specialty vehicles.",
+      hub: vehiclesHub,
+      entries: [],
+      subsections: vehicleSubsections,
+    });
+  }
+
   const locationsHub = findHub("/locations");
   const locationEntries = sortByTitle(getSitemapEntriesByContentType("location"));
   if (locationsHub || locationEntries.length > 0) {
     sections.push({
       id: "locations",
-      title: "Service areas",
+      title: "Locations",
       description: "Virginia cities and regions we serve.",
       hub: locationsHub,
       entries: locationEntries,
@@ -81,23 +94,10 @@ export function buildSitemapSections(): SitemapSection[] {
   if (resourcesHub || resourceEntries.length > 0) {
     sections.push({
       id: "resources",
-      title: "Guides & resources",
+      title: "Resources",
       description: "In-depth articles on Virginia commercial vehicle insurance.",
       hub: resourcesHub,
       entries: resourceEntries,
-    });
-  }
-
-  const vehiclesHub = findHub("/vehicles");
-  const vehicleSubsections = getVehicleSitemapSubsections();
-  if (vehiclesHub || vehicleSubsections.length > 0) {
-    sections.push({
-      id: "vehicles",
-      title: "Vehicle types",
-      description: "Commercial trucks, trailers, vans, buses, and specialty vehicles.",
-      hub: vehiclesHub,
-      entries: [],
-      subsections: vehicleSubsections,
     });
   }
 

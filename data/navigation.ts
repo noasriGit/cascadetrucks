@@ -3,8 +3,9 @@ import { coverageServices, industryServices } from "@/data/services";
 
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Coverage Types", href: "/coverage" },
+  { label: "Coverage", href: "/coverage" },
   { label: "Industries", href: "/industries" },
+  { label: "Vehicles", href: "/vehicles" },
   { label: "Locations", href: "/locations" },
   { label: "Resources", href: "/resources" },
   { label: "About", href: "/about" },
@@ -29,7 +30,7 @@ export interface MainNavEntry {
 export const mainNav: MainNavEntry[] = [
   { label: "Home", href: "/" },
   {
-    label: "Coverage Types",
+    label: "Coverage",
     href: "/coverage",
     menu: {
       overview: { label: "All coverage types", href: "/coverage" },
@@ -44,6 +45,7 @@ export const mainNav: MainNavEntry[] = [
       items: industryServices.map((s) => ({ label: s.name, href: `/coverage/${s.slug}` })),
     },
   },
+  { label: "Vehicles", href: "/vehicles" },
   { label: "Locations", href: "/locations" },
   { label: "Resources", href: "/resources" },
   { label: "About", href: "/about" },
@@ -74,6 +76,7 @@ export const footerNav: { heading: string; items: NavItem[] }[] = [
       { label: "HVAC Vehicle Insurance", href: "/coverage/hvac-vehicle-insurance" },
       { label: "Landscaping Vehicle Insurance", href: "/coverage/landscaping-vehicle-insurance" },
       { label: "Construction Vehicle Insurance", href: "/coverage/construction-vehicle-insurance" },
+      { label: "Business Auto Insurance", href: "/coverage/business-auto-insurance" },
     ],
   },
   {
@@ -86,8 +89,10 @@ export const footerNav: { heading: string; items: NavItem[] }[] = [
       { label: "Alexandria, VA", href: "/locations/alexandria-va" },
       { label: "Tysons, VA", href: "/locations/tysons-va" },
       { label: "Chantilly, VA", href: "/locations/chantilly-va" },
+      { label: "Woodbridge, VA", href: "/locations/woodbridge-va" },
       { label: "Richmond, VA", href: "/locations/richmond-va" },
       { label: "Henrico, VA", href: "/locations/henrico-va" },
+      { label: "Short Pump, VA", href: "/locations/short-pump-va" },
     ],
   },
   {
@@ -97,6 +102,9 @@ export const footerNav: { heading: string; items: NavItem[] }[] = [
       { label: "Resources", href: "/resources" },
       { label: "Contact", href: "/contact" },
       { label: "Request a Quote", href: "/quote" },
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Terms of Use", href: "/terms" },
+      { label: "Editorial Standards", href: "/editorial-standards" },
       { label: "Accessibility", href: "/accessibility" },
       { label: "Sitemap", href: "/sitemap" },
     ],

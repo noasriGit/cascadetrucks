@@ -5,7 +5,9 @@ import { Hero } from "@/components/marketing/Hero";
 import { Section, SectionHeading } from "@/components/layout/Section";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { CallToActionBar } from "@/components/marketing/CallToActionBar";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { buildMetadata } from "@/lib/metadata";
+import { collectionPageSchema } from "@/lib/schema";
 import { resources } from "@/data/resources";
 
 const path = "/resources";
@@ -22,6 +24,15 @@ export function generateMetadata(): Metadata {
 export default function ResourcesPage() {
   return (
     <>
+      <JsonLd
+        data={collectionPageSchema({
+          name: "Commercial Vehicle Insurance Guides",
+          description:
+            "Expert guides on Virginia commercial auto, dump truck, tow truck, fleet, and Uber Black insurance from Cascade Truck Insurance.",
+          path,
+          items: resources.map((r) => ({ name: r.title, url: `/resources/${r.slug}` })),
+        })}
+      />
       <Hero
         eyebrow="Resources"
         headline="Commercial Vehicle Insurance Guides"

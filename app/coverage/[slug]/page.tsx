@@ -63,7 +63,9 @@ export default async function ServicePage(props: PageProps<"/coverage/[slug]">) 
           <Breadcrumbs
             items={[
               { name: "Home", path: "/" },
-              { name: "Coverage", path: "/coverage" },
+              service.category === "industry"
+                ? { name: "Industries", path: "/industries" }
+                : { name: "Coverage", path: "/coverage" },
               { name: service.name, path },
             ]}
           />

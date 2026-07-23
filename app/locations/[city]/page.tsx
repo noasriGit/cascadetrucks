@@ -14,6 +14,8 @@ import { buildMetadata } from "@/lib/metadata";
 import { locationSchema } from "@/lib/schema";
 import { pageLocations, getLocation, getLocations } from "@/data/locations";
 import { getServices } from "@/data/services";
+import { getVehicles } from "@/data/vehicles";
+import { getResources } from "@/data/resources";
 import { getFaqs } from "@/data/faqs";
 import { getHeroImage } from "@/data/hero-images";
 
@@ -43,6 +45,8 @@ export default async function LocationPage(props: PageProps<"/locations/[city]">
   const path = `/locations/${location.slug}`;
   const faqs = getFaqs(location.faqIds);
   const relatedServices = getServices(location.relatedServiceSlugs);
+  const relatedVehicles = getVehicles(location.relatedVehicleSlugs);
+  const relatedResources = getResources(location.relatedResourceSlugs);
   const nearby = getLocations(location.nearbyLocationSlugs).filter((l) => l.hasPage);
 
   return (
@@ -87,7 +91,10 @@ export default async function LocationPage(props: PageProps<"/locations/[city]">
               <ul className="mt-4 space-y-2.5 text-sm">
                 {relatedServices.map((s) => (
                   <li key={s.slug}>
-                    <a href={`/coverage/${s.slug}`} className="font-medium text-brand-700 transition-colors hover:text-brand-900 hover:underline">
+                    <a
+                      href={`/coverage/${s.slug}`}
+                      className="font-medium text-brand-700 transition-colors hover:text-brand-900 hover:underline"
+                    >
                       {s.name}
                     </a>
                   </li>
@@ -115,8 +122,16 @@ export default async function LocationPage(props: PageProps<"/locations/[city]">
                 links: relatedServices.map((s) => ({ label: s.name, href: `/coverage/${s.slug}` })),
               },
               {
+                heading: "Vehicle types",
+                links: relatedVehicles.map((v) => ({ label: v.name, href: `/vehicles/${v.slug}` })),
+              },
+              {
                 heading: "Nearby service areas",
                 links: nearby.map((l) => ({ label: `${l.city}, VA`, href: `/locations/${l.slug}` })),
+              },
+              {
+                heading: "Guides",
+                links: relatedResources.map((r) => ({ label: r.title, href: `/resources/${r.slug}` })),
               },
             ]}
           />

@@ -7,6 +7,7 @@ import { DetailHero } from "@/components/marketing/DetailHero";
 import { ContentSections } from "@/components/marketing/ContentSections";
 import { Faq } from "@/components/marketing/Faq";
 import { AuthorBio } from "@/components/marketing/AuthorBio";
+import { EditorialDisclaimer } from "@/components/marketing/EditorialDisclaimer";
 import { RelatedLinks } from "@/components/marketing/RelatedLinks";
 import { CallToActionBar } from "@/components/marketing/CallToActionBar";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -74,7 +75,29 @@ export default async function ResourcePage(props: PageProps<"/resources/[slug]">
         </h2>
         <div className="grid gap-12 lg:grid-cols-3">
           <article className="lg:col-span-2">
+            <div className="mb-8">
+              <EditorialDisclaimer />
+            </div>
             <ContentSections sections={resource.sections} />
+            {resource.sources && resource.sources.length > 0 ? (
+              <div className="mt-12 rounded-2xl border border-line bg-surface p-6 shadow-card">
+                <h3 className="text-base font-semibold text-brand-800">Sources</h3>
+                <ul className="mt-4 space-y-2.5 text-sm">
+                  {resource.sources.map((source) => (
+                    <li key={source.url}>
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-brand-700 transition-colors hover:text-brand-900 hover:underline"
+                      >
+                        {source.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
             {author ? (
               <div className="mt-12">
                 <AuthorBio author={author} reviewedDate={resource.updated} />

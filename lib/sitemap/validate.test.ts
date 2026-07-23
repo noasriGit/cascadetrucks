@@ -32,14 +32,30 @@ describe("sitemap registry", () => {
 
     assert.ok(featured.some((entry) => entry.path === "/"));
     assert.ok(featured.some((entry) => entry.path === "/quote"));
+    assert.ok(featured.some((entry) => entry.path === "/vehicles"));
     assert.equal(recent.length, 5);
     assert.ok(recent.every((entry) => entry.published));
   });
 
-  it("builds non-empty categorized sections", () => {
+  it("builds non-empty categorized sections in nav order", () => {
     const sections = buildSitemapSections();
     assert.ok(sections.length >= 6);
     assert.ok(sections.every((section) => section.hub || section.entries.length > 0 || section.subsections?.length));
+
+    const expectedOrder = [
+      "featured",
+      "recent",
+      "coverage",
+      "industries",
+      "vehicles",
+      "locations",
+      "resources",
+      "company",
+    ];
+    assert.deepEqual(
+      sections.map((section) => section.id),
+      expectedOrder,
+    );
   });
 
   it("creates an A–Z index without empty letters", () => {

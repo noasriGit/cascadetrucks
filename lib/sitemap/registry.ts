@@ -1,3 +1,4 @@
+import { authors } from "@/data/authors";
 import { pageLocations } from "@/data/locations";
 import { resources } from "@/data/resources";
 import { coverageServices, industryServices, services } from "@/data/services";
@@ -52,7 +53,7 @@ function serviceEntries(): SitemapEntry[] {
       path: `/coverage/${service.slug}`,
       description: service.shortDescription,
       contentType,
-      category: service.category === "coverage" ? "Coverage Types" : "Industries",
+      category: service.category === "coverage" ? "Coverage" : "Industries",
       updated: service.updated,
       indexable: true,
       parentPath,
@@ -67,7 +68,7 @@ function locationEntries(): SitemapEntry[] {
     path: `/locations/${location.slug}`,
     description: location.shortDescription,
     contentType: "location" as const,
-    category: "Service Areas",
+    category: "Locations",
     updated: location.updated,
     indexable: location.hasPage,
     parentPath: "/locations",
@@ -81,7 +82,7 @@ function resourceEntries(): SitemapEntry[] {
     path: `/resources/${resource.slug}`,
     description: resource.excerpt,
     contentType: "resource" as const,
-    category: "Guides & Resources",
+    category: "Resources",
     published: resource.published,
     updated: resource.updated,
     indexable: true,
@@ -96,11 +97,24 @@ function vehicleEntries(): SitemapEntry[] {
     path: `/vehicles/${vehicle.slug}`,
     description: vehicle.shortDescription,
     contentType: "vehicle" as const,
-    category: "Vehicle Types",
+    category: "Vehicles",
     subcategory: VEHICLE_GROUP_LABELS[vehicle.vehicleGroup],
     updated: vehicle.updated,
     indexable: true,
     parentPath: "/vehicles",
+  }));
+}
+
+function authorEntries(): SitemapEntry[] {
+  return authors.map((author) => ({
+    id: `author:${author.id}`,
+    title: author.name,
+    path: `/authors/${author.id}`,
+    description: author.bio,
+    contentType: "page" as const,
+    category: "Company",
+    indexable: true,
+    parentPath: "/about",
   }));
 }
 
@@ -115,6 +129,7 @@ export function buildSitemapRegistry(): SitemapEntry[] {
       ...locationEntries(),
       ...resourceEntries(),
       ...vehicleEntries(),
+      ...authorEntries(),
     ];
   }
   return cachedRegistry;

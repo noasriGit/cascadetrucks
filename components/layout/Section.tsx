@@ -8,6 +8,7 @@ interface SectionProps {
   className?: string;
   tone?: "default" | "soft" | "brand";
   as?: "section" | "div";
+  id?: string;
   ariaLabelledby?: string;
 }
 
@@ -22,10 +23,15 @@ export function Section({
   className = "",
   tone = "default",
   as: Tag = "section",
+  id,
   ariaLabelledby,
 }: SectionProps) {
   return (
-    <Tag aria-labelledby={ariaLabelledby} className={cn("py-16 sm:py-22", toneClasses[tone], className)}>
+    <Tag
+      id={id}
+      aria-labelledby={ariaLabelledby}
+      className={cn("py-16 sm:py-22", toneClasses[tone], className)}
+    >
       {tone === "brand" ? (
         <div aria-hidden="true" className="bg-grid absolute inset-0 opacity-50" />
       ) : null}

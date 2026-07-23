@@ -5,7 +5,7 @@ const indicators: { icon: LucideIcon; title: string; description: string }[] = [
   {
     icon: Building2,
     title: "Independent agency",
-    description: `Backed by ${site.parentName} and multiple A-rated carrier partners.`,
+    description: `Backed by ${site.parentName} and multiple carrier partners.`,
   },
   {
     icon: MapPinned,

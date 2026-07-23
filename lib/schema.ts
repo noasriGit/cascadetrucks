@@ -4,8 +4,9 @@ import { reviews as allReviews } from "@/data/reviews";
 import { absoluteUrl } from "@/lib/url";
 import type { Author, Faq, Resource, Review, Service, VehicleType } from "@/lib/types";
 
-const ORG_ID = absoluteUrl("/#organization");
-const AGENCY_ID = absoluteUrl("/#agency");
+export const ORG_ID = absoluteUrl("/#organization");
+export const AGENCY_ID = absoluteUrl("/#agency");
+export const WEBSITE_ID = absoluteUrl("/#website");
 
 type Json = Record<string, unknown>;
 
@@ -20,6 +21,17 @@ function postalAddress(): Json {
   };
 }
 
+function openingHoursSpecification(): Json[] {
+  return [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+  ];
+}
+
 export function organizationSchema(): Json {
   return {
     "@context": "https://schema.org",
@@ -29,11 +41,27 @@ export function organizationSchema(): Json {
     legalName: site.legalName,
     alternateName: site.brandName,
     url: absoluteUrl("/"),
-    logo: absoluteUrl(site.logo),
+    logo: {
+      "@type": "ImageObject",
+      url: absoluteUrl(site.logo),
+    },
     telephone: site.phoneDisplay,
     email: site.email,
     address: postalAddress(),
     sameAs: site.socials,
+  };
+}
+
+export function websiteSchema(): Json {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": WEBSITE_ID,
+    name: site.brandName,
+    url: absoluteUrl("/"),
+    description: site.description,
+    publisher: { "@id": AGENCY_ID },
+    inLanguage: "en-US",
   };
 }
 
@@ -58,20 +86,27 @@ export function insuranceAgencySchema(options: { withReviews?: boolean } = {}): 
       latitude: site.geo.latitude,
       longitude: site.geo.longitude,
     },
-    openingHours: site.hours,
+    openingHoursSpecification: openingHoursSpecification(),
     areaServed: locations.map((l) => ({
       "@type": "City",
       name: `${l.city}, ${site.address.regionCode}`,
     })),
     sameAs: site.socials,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: site.aggregateRating.ratingValue,
-      reviewCount: site.aggregateRating.reviewCount,
-    },
   };
 
-  if (options.withReviews) {
+  // AggregateRating and Review entities are only emitted when real, attributable
+  // reviews exist. Shipping AggregateRating alone is a Google rich-result policy risk.
+  const includeReviews = allReviews.length > 0 && (options.withReviews ?? true);
+  if (includeReviews) {
+    const ratingSum = allReviews.reduce((sum, review) => sum + review.rating, 0);
+    const ratingValue = Math.round((ratingSum / allReviews.length) * 10) / 10;
+    schema.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue,
+      reviewCount: allReviews.length,
+      bestRating: 5,
+      worstRating: 1,
+    };
     schema.review = reviewSchemaList();
   }
 
@@ -129,31 +164,44 @@ export function vehicleTypeSchema(vehicle: VehicleType, path: string): Json {
 }
 
 export function locationSchema(
-  location: { city: string; shortDescription: string; geo?: { latitude: number; longitude: number } },
-  path: string
+  location: {
+    city: string;
+    shortDescription: string;
+    headline?: string;
+    geo?: { latitude: number; longitude: number };
+  },
+  path: string,
 ): Json {
+  const url = absoluteUrl(path);
+  const cityName = `${location.city}, ${site.address.regionCode}`;
+  const areaServed: Json = {
+    "@type": "City",
+    name: cityName,
+  };
+  if (location.geo) {
+    areaServed.geo = {
+      "@type": "GeoCoordinates",
+      latitude: location.geo.latitude,
+      longitude: location.geo.longitude,
+    };
+  }
+
   return {
     "@context": "https://schema.org",
-    "@type": "InsuranceAgency",
-    "@id": `${absoluteUrl(path)}#agency`,
-    name: `${site.brandName} - ${location.city}, ${site.address.regionCode}`,
-    legalName: site.legalName,
-    parentOrganization: { "@id": ORG_ID },
-    url: absoluteUrl(path),
-    image: absoluteUrl(site.logo),
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    name: location.headline ?? `Commercial Truck Insurance in ${cityName}`,
     description: location.shortDescription,
-    telephone: site.phoneDisplay,
-    email: site.email,
-    priceRange: "$$",
-    address: postalAddress(),
-    areaServed: { "@type": "City", name: `${location.city}, ${site.address.regionCode}` },
-    geo: location.geo
-      ? { "@type": "GeoCoordinates", latitude: location.geo.latitude, longitude: location.geo.longitude }
-      : undefined,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: site.aggregateRating.ratingValue,
-      reviewCount: site.aggregateRating.reviewCount,
+    url,
+    isPartOf: { "@id": WEBSITE_ID },
+    about: {
+      "@type": "Service",
+      "@id": `${url}#service`,
+      name: `Commercial vehicle insurance in ${cityName}`,
+      description: location.shortDescription,
+      provider: { "@id": AGENCY_ID },
+      areaServed,
+      category: "Commercial Vehicle Insurance",
     },
   };
 }
@@ -184,23 +232,98 @@ export function breadcrumbSchema(items: { name: string; path: string }[]): Json 
 }
 
 export function articleSchema(resource: Resource, author: Author | undefined, path: string): Json {
+  const authorEntity = author
+    ? {
+        "@type": "Organization",
+        "@id": absoluteUrl(`/authors/${author.id}#author`),
+        name: author.name,
+        description: author.bio,
+        url: absoluteUrl(`/authors/${author.id}`),
+      }
+    : { "@id": ORG_ID };
+
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: resource.title,
     description: resource.excerpt,
     url: absoluteUrl(path),
-    image: absoluteUrl(resource.image.src),
+    image: {
+      "@type": "ImageObject",
+      url: absoluteUrl(resource.image.src),
+      width: resource.image.width,
+      height: resource.image.height,
+    },
     datePublished: resource.published,
     dateModified: resource.updated,
-    author: author
-      ? {
-          "@type": "Person",
-          name: author.name,
-          jobTitle: author.title,
-        }
-      : { "@id": ORG_ID },
-    publisher: { "@id": ORG_ID },
-    mainEntityOfPage: absoluteUrl(path),
+    author: authorEntity,
+    publisher: {
+      "@id": ORG_ID,
+      name: site.parentName,
+      logo: {
+        "@type": "ImageObject",
+        url: absoluteUrl(site.logo),
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": absoluteUrl(path),
+    },
+    isPartOf: { "@id": WEBSITE_ID },
+  };
+}
+
+export function aboutPageSchema(path: string): Json {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": `${absoluteUrl(path)}#webpage`,
+    name: `About ${site.brandName}`,
+    description: site.description,
+    url: absoluteUrl(path),
+    isPartOf: { "@id": WEBSITE_ID },
+    mainEntity: { "@id": AGENCY_ID },
+  };
+}
+
+export function contactPageSchema(path: string): Json {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": `${absoluteUrl(path)}#webpage`,
+    name: `Contact ${site.brandName}`,
+    description: `Contact ${site.brandName} for Virginia commercial vehicle and trucking insurance.`,
+    url: absoluteUrl(path),
+    isPartOf: { "@id": WEBSITE_ID },
+    mainEntity: { "@id": AGENCY_ID },
+    significantLink: [absoluteUrl("/quote"), `tel:${site.phoneHref}`],
+  };
+}
+
+export function collectionPageSchema(options: {
+  name: string;
+  description: string;
+  path: string;
+  items: { name: string; url: string }[];
+}): Json {
+  const url = absoluteUrl(options.path);
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${url}#webpage`,
+    name: options.name,
+    description: options.description,
+    url,
+    isPartOf: { "@id": WEBSITE_ID },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: options.items.length,
+      itemListElement: options.items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        url: absoluteUrl(item.url),
+      })),
+    },
   };
 }

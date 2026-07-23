@@ -3,10 +3,13 @@ import { Hero } from "@/components/marketing/Hero";
 import { Section, SectionHeading } from "@/components/layout/Section";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { CoverageGrid } from "@/components/marketing/CoverageGrid";
+import { RelatedHubs } from "@/components/marketing/RelatedHubs";
 import { Faq } from "@/components/marketing/Faq";
 import { CallToActionBar } from "@/components/marketing/CallToActionBar";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { buildMetadata } from "@/lib/metadata";
-import { coverageServices, industryServices } from "@/data/services";
+import { collectionPageSchema } from "@/lib/schema";
+import { coverageServices, industryServices, services } from "@/data/services";
 import { getFaqs } from "@/data/faqs";
 
 const path = "/coverage";
@@ -25,6 +28,15 @@ const faqs = getFaqs(["general-requirements", "general-cost", "general-multi-veh
 export default function CoveragePage() {
   return (
     <>
+      <JsonLd
+        data={collectionPageSchema({
+          name: "Virginia Commercial Vehicle Insurance Coverage",
+          description:
+            "Explore commercial truck and vehicle insurance coverage types from Cascade Truck Insurance, serving businesses across Virginia.",
+          path,
+          items: services.map((s) => ({ name: s.name, url: `/coverage/${s.slug}` })),
+        })}
+      />
       <Hero
         eyebrow="Coverage Types"
         headline="Virginia Commercial Vehicle Insurance Coverage"
@@ -47,6 +59,36 @@ export default function CoveragePage() {
         />
         <div className="mt-10">
           <CoverageGrid services={industryServices} />
+        </div>
+      </Section>
+
+      <Section ariaLabelledby="coverage-related-hubs-heading">
+        <SectionHeading
+          id="coverage-related-hubs-heading"
+          eyebrow="Explore More"
+          title="Related coverage areas"
+          description="Browse vehicle types, service areas, and guides that connect to our coverage options."
+        />
+        <div className="mt-10">
+          <RelatedHubs
+            hubs={[
+              {
+                label: "Vehicle Types",
+                href: "/vehicles",
+                description: "See every commercial vehicle type we insure across Virginia.",
+              },
+              {
+                label: "Service Areas",
+                href: "/locations",
+                description: "Find commercial vehicle insurance near you throughout Virginia.",
+              },
+              {
+                label: "Resources",
+                href: "/resources",
+                description: "Read guides on commercial auto, fleets, dump trucks, and more.",
+              },
+            ]}
+          />
         </div>
       </Section>
 
