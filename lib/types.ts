@@ -32,6 +32,8 @@ export interface Author {
   name: string;
   title: string;
   bio: string;
+  /** SEO meta description (target 140–160 characters). */
+  metaDescription: string;
   credentials: string[];
   image: string;
 }
@@ -49,6 +51,8 @@ export interface Service {
   category: ServiceCategory;
   navLabel: string;
   shortDescription: string;
+  /** SEO meta description (target 140–160 characters). */
+  metaDescription: string;
   heroHeadline: string;
   heroSubheadline: string;
   /** Semantic entities reinforced on the page for topical relevance. */
@@ -73,6 +77,8 @@ export interface VehicleType {
   name: string;
   vehicleGroup: VehicleGroup;
   shortDescription: string;
+  /** SEO meta description (target 140–160 characters). */
+  metaDescription: string;
   heroHeadline: string;
   heroSubheadline: string;
   /** Semantic entities reinforced on the page for topical relevance. */
@@ -105,6 +111,8 @@ export interface Location {
   headline: string;
   heroSubheadline: string;
   shortDescription: string;
+  /** SEO meta description (target 140–160 characters). */
+  metaDescription: string;
   semanticEntities: string[];
   sections: ContentSection[];
   faqIds: string[];
@@ -121,6 +129,8 @@ export interface Resource {
   slug: string;
   title: string;
   excerpt: string;
+  /** SEO meta description (target 140–160 characters). */
+  metaDescription: string;
   authorId: string;
   semanticEntities: string[];
   sections: ContentSection[];

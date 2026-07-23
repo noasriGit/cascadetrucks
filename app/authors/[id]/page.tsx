@@ -23,7 +23,7 @@ export async function generateMetadata(props: PageProps<"/authors/[id]">): Promi
   if (!author) return {};
   return buildMetadata({
     title: author.name,
-    description: author.bio,
+    description: author.metaDescription,
     path: `/authors/${author.id}`,
     image: { src: author.image, alt: author.name },
   });
@@ -50,7 +50,7 @@ export default async function AuthorPage(props: PageProps<"/authors/[id]">) {
         <div className="mx-auto mt-8 flex max-w-3xl flex-col gap-6 sm:flex-row sm:items-start">
           <Image
             src={author.image}
-            alt=""
+            alt={author.name}
             width={112}
             height={112}
             className="h-28 w-28 flex-none rounded-2xl object-cover ring-1 ring-white/20"

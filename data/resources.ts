@@ -10,6 +10,8 @@ export const resources: Resource[] = [
     title: "Virginia Commercial Auto Insurance Guide",
     excerpt:
       "A plain-language guide to commercial auto insurance in Virginia, covering minimum liability limits, business-use rules, federal filings, and how to choose the right coverage.",
+    metaDescription:
+      "A plain-language guide to Virginia commercial auto insurance: minimum liability limits, business-use rules, federal filings, and choosing coverage.",
     authorId: "cascade-commercial-team",
     semanticEntities: ["commercial auto liability", "Virginia DMV", "minimum limits", "for-hire"],
     sections: [
@@ -74,6 +76,8 @@ export const resources: Resource[] = [
     title: "How Dump Truck Insurance Works",
     excerpt:
       "A breakdown of how dump truck insurance works, including the coverage types in a policy, how physical damage and motor truck cargo respond, and what drives your premium in Virginia.",
+    metaDescription:
+      "How dump truck insurance works in Virginia, including policy coverages, physical damage, motor truck cargo, and what drives your premium costs.",
     authorId: "cascade-commercial-team",
     semanticEntities: ["dump truck", "motor truck cargo", "physical damage", "gross vehicle weight"],
     sections: [
@@ -136,6 +140,8 @@ export const resources: Resource[] = [
     title: "Tow Truck Insurance Requirements",
     excerpt:
       "What tow operators in Virginia need to carry, from on-hook and garagekeepers coverage to DMV registration and the additional-insured filings municipal towing contracts require.",
+    metaDescription:
+      "Virginia tow truck insurance requirements: on-hook and garagekeepers coverage, DMV registration, and the filings municipal contracts often need.",
     authorId: "cascade-commercial-team",
     semanticEntities: ["on-hook coverage", "garagekeepers", "wrecker", "towing"],
     sections: [
@@ -198,6 +204,8 @@ export const resources: Resource[] = [
     title: "Commercial Fleet Insurance Guide",
     excerpt:
       "How commercial fleet insurance works in Virginia, why combining vehicles can lower cost, and the safety programs, telematics, and experience-rating factors that shape your premium.",
+    metaDescription:
+      "How commercial fleet insurance works in Virginia, why combining vehicles can lower cost, and the safety factors that shape your premium rates.",
     authorId: "cascade-commercial-team",
     semanticEntities: ["fleet policy", "telematics", "experience-rating", "safety program"],
     sections: [
@@ -260,6 +268,8 @@ export const resources: Resource[] = [
     title: "Uber Black Insurance Requirements",
     excerpt:
       "What Uber Black drivers in Virginia need to know about insurance: TNC rules, personal vehicle registration, and the $1,000,000 liability requirement while carrying a passenger.",
+    metaDescription:
+      "Uber Black insurance in Virginia: TNC rules, personal vehicle registration, and the $1,000,000 liability requirement while carrying passengers.",
     authorId: "cascade-commercial-team",
     semanticEntities: ["TNC", "black car", "Virginia TNC", "prearranged ride"],
     sections: [

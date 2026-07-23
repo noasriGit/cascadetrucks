@@ -195,6 +195,7 @@ const seeds: LocationSeed[] = [
 interface LocationContent {
   heroSubheadline: string;
   shortDescription: string;
+  metaDescription: string;
   semanticEntities: string[];
   sections: ContentSection[];
 }
@@ -207,6 +208,8 @@ const pageContent: Record<string, LocationContent> = {
       "From government contractor fleets to trade vans and dump trucks, we insure the commercial vehicles that keep Fairfax County working, all from our office just up Route 28 in Manassas.",
     shortDescription:
       "Commercial truck and vehicle insurance in Fairfax, VA. Coverage for contractors, fleets, and trucking businesses across Fairfax County, from licensed advisors in nearby Manassas.",
+    metaDescription:
+      "Commercial truck and vehicle insurance in Fairfax, VA. Coverage for contractors, fleets, and trucking businesses across Fairfax County statewide.",
     semanticEntities: ["Fairfax", "Fairfax County", "government contractor fleets", "Route 50", "I-66", "commercial auto"],
     sections: [
       {
@@ -242,6 +245,8 @@ const pageContent: Record<string, LocationContent> = {
       "Arlington's dense, urban roads and its busy black-car and corporate fleet activity call for commercial coverage built for the risk. We insure livery operators, fleets, and work vehicles across the county.",
     shortDescription:
       "Commercial vehicle and livery insurance in Arlington, VA. Coverage for Uber Black operators, corporate fleets, and work trucks near Reagan National, from licensed Virginia advisors.",
+    metaDescription:
+      "Commercial vehicle and livery insurance in Arlington, VA. Coverage for Uber Black, corporate fleets, and work trucks near Reagan National Airport.",
     semanticEntities: ["Arlington", "Reagan National Airport", "livery", "Uber Black", "corporate fleets", "urban commercial auto"],
     sections: [
       {
@@ -277,6 +282,8 @@ const pageContent: Record<string, LocationContent> = {
       "At the heart of the Dulles Tech Corridor, Chantilly runs on logistics, warehousing, and construction. We insure the trucks, vans, and fleets moving along the Route 28 and Route 50 corridors.",
     shortDescription:
       "Commercial vehicle insurance in Chantilly, VA. Coverage for logistics, warehouse, and construction fleets in the Dulles corridor, from licensed advisors in nearby Manassas.",
+    metaDescription:
+      "Commercial vehicle insurance in Chantilly, VA. Coverage for logistics, warehouse, and construction fleets working the Dulles corridor daily.",
     semanticEntities: ["Chantilly", "Dulles Tech Corridor", "Route 28", "logistics", "warehousing", "Dulles Airport"],
     sections: [
       {
@@ -312,6 +319,8 @@ const pageContent: Record<string, LocationContent> = {
       "Stafford's rapid growth along I-95 has put more contractor and construction vehicles on the road than ever. We insure the trades and trucking businesses building out this part of Virginia.",
     shortDescription:
       "Commercial truck and vehicle insurance in Stafford, VA. Coverage for contractors, construction, and trucking businesses along the I-95 corridor, from licensed Virginia advisors.",
+    metaDescription:
+      "Commercial truck and vehicle insurance in Stafford, VA. Coverage for contractors, construction, and trucking businesses along the I-95 corridor.",
     semanticEntities: ["Stafford", "Stafford County", "I-95 corridor", "construction", "Quantico", "contractor vehicles"],
     sections: [
       {
@@ -347,6 +356,8 @@ const pageContent: Record<string, LocationContent> = {
       "Positioned between Northern Virginia and Richmond, Fredericksburg's trades and haulers work both markets. We insure the commercial vehicles serving this busy I-95 and Route 1 hub.",
     shortDescription:
       "Commercial vehicle insurance in Fredericksburg, VA. Coverage for contractors, haulers, and fleets working the I-95 and Route 1 corridor, from licensed Virginia advisors.",
+    metaDescription:
+      "Commercial vehicle insurance in Fredericksburg, VA. Coverage for contractors, haulers, and fleets working the I-95 and Route 1 corridor daily.",
     semanticEntities: ["Fredericksburg", "Central Virginia", "I-95", "Route 1", "commuter belt", "construction"],
     sections: [
       {
@@ -382,6 +393,8 @@ const pageContent: Record<string, LocationContent> = {
       "In the Shenandoah Valley, Winchester's commercial vehicles run the I-81 and Route 7 corridors and the region's agricultural and distribution work. We insure the trucks and fleets that keep the Valley moving.",
     shortDescription:
       "Commercial truck and vehicle insurance in Winchester, VA. Coverage for Shenandoah Valley haulers, fleets, and trades along I-81 and Route 7, from licensed Virginia advisors.",
+    metaDescription:
+      "Commercial truck and vehicle insurance in Winchester, VA. Coverage for Shenandoah Valley haulers, fleets, and trades along I-81 and Route 7.",
     semanticEntities: ["Winchester", "Shenandoah Valley", "I-81 corridor", "Route 7", "agriculture", "distribution"],
     sections: [
       {
@@ -417,6 +430,8 @@ const pageContent: Record<string, LocationContent> = {
       "As the state capital and a major I-95 distribution hub, Richmond runs a diverse commercial vehicle market. We insure trucking businesses, contractors, and fleets across the metro and Central Virginia.",
     shortDescription:
       "Commercial truck and vehicle insurance in Richmond, VA. Coverage for haulers, contractors, and fleets in the I-95 distribution hub, from licensed Virginia advisors.",
+    metaDescription:
+      "Commercial truck and vehicle insurance in Richmond, VA. Coverage for haulers, contractors, and fleets across the busy I-95 distribution hub.",
     semanticEntities: ["Richmond", "Central Virginia", "I-95 distribution hub", "Port of Virginia", "fleets", "commercial auto"],
     sections: [
       {
@@ -452,6 +467,8 @@ const pageContent: Record<string, LocationContent> = {
       "Old Town waterfront traffic, dense urban streets, and a strong livery market make Alexandria a demanding place to run commercial vehicles. We insure fleets, black-car operators, and contractor vans across the city.",
     shortDescription:
       "Commercial vehicle and livery insurance in Alexandria, VA. Coverage for Uber Black operators, delivery fleets, and contractor vans in Old Town and the Potomac corridor.",
+    metaDescription:
+      "Commercial vehicle and livery insurance in Alexandria, VA. Coverage for Uber Black, delivery fleets, and contractor vans in Old Town and beyond.",
     semanticEntities: ["Alexandria", "Old Town", "Potomac River", "livery", "Uber Black", "urban commercial auto"],
     sections: [
       {
@@ -487,6 +504,8 @@ const pageContent: Record<string, LocationContent> = {
       "Reston's tech campuses, corporate parks, and Dulles corridor logistics put steady commercial traffic on Route 7 and the Toll Road. We insure the vans, box trucks, and fleets that keep this planned community running.",
     shortDescription:
       "Commercial vehicle insurance in Reston, VA. Coverage for tech corridor fleets, contractor vans, and logistics operators near Dulles, from licensed advisors in Manassas.",
+    metaDescription:
+      "Commercial vehicle insurance in Reston, VA. Coverage for tech corridor fleets, contractor vans, and logistics operators near Dulles Airport.",
     semanticEntities: ["Reston", "Dulles Toll Road", "Route 7", "tech corridor", "corporate fleets", "logistics"],
     sections: [
       {
@@ -522,6 +541,8 @@ const pageContent: Record<string, LocationContent> = {
       "Ashburn's data center alley and Loudoun County growth have made it one of the busiest logistics and construction markets in Virginia. We insure the trucks, vans, and fleets building and supplying this corridor.",
     shortDescription:
       "Commercial truck and vehicle insurance in Ashburn, VA. Coverage for logistics, construction, and fleet operators in Loudoun County's data center corridor.",
+    metaDescription:
+      "Commercial truck and vehicle insurance in Ashburn, VA. Coverage for logistics, construction, and fleet operators in Loudoun's data center corridor.",
     semanticEntities: ["Ashburn", "Loudoun County", "data centers", "Route 7", "logistics", "construction fleets"],
     sections: [
       {
@@ -557,6 +578,8 @@ const pageContent: Record<string, LocationContent> = {
       "As the seat of Loudoun County, Leesburg anchors western Northern Virginia's growth along Route 7 and the Route 15 corridor. We insure the contractor, agricultural, and fleet operators keeping this market moving.",
     shortDescription:
       "Commercial vehicle insurance in Leesburg, VA. Coverage for contractors, haulers, and fleets in western Loudoun County along Route 7, from licensed Virginia advisors.",
+    metaDescription:
+      "Commercial vehicle insurance in Leesburg, VA. Coverage for contractors, haulers, and fleets in western Loudoun County along the Route 7 corridor.",
     semanticEntities: ["Leesburg", "Loudoun County", "Route 7", "Route 15", "western NoVA", "contractor vehicles"],
     sections: [
       {
@@ -592,6 +615,8 @@ const pageContent: Record<string, LocationContent> = {
       "Cascade Truck Insurance is headquartered in Manassas, at the crossroads of Route 28 and I-66. We know Prince William County's contractor, logistics, and fleet market because this is home.",
     shortDescription:
       "Commercial truck and vehicle insurance in Manassas, VA. Local coverage for Prince William County contractors, fleets, and trucking businesses from our Manassas office.",
+    metaDescription:
+      "Commercial truck and vehicle insurance in Manassas, VA. Local coverage for Prince William County contractors, fleets, and trucking businesses.",
     semanticEntities: ["Manassas", "Prince William County", "Route 28", "I-66", "headquarters", "commercial auto"],
     sections: [
       {
@@ -627,6 +652,8 @@ const pageContent: Record<string, LocationContent> = {
       "Woodbridge's I-95 corridor and Prince William County growth put contractor, delivery, and fleet vehicles on the road in volume. We insure the commercial operators building and supplying this busy market.",
     shortDescription:
       "Commercial vehicle insurance in Woodbridge, VA. Coverage for contractors, delivery fleets, and trucking businesses along the I-95 corridor in Prince William County.",
+    metaDescription:
+      "Commercial vehicle insurance in Woodbridge, VA. Coverage for contractors, delivery fleets, and trucking businesses along the busy I-95 corridor.",
     semanticEntities: ["Woodbridge", "Prince William County", "I-95 corridor", "Potomac", "construction", "delivery fleets"],
     sections: [
       {
@@ -662,6 +689,8 @@ const pageContent: Record<string, LocationContent> = {
       "Henrico County's West End corridors and Innsbrook business district run on contractor vans, delivery fleets, and commercial trucks. We insure the vehicles keeping Richmond's largest suburb working.",
     shortDescription:
       "Commercial truck and vehicle insurance in Henrico, VA. Coverage for contractors, fleets, and delivery operators across Henrico County and the Richmond West End.",
+    metaDescription:
+      "Commercial truck and vehicle insurance in Henrico, VA. Coverage for contractors, fleets, and delivery operators across Henrico County and beyond.",
     semanticEntities: ["Henrico", "Henrico County", "West End", "Innsbrook", "Richmond metro", "contractor fleets"],
     sections: [
       {
@@ -697,6 +726,8 @@ const pageContent: Record<string, LocationContent> = {
       "Glen Allen's suburban growth north of Richmond has fueled steady demand for contractor, service, and fleet vehicles along Route 1 and I-295. We insure the trades and businesses building this market.",
     shortDescription:
       "Commercial vehicle insurance in Glen Allen, VA. Coverage for contractors, service fleets, and delivery operators in northern Henrico County, from licensed Virginia advisors.",
+    metaDescription:
+      "Commercial vehicle insurance in Glen Allen, VA. Coverage for contractors, service fleets, and delivery operators across northern Henrico County.",
     semanticEntities: ["Glen Allen", "Henrico County", "Route 1", "I-295", "Richmond north", "contractor vans"],
     sections: [
       {
@@ -732,6 +763,8 @@ const pageContent: Record<string, LocationContent> = {
       "Short Pump's West End retail hub and surrounding commercial corridors generate heavy trade van and delivery traffic. We insure the contractor and fleet operators serving one of Richmond's busiest suburban markets.",
     shortDescription:
       "Commercial vehicle insurance in Short Pump, VA. Coverage for contractor vans, delivery fleets, and commercial trucks in Richmond's West End retail corridor.",
+    metaDescription:
+      "Commercial vehicle insurance in Short Pump, VA. Coverage for contractor vans, delivery fleets, and commercial trucks in Richmond's West End corridor.",
     semanticEntities: ["Short Pump", "West End", "Richmond metro", "retail corridor", "contractor vans", "delivery fleets"],
     sections: [
       {
@@ -766,6 +799,8 @@ const pageContent: Record<string, LocationContent> = {
     heroSubheadline:
       "Mechanicsville's residential boom in Hanover County keeps contractor vans, dump trucks, and service fleets busy along the Route 360 and I-295 corridors north of Richmond. We insure the trades building this market.",
     shortDescription:
+      "Commercial truck and vehicle insurance in Mechanicsville, VA. Coverage for contractors, builders, and fleet operators in Hanover County north of Richmond.",
+    metaDescription:
       "Commercial truck and vehicle insurance in Mechanicsville, VA. Coverage for contractors, builders, and fleet operators in Hanover County north of Richmond.",
     semanticEntities: ["Mechanicsville", "Hanover County", "Route 360", "I-295", "residential construction", "contractor vans"],
     sections: [
@@ -802,6 +837,8 @@ const pageContent: Record<string, LocationContent> = {
       "Spotsylvania County's growth south of Fredericksburg along I-95 and Route 3 keeps contractor and construction fleets on the move. We insure the commercial vehicles building this expanding corridor.",
     shortDescription:
       "Commercial vehicle insurance in Spotsylvania, VA. Coverage for contractors, construction fleets, and haulers along the I-95 corridor south of Fredericksburg.",
+    metaDescription:
+      "Commercial vehicle insurance in Spotsylvania, VA. Coverage for contractors, construction fleets, and haulers along I-95 south of Fredericksburg.",
     semanticEntities: ["Spotsylvania", "Spotsylvania County", "I-95 corridor", "Route 3", "Fredericksburg south", "construction"],
     sections: [
       {
@@ -836,6 +873,8 @@ const pageContent: Record<string, LocationContent> = {
     heroSubheadline:
       "Ashland sits at the midpoint of the I-95 and Route 1 corridors between Richmond and Fredericksburg, where small businesses, trades, and regional haulers keep commercial vehicles on the road daily.",
     shortDescription:
+      "Commercial vehicle insurance in Ashland, VA. Coverage for contractors, haulers, and small fleets at the I-95 midpoint between Richmond and Fredericksburg.",
+    metaDescription:
       "Commercial vehicle insurance in Ashland, VA. Coverage for contractors, haulers, and small fleets at the I-95 midpoint between Richmond and Fredericksburg.",
     semanticEntities: ["Ashland", "Hanover County", "I-95", "Route 1", "Richmond-Fredericksburg corridor", "regional haulers"],
     sections: [
@@ -872,6 +911,8 @@ const pageContent: Record<string, LocationContent> = {
       "Herndon's position along the Dulles corridor and Route 28 puts contractor vans, logistics fleets, and service trucks in constant motion. We insure the commercial operators serving this tech-heavy market.",
     shortDescription:
       "Commercial vehicle insurance in Herndon, VA. Coverage for contractor vans, logistics fleets, and service trucks in the Dulles Tech Corridor.",
+    metaDescription:
+      "Commercial vehicle insurance in Herndon, VA. Coverage for contractor vans, logistics fleets, and service trucks throughout the Dulles Tech Corridor.",
     semanticEntities: ["Herndon", "Dulles corridor", "Route 28", "tech corridor", "logistics", "contractor vans"],
     sections: [
       {
@@ -907,6 +948,8 @@ const pageContent: Record<string, LocationContent> = {
       "Sterling's warehouses, logistics yards, and Dulles-area construction put box trucks, dump trucks, and fleet vehicles on Route 28 and the surrounding Loudoun roads every day. We insure this corridor market.",
     shortDescription:
       "Commercial truck and vehicle insurance in Sterling, VA. Coverage for logistics, warehouse, and construction fleets in the Dulles corridor.",
+    metaDescription:
+      "Commercial truck and vehicle insurance in Sterling, VA. Coverage for logistics, warehouse, and construction fleets working the Dulles corridor daily.",
     semanticEntities: ["Sterling", "Loudoun County", "Route 28", "logistics", "warehousing", "Dulles corridor"],
     sections: [
       {
@@ -942,6 +985,8 @@ const pageContent: Record<string, LocationContent> = {
       "Tysons is one of the largest commercial centers in Virginia, where corporate fleets, construction cranes, and delivery vehicles share some of the region's busiest roads. We insure the commercial operators working this market.",
     shortDescription:
       "Commercial vehicle insurance in Tysons, VA. Coverage for corporate fleets, contractor vehicles, and delivery operators in Fairfax County's largest business district.",
+    metaDescription:
+      "Commercial vehicle insurance in Tysons, VA. Coverage for corporate fleets, contractor vehicles, and delivery operators in Fairfax's business hub.",
     semanticEntities: ["Tysons", "Tysons Corner", "Fairfax County", "corporate fleets", "Route 7", "Route 123"],
     sections: [
       {
@@ -977,6 +1022,8 @@ const pageContent: Record<string, LocationContent> = {
       "McLean's corporate campuses, embassy corridor, and Tysons-adjacent development put executive fleets, contractor vans, and service vehicles on some of Northern Virginia's most traveled roads.",
     shortDescription:
       "Commercial vehicle insurance in McLean, VA. Coverage for corporate fleets, contractor vans, and service vehicles along the Georgetown Pike and Chain Bridge corridors.",
+    metaDescription:
+      "Commercial vehicle insurance in McLean, VA. Coverage for corporate fleets, contractor vans, and service vehicles along the Chain Bridge corridor.",
     semanticEntities: ["McLean", "Fairfax County", "Georgetown Pike", "corporate fleets", "Chain Bridge Road", "executive vehicles"],
     sections: [
       {
@@ -1012,6 +1059,8 @@ const pageContent: Record<string, LocationContent> = {
       "Springfield's Mixing Bowl interchange puts more commercial vehicles through I-95, I-395, and I-495 than almost anywhere in Virginia. We insure the delivery, contractor, and fleet operators navigating this hub.",
     shortDescription:
       "Commercial vehicle insurance in Springfield, VA. Coverage for delivery fleets, contractor vans, and commercial trucks at the I-95, I-395, and I-495 interchange.",
+    metaDescription:
+      "Commercial vehicle insurance in Springfield, VA. Coverage for delivery fleets, contractor vans, and commercial trucks at the I-95 interchange.",
     semanticEntities: ["Springfield", "Mixing Bowl", "I-95", "I-395", "I-495", "delivery fleets"],
     sections: [
       {
@@ -1047,6 +1096,8 @@ const pageContent: Record<string, LocationContent> = {
       "Centreville's position at the western edge of Fairfax County along Route 28 and I-66 makes it a crossroads for contractor, logistics, and fleet operators heading toward Manassas, Chantilly, and beyond.",
     shortDescription:
       "Commercial vehicle insurance in Centreville, VA. Coverage for contractors, logistics fleets, and commercial trucks at the Route 28 and I-66 crossroads in western Fairfax.",
+    metaDescription:
+      "Commercial vehicle insurance in Centreville, VA. Coverage for contractors, logistics fleets, and commercial trucks at the Route 28 and I-66 crossroads.",
     semanticEntities: ["Centreville", "Fairfax County", "Route 28", "I-66", "western Fairfax", "contractor fleets"],
     sections: [
       {
@@ -1083,6 +1134,7 @@ function fallbackContent(city: string, region: string): LocationContent {
   return {
     heroSubheadline: `Commercial truck and vehicle insurance for ${city} and the surrounding ${region} area, from licensed advisors at Cascade Truck Insurance in Manassas.`,
     shortDescription: `Commercial truck and vehicle insurance for ${city}, ${region}. Coverage for contractors, trucking businesses, and fleets from licensed Virginia advisors.`,
+    metaDescription: `Commercial truck and vehicle insurance for ${city}, ${region}. Coverage for contractors, trucking businesses, and fleets statewide.`,
     semanticEntities: [city, region, "commercial auto", "trucking insurance", "Virginia DMV"],
     sections: [
       {
@@ -1096,6 +1148,38 @@ function fallbackContent(city: string, region: string): LocationContent {
   };
 }
 
+
+function locationImageAlt(slug: string, city: string): string {
+  const alts: Record<string, string> = {
+    "fairfax-va": "Great Falls Park river and forest in Fairfax County, Virginia",
+    "arlington-va": "Washington DC skyline and Potomac River viewed from Arlington area",
+    "chantilly-va": "Aerial view of suburban Northern Virginia neighborhood with tree-lined streets",
+    "stafford-va": "Scenic Virginia river valley with autumn trees near Stafford County",
+    "fredericksburg-va": "Historic brick storefronts along a charming downtown main street",
+    "winchester-va": "Shenandoah Valley mountain vista with rolling hills near Winchester, Virginia",
+    "richmond-va": "Richmond, Virginia downtown skyline along the James River waterfront",
+    "alexandria-va": "Potomac River waterfront and urban skyline near Alexandria, Virginia",
+    "reston-va": "Suburban Northern Virginia neighborhood with tree-lined streets near Reston",
+    "ashburn-va": "Construction site with commercial trucks near Ashburn, Virginia",
+    "leesburg-va": "Historic downtown main street in Leesburg, Loudoun County, Virginia",
+    "manassas-va": "Suburban commercial corridor in Manassas, Prince William County, Virginia",
+    "woodbridge-va": "Scenic river valley landscape near Woodbridge, Prince William County, Virginia",
+    "henrico-va": "Richmond metro skyline visible from Henrico County, Virginia",
+    "glen-allen-va": "Suburban neighborhood in Glen Allen, Henrico County, Virginia",
+    "short-pump-va": "Commercial retail corridor in Short Pump, Richmond West End, Virginia",
+    "mechanicsville-va": "Suburban residential area in Mechanicsville, Hanover County, Virginia",
+    "spotsylvania-va": "Rolling countryside along the I-95 corridor in Spotsylvania County, Virginia",
+    "ashland-va": "Small town main street in Ashland, Hanover County, Virginia",
+    "herndon-va": "Suburban office park in Herndon along the Dulles Tech Corridor, Virginia",
+    "sterling-va": "Commercial fleet vehicles parked near Sterling, Loudoun County, Virginia",
+    "tysons-va": "Urban commercial skyline in Tysons Corner, Fairfax County, Virginia",
+    "mclean-va": "Tree-lined suburban road in McLean, Fairfax County, Virginia",
+    "springfield-va": "Commercial truck on a Virginia highway near the Springfield interchange",
+    "centreville-va": "Suburban neighborhood in Centreville, western Fairfax County, Virginia",
+  };
+  return alts[slug] ?? `Commercial vehicles and roadways in ${city}, Virginia`;
+}
+
 export const locations: Location[] = seeds.map((seed) => {
   const content = pageContent[seed.slug] ?? fallbackContent(seed.city, seed.region);
   return {
@@ -1106,6 +1190,7 @@ export const locations: Location[] = seeds.map((seed) => {
     headline: `Commercial Truck Insurance in ${seed.city}, VA`,
     heroSubheadline: content.heroSubheadline,
     shortDescription: content.shortDescription,
+    metaDescription: content.metaDescription,
     semanticEntities: content.semanticEntities,
     sections: content.sections,
     faqIds: ["location-service", "location-local-rules", "general-cost", "general-requirements"],
@@ -1113,7 +1198,7 @@ export const locations: Location[] = seeds.map((seed) => {
     relatedVehicleSlugs: relatedVehiclesFor(seed.slug),
     relatedResourceSlugs: relatedResourcesFor(seed.slug),
     nearbyLocationSlugs: nearby(seed.slug),
-    image: image(seed.slug, `${seed.city}, Virginia commercial vehicles`),
+    image: image(seed.slug, locationImageAlt(seed.slug, seed.city)),
     geo: seed.geo,
     updated: "2026-06-08",
   };

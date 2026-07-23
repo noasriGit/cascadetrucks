@@ -6,7 +6,7 @@ export const site: SiteConfig = {
   parentName: "Cascade Insurance Group",
   tagline: "Virginia Commercial Truck & Vehicle Insurance",
   description:
-    "Cascade Truck Insurance helps Virginia businesses insure dump trucks, tow trucks, contractor vehicles, and commercial fleets. Get fast quotes from licensed advisors in Manassas, VA.",
+    "Cascade Truck Insurance helps Virginia businesses insure dump trucks, tow trucks, contractor vehicles, and fleets. Fast quotes from Manassas advisors.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.cascadetruckinsurance.com",
   phoneDisplay: "(703) 551-2000",
   phoneHref: "+17035512000",

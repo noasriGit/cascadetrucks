@@ -7,7 +7,7 @@ export function AuthorBio({ author, reviewedDate }: { author: Author; reviewedDa
     <aside aria-label="About the author" className="flex flex-col gap-4 rounded-2xl border border-line bg-surface-soft p-6 shadow-card sm:flex-row sm:items-start">
       <Image
         src={author.image}
-        alt=""
+        alt={author.name}
         width={72}
         height={72}
         className="h-16 w-16 flex-none rounded-full object-cover"

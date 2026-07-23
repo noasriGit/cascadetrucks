@@ -31,7 +31,7 @@ export async function generateMetadata(props: PageProps<"/resources/[slug]">): P
   if (!resource) return {};
   return buildMetadata({
     title: resource.title,
-    description: resource.excerpt,
+    description: resource.metaDescription,
     path: `/resources/${resource.slug}`,
     image: { src: resource.image.src, alt: resource.image.alt },
     type: "article",

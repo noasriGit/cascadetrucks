@@ -25,6 +25,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "truck",
     shortDescription:
       "Box truck insurance for Virginia businesses hauling goods, making deliveries, or moving equipment. Commercial auto liability, physical damage, and motor truck cargo coverage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Box truck insurance for Virginia businesses hauling goods or making deliveries. Liability, physical damage, and motor truck cargo coverage statewide.",
     heroHeadline: "Virginia Box Truck Insurance",
     heroSubheadline:
       "Box trucks and straight trucks power last-mile delivery, moving operations, and equipment transport across Virginia. We insure them with coverage built around your gross vehicle weight, cargo type, and haul radius.",
@@ -110,6 +112,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "truck",
     shortDescription:
       "Bucket truck insurance for Virginia utility, tree service, and telecom operators. Commercial auto liability, aerial work platform coverage, and physical damage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Bucket truck insurance for Virginia utility, tree service, and telecom operators. Liability, aerial platform, and physical damage coverage statewide.",
     heroHeadline: "Virginia Bucket Truck Insurance",
     heroSubheadline:
       "Bucket trucks put workers in the air over live lines, roads, and structures. We write coverage for Virginia utility contractors, tree services, and telecom crews that reflects the real risk of aerial operations.",
@@ -193,6 +197,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "truck",
     shortDescription:
       "Car carrier and rollback insurance for Virginia auto haulers, towing companies, and dealership transport. Commercial auto liability, on-hook coverage, and garagekeepers legal liability from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Car carrier and rollback insurance for Virginia auto haulers and towing companies. Liability, on-hook, and garagekeepers coverage available.",
     heroHeadline: "Virginia Car Carrier and Rollback Insurance",
     heroSubheadline:
       "Car carriers and rollbacks move other people's vehicles, which means you're responsible for every car on the deck. We write coverage for Virginia auto haulers and towing operators that protects the vehicles in your care.",
@@ -276,6 +282,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "truck",
     shortDescription:
       "Catering truck and food truck insurance for Virginia food service operators. Commercial auto liability, equipment breakdown, and product liability coverage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Catering and food truck insurance for Virginia food service operators. Commercial auto, equipment breakdown, and product liability coverage.",
     heroHeadline: "Virginia Catering Truck Insurance",
     heroSubheadline:
       "Catering trucks and food trucks are rolling kitchens and commercial vehicles at the same time. We write Virginia coverage that addresses both the road risk and the food service exposure in a single package.",
@@ -359,6 +367,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "truck",
     shortDescription:
       "Cement mixer truck insurance for Virginia concrete contractors and ready-mix haulers. Commercial auto liability, physical damage, and motor truck cargo coverage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Cement mixer truck insurance for Virginia concrete contractors and ready-mix haulers. Liability, physical damage, and cargo coverage statewide.",
     heroHeadline: "Virginia Cement Mixer Truck Insurance",
     heroSubheadline:
       "Ready-mix trucks carry heavy, time-sensitive loads on tight delivery windows. We insure Virginia cement mixer operations with coverage built around the weight, radius, and cargo characteristics of concrete hauling.",
@@ -442,6 +452,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "truck",
     shortDescription:
       "Delivery van and step van insurance for Virginia last-mile carriers, route drivers, and service technicians. Commercial auto liability, cargo coverage, and hired and non-owned auto from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Delivery and step van insurance for Virginia last-mile carriers and route drivers. Liability, cargo, and hired and non-owned auto coverage statewide.",
     heroHeadline: "Virginia Delivery Van Insurance",
     heroSubheadline:
       "Delivery vans and step vans make dozens of stops a day in congested Virginia traffic. We write coverage built for the high-frequency exposure of route delivery, parcel service, and field service operations.",
@@ -527,6 +539,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "truck",
     shortDescription:
       "Flatbed truck insurance for Virginia carriers hauling steel, lumber, machinery, and oversized freight. Commercial auto liability, motor truck cargo, and physical damage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Flatbed truck insurance for Virginia carriers hauling steel, lumber, and oversized freight. Liability, cargo, and physical damage coverage statewide.",
     heroHeadline: "Virginia Flatbed Truck Insurance",
     heroSubheadline:
       "Flatbed haulers carry exposed freight on open decks, often oversized, often heavy. We insure Virginia flatbed operations with coverage that addresses load securement liability, cargo value, and the weight class of your rig.",
@@ -612,6 +626,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "truck",
     shortDescription:
       "Hotshot truck insurance for Virginia owner-operators using a pickup with a fifth wheel or gooseneck trailer for expedited freight. Commercial auto liability, motor truck cargo, and FMCSA filing support from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Hotshot truck insurance for Virginia owner-operators running pickup and trailer expedited freight. Liability, cargo, and FMCSA filing support.",
     heroHeadline: "Virginia Hotshot Truck Insurance",
     heroSubheadline:
       "Hotshot operators move time-sensitive freight fast, often crossing state lines with a loaded gooseneck behind a dually. We write Virginia hotshot coverage built for the owner-operator who needs the right filings and the right cargo limits.",
@@ -697,6 +713,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "truck",
     shortDescription:
       "Pump truck insurance for Virginia concrete pump operators and grout pump contractors. Commercial auto liability, equipment coverage, and third-party property damage coverage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Pump truck insurance for Virginia concrete and grout pump contractors. Commercial auto liability, equipment, and third-party damage coverage.",
     heroHeadline: "Virginia Pump Truck Insurance",
     heroSubheadline:
       "Concrete boom pumps and trailer pumps extend your reach on job sites but also extend your liability exposure. We write Virginia pump truck coverage that protects the equipment and the liability created by high-pressure pumping operations.",
@@ -780,6 +798,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "truck",
     shortDescription:
       "Refrigerated truck insurance for Virginia food, pharmaceutical, and temperature-sensitive cargo carriers. Commercial auto liability, reefer breakdown coverage, and motor truck cargo from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Refrigerated truck insurance for Virginia food and pharma carriers. Liability, reefer breakdown coverage, and motor truck cargo protection statewide.",
     heroHeadline: "Virginia Refrigerated Truck Insurance",
     heroSubheadline:
       "Reefer trucks carry cargo that can spoil in minutes if the refrigeration unit fails. We write Virginia coverage that addresses both the road liability and the cargo loss exposure unique to temperature-controlled hauling.",
@@ -865,6 +885,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "truck",
     shortDescription:
       "Stake body truck insurance for Virginia landscapers, nurseries, contractors, and material haulers. Commercial auto liability, physical damage, and motor truck cargo from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Stake body truck insurance for Virginia landscapers, nurseries, and material haulers. Liability, physical damage, and cargo coverage statewide.",
     heroHeadline: "Virginia Stake Body Truck Insurance",
     heroSubheadline:
       "Stake body trucks are the workhorses of landscaping, nursery, and light construction hauling. We write Virginia coverage for the operators who depend on them every day.",
@@ -948,6 +970,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "truck",
     shortDescription:
       "Tank truck insurance for Virginia fuel haulers, liquid waste carriers, and water transport operators. Commercial auto liability, FMCSA filings, and hazmat endorsements from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Tank truck insurance for Virginia fuel, liquid waste, and water transport operators. Liability, FMCSA filings, and hazmat endorsements available.",
     heroHeadline: "Virginia Tank Truck Insurance",
     heroSubheadline:
       "Tank trucks haul liquids that can cause significant environmental and public safety damage if something goes wrong. We write Virginia coverage for fuel, water, and liquid waste operations with the liability limits and filings your business requires.",
@@ -1033,6 +1057,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "truck",
     shortDescription:
       "Truck tractor and semi-truck insurance for Virginia owner-operators and motor carriers. Commercial auto liability, physical damage, and FMCSA filing support from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Truck tractor and semi insurance for Virginia owner-operators and motor carriers. Liability, physical damage, and FMCSA filing support statewide.",
     heroHeadline: "Virginia Truck Tractor Insurance",
     heroSubheadline:
       "A truck tractor is the power unit behind every Class 8 haul. We write Virginia coverage for owner-operators and motor carriers running day cabs and sleepers, with the liability limits and federal filings your authority requires.",
@@ -1120,6 +1146,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Auto hauler trailer insurance for Virginia multi-car transport operators. On-hook coverage, trailer physical damage, and FMCSA liability from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Auto hauler trailer insurance for Virginia multi-car transport operators. On-hook coverage, trailer physical damage, and FMCSA liability statewide.",
     heroHeadline: "Virginia Auto Hauler Trailer Insurance",
     heroSubheadline:
       "Multi-car hauler trailers carry significant cargo value on every load. We write Virginia coverage for open and enclosed auto transport trailers that protects both the trailer and the vehicles on it.",
@@ -1194,6 +1222,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Dump trailer insurance for Virginia operators hauling dirt, gravel, and aggregate with bottom or side dump trailers. Commercial auto liability, physical damage, and motor truck cargo from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Dump trailer insurance for Virginia operators hauling dirt, gravel, and aggregate. Liability, physical damage, and motor truck cargo coverage.",
     heroHeadline: "Virginia Dump Trailer Insurance",
     heroSubheadline:
       "Bottom and side dump trailers haul large volumes of bulk material on construction sites and highway projects across Virginia. We write coverage for the trailer and the combination unit.",
@@ -1269,6 +1299,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Bulk commodity trailer insurance for Virginia carriers hauling grain, feed, plastic pellets, cement, and dry bulk materials. Commercial auto liability, motor truck cargo, and physical damage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Bulk commodity trailer insurance for Virginia carriers hauling grain, feed, cement, and dry bulk. Liability, cargo, and physical damage coverage.",
     heroHeadline: "Virginia Bulk Commodity Trailer Insurance",
     heroSubheadline:
       "Bulk commodity trailers move agricultural goods, industrial dry materials, and processed products across Virginia. We write coverage that accounts for the commodity, the load value, and the FMCSA requirements of for-hire dry bulk operations.",
@@ -1345,6 +1377,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Concession trailer insurance for Virginia food vendors, fair operators, and mobile catering businesses. Commercial auto liability for the tow vehicle, trailer physical damage, and product liability coverage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Concession trailer insurance for Virginia food vendors and mobile catering. Tow vehicle liability, trailer damage, and product liability coverage.",
     heroHeadline: "Virginia Concession Trailer Insurance",
     heroSubheadline:
       "Concession trailers travel from fair to fair and event to event, which means they need coverage both on the road and at the venue. We write Virginia coverage that addresses both exposures.",
@@ -1419,6 +1453,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Dry freight trailer insurance for Virginia van trailer operators hauling general merchandise, packaged goods, and palletized freight. Trailer physical damage, motor truck cargo, and FMCSA compliance from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Dry freight trailer insurance for Virginia van trailer operators hauling merchandise and palletized freight. Damage, cargo, and FMCSA support.",
     heroHeadline: "Virginia Dry Freight Trailer Insurance",
     heroSubheadline:
       "Dry van trailers are the backbone of freight transport. We write Virginia coverage for the standard 53-foot van, the 48-foot regional trailer, and everything in between.",
@@ -1494,6 +1530,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Transfer dump and dump body trailer insurance for Virginia aggregate haulers and earth-moving operations. Commercial auto liability, physical damage, and motor truck cargo from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Transfer dump trailer insurance for Virginia aggregate haulers and earth-moving operations. Liability, physical damage, and cargo coverage statewide.",
     heroHeadline: "Virginia Transfer Dump Trailer Insurance",
     heroSubheadline:
       "Transfer dump trailers increase payload on highway projects and aggregate operations without adding a second power unit. We write Virginia coverage for transfer dump configurations and dump body trailers.",
@@ -1568,6 +1606,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Pole trailer insurance for Virginia log, pipe, and structural steel haulers. Commercial auto liability, motor truck cargo, and physical damage for long-load configurations from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Pole trailer insurance for Virginia log, pipe, and structural steel haulers. Liability, cargo, and physical damage for long-load setups statewide.",
     heroHeadline: "Virginia Pole Trailer Insurance",
     heroSubheadline:
       "Pole trailers carry long, rigid loads that extend beyond the tractor, lumber, logs, pipe, and structural steel. We write Virginia coverage built for the oversize and overweight risks of long-load hauling.",
@@ -1644,6 +1684,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Refrigerated trailer insurance for Virginia reefer carriers hauling food, pharmaceuticals, and temperature-sensitive freight. Trailer physical damage, motor truck cargo with reefer breakdown, and FMCSA compliance from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Refrigerated trailer insurance for Virginia reefer carriers hauling food and pharmaceuticals. Damage, cargo with reefer breakdown, and FMCSA help.",
     heroHeadline: "Virginia Refrigerated Trailer Insurance",
     heroSubheadline:
       "Reefer trailer breakdowns cause load losses that can run into six figures. We write Virginia coverage with reefer breakdown protection built in so a mechanical failure doesn't become an uncovered loss.",
@@ -1719,6 +1761,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Tank trailer insurance for Virginia liquid and dry bulk carriers. Trailer physical damage, motor truck cargo, hazmat endorsements, and FMCSA filing support from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Tank trailer insurance for Virginia liquid and dry bulk carriers. Trailer damage, cargo, hazmat endorsements, and FMCSA filing support statewide.",
     heroHeadline: "Virginia Tank Trailer Insurance",
     heroSubheadline:
       "Tank trailers carry liquids that can create major environmental and public safety liability. We write Virginia coverage for petroleum, chemical, and liquid food-grade trailer operations with the limits and filings regulators require.",
@@ -1794,6 +1838,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Rag top trailer insurance for Virginia carriers hauling oversized or tall cargo requiring a roll-open roof. Commercial auto liability, motor truck cargo, and physical damage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Rag top trailer insurance for Virginia carriers hauling tall cargo with a roll-open roof. Liability, cargo, and physical damage coverage statewide.",
     heroHeadline: "Virginia Rag Top Trailer Insurance",
     heroSubheadline:
       "Rag top trailers are designed for tall or awkward cargo that won't fit inside a standard dry van. We write Virginia coverage for roll-roof and open-top trailer operations hauling dimensional and oversized loads.",
@@ -1865,6 +1911,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Flatbed trailer insurance for Virginia carriers hauling steel, lumber, equipment, and open-deck freight. Trailer physical damage, motor truck cargo, and commercial auto liability from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Flatbed trailer insurance for Virginia carriers hauling steel, lumber, and open-deck freight. Trailer damage, cargo, and liability coverage statewide.",
     heroHeadline: "Virginia Flatbed Trailer Insurance",
     heroSubheadline:
       "Flatbed trailers carry exposed cargo that must be properly secured. We write Virginia coverage for standard, step-deck, and double-drop flatbeds hauling everything from structural steel to construction equipment.",
@@ -1939,6 +1987,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Gooseneck trailer insurance for Virginia contractors, equipment dealers, and machinery haulers. Trailer physical damage, motor truck cargo, and commercial auto liability from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Gooseneck trailer insurance for Virginia contractors, equipment dealers, and machinery haulers. Trailer damage, cargo, and liability coverage.",
     heroHeadline: "Virginia Gooseneck Trailer Insurance",
     heroSubheadline:
       "Gooseneck trailers move the heavy equipment Virginia contractors and dealers depend on. We write coverage for standard and hydraulic-neck gooseneck trailers and the equipment they haul.",
@@ -2013,6 +2063,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Horse trailer insurance for Virginia equine operations, trainers, and show competitors. Trailer physical damage, livestock mortality options, and commercial auto liability for the tow vehicle from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Horse trailer insurance for Virginia equine operations and trainers. Trailer physical damage, livestock options, and tow vehicle liability coverage.",
     heroHeadline: "Virginia Horse Trailer Insurance",
     heroSubheadline:
       "Horse trailers carry animals whose value can run into six figures. We write Virginia commercial coverage for equine transport businesses and operations that regularly haul horses for hire.",
@@ -2086,6 +2138,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Livestock trailer insurance for Virginia cattle, hog, and poultry haulers. Commercial auto liability, animal mortality coverage, and motor truck cargo from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Livestock trailer insurance for Virginia cattle, hog, and poultry haulers. Liability, animal mortality coverage, and motor truck cargo statewide.",
     heroHeadline: "Virginia Livestock Trailer Insurance",
     heroSubheadline:
       "Livestock haulers carry perishable cargo that can perish from heat, stress, or accident. We write Virginia coverage for cattle, hog, and poultry transport operations built around agricultural hauling realities.",
@@ -2161,6 +2215,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Logging trailer insurance for Virginia timber haulers and forestry operations. Commercial auto liability, motor truck cargo for timber, and physical damage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Logging trailer insurance for Virginia timber haulers and forestry operations. Liability, cargo for timber, and physical damage coverage statewide.",
     heroHeadline: "Virginia Logging Trailer Insurance",
     heroSubheadline:
       "Log trailers haul some of the heaviest and most difficult cargo on Virginia's rural roads. We write coverage for logging trailers built around the specific risks of timber transport.",
@@ -2235,6 +2291,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Lowboy trailer insurance for Virginia heavy equipment transporters and construction operations. Commercial auto liability, physical damage for the trailer, and high-value cargo coverage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Lowboy trailer insurance for Virginia heavy equipment transporters. Liability, trailer physical damage, and high-value cargo coverage statewide.",
     heroHeadline: "Virginia Lowboy Trailer Insurance",
     heroSubheadline:
       "Lowboy trailers move the heaviest equipment on Virginia roads, excavators, cranes, bulldozers, and compactors. We write coverage for the trailer and the machinery on it, including oversize and overweight operations.",
@@ -2311,6 +2369,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Tilt trailer insurance for Virginia equipment dealers, contractors, and landscapers hauling skid steers, mini excavators, and small equipment. Trailer physical damage and commercial auto liability from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Tilt trailer insurance for Virginia contractors and landscapers hauling skid steers and mini excavators. Trailer damage and liability coverage.",
     heroHeadline: "Virginia Tilt Trailer Insurance",
     heroSubheadline:
       "Tilt trailers load and unload without a ramp, making them the go-to choice for contractors and equipment dealers hauling small machines. We write Virginia coverage for tilt trailers and the equipment they carry.",
@@ -2382,6 +2442,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Commercial travel trailer insurance for Virginia businesses using trailers as mobile offices, command units, or project support. Commercial auto liability and trailer physical damage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Commercial travel trailer insurance for Virginia businesses using trailers as mobile offices or command units. Liability and trailer damage.",
     heroHeadline: "Virginia Commercial Travel Trailer Insurance",
     heroSubheadline:
       "Travel trailers repurposed for mobile offices, job site accommodations, or event support need commercial coverage, not a personal RV policy. We write Virginia coverage for commercial travel trailer operations.",
@@ -2453,6 +2515,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Small utility trailer insurance for Virginia contractors, landscapers, and tradespeople hauling equipment and materials. Trailer physical damage and commercial auto liability from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Utility trailer insurance for Virginia contractors and landscapers hauling equipment and materials. Trailer physical damage and liability coverage.",
     heroHeadline: "Virginia Utility Trailer Insurance",
     heroSubheadline:
       "Small utility trailers are hauled every day across Virginia by contractors, landscapers, and tradespeople. They're simple, but they still need commercial coverage when used for business.",
@@ -2523,6 +2587,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Large utility trailer insurance for Virginia contractors, equipment operators, and material haulers needing heavier capacity than a small utility trailer. Trailer physical damage and commercial auto liability from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Large utility trailer insurance for Virginia contractors needing heavier capacity. Trailer physical damage and commercial auto liability coverage.",
     heroHeadline: "Virginia Large Utility Trailer Insurance",
     heroSubheadline:
       "Large utility trailers bridge the gap between a small contractor trailer and a full gooseneck. We write Virginia coverage for contractors and equipment operators depending on heavier, larger open trailers for daily operations.",
@@ -2594,6 +2660,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "trailer",
     shortDescription:
       "Wedge trailer insurance for Virginia carriers hauling light bulk materials, landscaping supplies, and aggregate. Commercial auto liability, motor truck cargo, and physical damage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Wedge trailer insurance for Virginia carriers hauling light bulk materials and landscaping supplies. Liability, cargo, and physical damage coverage.",
     heroHeadline: "Virginia Wedge Trailer Insurance",
     heroSubheadline:
       "Wedge trailers are used for light aggregate, mulch, and bulk material hauling across Virginia. We write coverage for the trailer and its loads.",
@@ -2666,6 +2734,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "car-van",
     shortDescription:
       "Business use passenger car insurance for Virginia companies with sedans, coupes, and standard cars used for work. Commercial auto liability, physical damage, and hired and non-owned auto from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Business passenger car insurance for Virginia companies using sedans for work. Liability, physical damage, and hired and non-owned auto coverage.",
     heroHeadline: "Virginia Business Passenger Car Insurance",
     heroSubheadline:
       "A personal auto policy won't cover your employees driving company sedans to client meetings or sales calls. We write Virginia commercial auto coverage for passenger cars used for business.",
@@ -2746,6 +2816,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "car-van",
     shortDescription:
       "Cargo van insurance for Virginia service companies, contractors, and delivery operators. Commercial auto liability, motor truck cargo, and physical damage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Cargo van insurance for Virginia service companies, contractors, and delivery operators. Liability, motor truck cargo, and physical damage coverage.",
     heroHeadline: "Virginia Cargo Van Insurance",
     heroSubheadline:
       "Cargo vans carry tools, equipment, parts, and goods across Virginia every day. We write commercial coverage for Sprinters, Transits, Promasters, and express vans used for work.",
@@ -2820,6 +2892,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "car-van",
     shortDescription:
       "Hearse and funeral vehicle insurance for Virginia funeral homes and mortuary services. Commercial auto liability, physical damage, and specialized limousine-class coverage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Hearse and funeral vehicle insurance for Virginia funeral homes. Commercial auto liability, physical damage, and limousine-class coverage statewide.",
     heroHeadline: "Virginia Hearse Insurance",
     heroSubheadline:
       "Hearses are specialized commercial vehicles that carry significant reputational and liability risk for funeral operations. We write Virginia commercial coverage for hearses and funeral coach fleets.",
@@ -2894,6 +2968,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "car-van",
     shortDescription:
       "Limousine insurance for Virginia livery operators, limo companies, and black-car services. Commercial livery liability, physical damage, and for-hire compliance coverage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Limousine insurance for Virginia livery operators and black-car services. Commercial livery liability, physical damage, and for-hire coverage.",
     heroHeadline: "Virginia Limousine Insurance",
     heroSubheadline:
       "Traditional limousine and stretch limo operations are classified as contract passenger carriers in Virginia, requiring commercial coverage that a personal policy can't provide. We write coverage that keeps Virginia limo operators compliant and protected.",
@@ -2969,6 +3045,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "car-van",
     shortDescription:
       "Commercial minivan insurance for Virginia businesses using minivans for service calls, transportation, and light delivery. Commercial auto liability, physical damage, and hired and non-owned auto from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Commercial minivan insurance for Virginia businesses using vans for service calls and light delivery. Liability, damage, and HNOA coverage statewide.",
     heroHeadline: "Virginia Commercial Minivan Insurance",
     heroSubheadline:
       "Minivans are used across Virginia for everything from home health care transport to contractor supply runs. A commercial policy ensures they're covered when they're working.",
@@ -3042,6 +3120,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "car-van",
     shortDescription:
       "Passenger van insurance for Virginia shuttle operators, group transportation services, and businesses transporting employees. Commercial auto liability, physical damage, and for-hire options from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Passenger van insurance for Virginia shuttle operators and employee transport. Commercial auto liability, physical damage, and for-hire options.",
     heroHeadline: "Virginia Passenger Van Insurance",
     heroSubheadline:
       "Passenger vans carry multiple people at once, which means liability exposure multiplies with each person on board. We write Virginia commercial coverage for employer shuttles, group transportation, and for-hire van services.",
@@ -3117,6 +3197,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "car-van",
     shortDescription:
       "Commercial pickup truck insurance for Virginia contractors, tradespeople, and businesses using pickups for work. Commercial auto liability, physical damage, and tools coverage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Commercial pickup insurance for Virginia contractors and tradespeople. Liability, physical damage, and tools coverage for work trucks statewide.",
     heroHeadline: "Virginia Commercial Pickup Insurance",
     heroSubheadline:
       "A pickup truck used for work needs commercial coverage. We write Virginia commercial auto policies for contractors, tradespeople, and business owners who drive pickups every day on the job.",
@@ -3191,6 +3273,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "car-van",
     shortDescription:
       "Commercial SUV insurance for Virginia businesses using sport utility vehicles for client transport, sales, and field work. Commercial auto liability, physical damage, and hired and non-owned auto from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Commercial SUV insurance for Virginia businesses using SUVs for client transport and field work. Liability, damage, and HNOA coverage statewide.",
     heroHeadline: "Virginia Commercial SUV Insurance",
     heroSubheadline:
       "SUVs used for business need commercial coverage, not a personal policy. We write Virginia commercial auto for the full range of SUVs in business use, from compact crossovers to full-size company SUVs.",
@@ -3262,6 +3346,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "car-van",
     shortDescription:
       "Wheelchair van insurance for Virginia NEMT providers, home health agencies, and care facilities transporting mobility-impaired passengers. Commercial auto liability, WAV endorsements, and for-hire transport coverage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Wheelchair van insurance for Virginia NEMT providers and care facilities. Liability, WAV endorsements, and for-hire transport coverage statewide.",
     heroHeadline: "Virginia Wheelchair Van Insurance",
     heroSubheadline:
       "Wheelchair accessible vans transport Virginia's most vulnerable passengers. We write commercial coverage built for NEMT providers, senior care facilities, and accessible transportation companies.",
@@ -3336,6 +3422,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "car-van",
     shortDescription:
       "Commercial luxury SUV insurance for Virginia executive transport, livery services, and high-value company vehicles. Commercial auto liability, agreed value physical damage, and for-hire options from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Luxury SUV insurance for Virginia executive transport and livery services. Liability, agreed value physical damage, and for-hire options statewide.",
     heroHeadline: "Virginia Luxury SUV Insurance",
     heroSubheadline:
       "Luxury SUVs used for executive transport, black-car service, and premium business travel need commercial coverage that reflects both their value and their use. We write Virginia coverage for high-value SUVs in business and for-hire service.",
@@ -3412,6 +3500,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "bus-motorhome",
     shortDescription:
       "Commercial motor home insurance for Virginia businesses using RVs as mobile offices, crew accommodations, or promotional vehicles. Commercial auto liability and physical damage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Commercial motor home insurance for Virginia businesses using RVs as offices or crew housing. Commercial auto liability and physical damage.",
     heroHeadline: "Virginia Commercial Motor Home Insurance",
     heroSubheadline:
       "Motor homes used for business, including mobile command centers, crew accommodations, and promotional tours, need commercial coverage, not a personal RV policy. We write Virginia coverage for commercial motor home operations.",
@@ -3484,6 +3574,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "bus-motorhome",
     shortDescription:
       "Bus insurance for Virginia charter operators, transit companies, and employer shuttle services. Commercial auto liability, for-hire passenger transport coverage, and FMCSA filing from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Bus insurance for Virginia charter operators, transit companies, and employer shuttles. Liability, for-hire passenger coverage, and FMCSA filings.",
     heroHeadline: "Virginia Bus Insurance",
     heroSubheadline:
       "Buses carry more passengers than any other vehicle on the road, and the liability exposure scales with every seat. We write Virginia commercial coverage for charter buses, transit buses, and employer shuttles with limits that match the risk.",
@@ -3559,6 +3651,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "bus-motorhome",
     shortDescription:
       "Wheelchair accessible bus insurance for Virginia NEMT operators, senior care facilities, and accessible transit services. Commercial auto liability, WAV endorsements, and for-hire transport coverage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Wheelchair bus insurance for Virginia NEMT operators and accessible transit. Liability, WAV endorsements, and for-hire transport coverage statewide.",
     heroHeadline: "Virginia Wheelchair Bus Insurance",
     heroSubheadline:
       "Wheelchair accessible buses combine the high-passenger-count liability of bus operations with the specialized equipment and regulatory requirements of accessible transport. We write Virginia coverage for WAB operators.",
@@ -3632,6 +3726,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "bus-motorhome",
     shortDescription:
       "School bus insurance for Virginia private schools, charter operators, and activity transport. Commercial auto liability with per-seat limits, physical damage, and FMCSA compliance from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "School bus insurance for Virginia private schools and charter operators. Liability with per-seat limits, physical damage, and FMCSA support.",
     heroHeadline: "Virginia School Bus Insurance",
     heroSubheadline:
       "School buses carry children, and the liability implications of a serious accident are among the highest in commercial transport. We write Virginia coverage for private school buses and activity transport with limits that protect your organization.",
@@ -3708,6 +3804,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "debris",
     shortDescription:
       "Front loader garbage truck insurance for Virginia waste haulers, municipal contractors, and recycling services. Commercial auto liability, physical damage, and motor truck cargo from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Front loader garbage truck insurance for Virginia waste haulers and recycling services. Liability, physical damage, and cargo coverage statewide.",
     heroHeadline: "Virginia Front Loader Truck Insurance",
     heroSubheadline:
       "Front loader garbage trucks navigate tight residential and commercial routes, picking up containers with automated arms. We write Virginia coverage for front-load waste haulers with limits built for debris removal operations.",
@@ -3783,6 +3881,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "debris",
     shortDescription:
       "Garbage truck insurance for Virginia residential haulers, rear loaders, roll-on/roll-off vehicles, and waste contractors. Commercial auto liability, physical damage, and debris removal coverage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Garbage truck insurance for Virginia residential haulers and waste contractors. Liability, physical damage, and debris removal coverage statewide.",
     heroHeadline: "Virginia Garbage Truck Insurance",
     heroSubheadline:
       "Garbage trucks and rear loaders run some of the most hazard-dense routes on Virginia roads, with workers outside the truck and constant traffic interaction. We write coverage built for residential and commercial waste hauling.",
@@ -3858,6 +3958,8 @@ export const vehicles: VehicleType[] = [
     vehicleGroup: "debris",
     shortDescription:
       "Roll-off truck insurance for Virginia debris haulers, dumpster rental companies, and construction waste contractors. Commercial auto liability, physical damage, and debris removal coverage from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Roll-off truck insurance for Virginia debris haulers and dumpster rental companies. Liability, physical damage, and debris removal coverage.",
     heroHeadline: "Virginia Roll-Off Truck Insurance",
     heroSubheadline:
       "Roll-off trucks move the dumpsters Virginia construction crews, demolition contractors, and recyclers depend on. We write coverage for roll-off operations built around debris removal risk.",

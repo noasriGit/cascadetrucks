@@ -25,6 +25,8 @@ export const services: Service[] = [
     navLabel: "Dump Truck Insurance",
     shortDescription:
       "Dump truck insurance for Virginia operators covering commercial auto liability, physical damage, and motor truck cargo. Fast quotes from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Dump truck insurance for Virginia operators covering commercial auto liability, physical damage, and motor truck cargo. Fast quotes available.",
     heroHeadline: "Virginia Dump Truck Insurance",
     heroSubheadline:
       "We insure single-axle through tri-axle and articulated dump trucks across Virginia, with coverage built around your haul radius, cargo, and gross vehicle weight. Independent advisors, multiple carrier options.",
@@ -113,6 +115,8 @@ export const services: Service[] = [
     navLabel: "Tow Truck Insurance",
     shortDescription:
       "Tow truck insurance for Virginia operators, including on-hook and garagekeepers coverage for light, medium, and heavy-duty towing. Fast quotes from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Tow truck insurance for Virginia operators, including on-hook and garagekeepers coverage for light, medium, and heavy-duty towing fleets statewide.",
     heroHeadline: "Virginia Tow Truck Insurance",
     heroSubheadline:
       "We cover wreckers, flatbeds, and recovery units across Virginia with the on-hook and garagekeepers protection towing businesses depend on, plus the filings your municipal contracts require.",
@@ -192,6 +196,8 @@ export const services: Service[] = [
     navLabel: "Semi Truck Insurance",
     shortDescription:
       "Semi truck insurance for Virginia owner-operators and motor carriers. Primary liability, physical damage, cargo, and FMCSA filing support from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Semi truck insurance for Virginia owner-operators and motor carriers. Primary liability, physical damage, cargo coverage, and FMCSA filing support.",
     heroHeadline: "Virginia Semi Truck Insurance",
     heroSubheadline:
       "Whether you run under your own authority or lease to a carrier, we write Virginia semi truck coverage with the liability limits, filings, and physical damage protection your operation requires.",
@@ -280,6 +286,8 @@ export const services: Service[] = [
     navLabel: "Contractor Vehicle Insurance",
     shortDescription:
       "Contractor vehicle insurance for Virginia trades. Commercial auto liability plus tools and equipment coverage for work trucks and vans, from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Contractor vehicle insurance for Virginia trades. Commercial auto liability plus tools and equipment coverage for work trucks and vans statewide.",
     heroHeadline: "Virginia Contractor Vehicle Insurance",
     heroSubheadline:
       "Your truck and the tools inside it are how you earn a living. We cover work trucks and vans for Virginia contractors and trades, with the equipment protection job sites demand.",
@@ -341,6 +349,8 @@ export const services: Service[] = [
     navLabel: "Plumbing Vehicle Insurance",
     shortDescription:
       "Plumbing van insurance for Virginia contractors. Commercial auto liability plus tools and equipment coverage for service vehicles, from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Plumbing van insurance for Virginia contractors. Commercial auto liability plus tools and equipment coverage for service vehicles statewide.",
     heroHeadline: "Virginia Plumbing Vehicle Insurance",
     heroSubheadline:
       "From a single service van to a small fleet, we cover Virginia plumbing businesses with road protection and coverage for the tools, fixtures, and parts you carry.",
@@ -399,6 +409,8 @@ export const services: Service[] = [
     navLabel: "HVAC Vehicle Insurance",
     shortDescription:
       "HVAC vehicle insurance for Virginia contractors. Commercial auto liability plus equipment coverage for service trucks and vans, from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "HVAC vehicle insurance for Virginia contractors. Commercial auto liability plus equipment coverage for service trucks and vans across the state.",
     heroHeadline: "Virginia HVAC Vehicle Insurance",
     heroSubheadline:
       "We insure HVAC service trucks and vans across Virginia, covering both the vehicle on the road and the compressors, recovery machines, and units your crews transport.",
@@ -458,6 +470,8 @@ export const services: Service[] = [
     navLabel: "Landscaping Vehicle Insurance",
     shortDescription:
       "Landscaping vehicle insurance for Virginia businesses. Truck, trailer, and equipment coverage for lawn care and landscaping crews, from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Landscaping vehicle insurance for Virginia businesses. Truck, trailer, and equipment coverage for lawn care and landscaping crews statewide.",
     heroHeadline: "Virginia Landscaping Vehicle Insurance",
     heroSubheadline:
       "We cover landscaping trucks, the trailers behind them, and the mowers and equipment they haul, with coverage that flexes for Virginia's busy and off-season months.",
@@ -520,6 +534,8 @@ export const services: Service[] = [
     navLabel: "Construction Vehicle Insurance",
     shortDescription:
       "Construction vehicle insurance for Virginia firms. Liability, physical damage, mobile equipment, and cargo coverage for job-site vehicles, from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Construction vehicle insurance for Virginia firms. Liability, physical damage, mobile equipment, and cargo coverage for job-site vehicles statewide.",
     heroHeadline: "Virginia Construction Vehicle Insurance",
     heroSubheadline:
       "From pickups to dump trucks to off-road machinery, we insure the vehicles and equipment that keep Virginia construction projects moving, on the road and on the site.",
@@ -588,6 +604,8 @@ export const services: Service[] = [
     navLabel: "Commercial Fleet Insurance",
     shortDescription:
       "Commercial fleet insurance for Virginia businesses running two or more vehicles. Combined coverage, multi-vehicle pricing, and safety program support from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Commercial fleet insurance for Virginia businesses with two or more vehicles. Combined coverage, multi-vehicle pricing, and safety program support.",
     heroHeadline: "Virginia Commercial Fleet Insurance",
     heroSubheadline:
       "Once you run two or more trucks or vans, a fleet policy simplifies coverage and can lower your cost. We insure mixed fleets of dump trucks, work vans, and trailers across Virginia.",
@@ -656,6 +674,8 @@ export const services: Service[] = [
     navLabel: "Uber Black Insurance",
     shortDescription:
       "Uber Black insurance for Virginia TNC drivers. Commercial coverage that meets Virginia and platform requirements, from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Uber Black insurance for Virginia TNC drivers. Commercial coverage that meets Virginia and platform requirements, from licensed advisors in Manassas, VA.",
     heroHeadline: "Virginia Uber Black Insurance",
     heroSubheadline:
       "Uber Black is premium TNC driving with higher vehicle and coverage standards than standard rideshare. We write commercial policies that keep Virginia Uber Black drivers compliant and earning.",
@@ -723,6 +743,8 @@ export const services: Service[] = [
     navLabel: "Business Auto Insurance",
     shortDescription:
       "Business auto insurance for Virginia companies using cars, vans, pickups, SUVs, and box trucks for everyday operations. Coverage for owned vehicles, hired autos, and employee-driven units from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Business auto insurance for Virginia companies using cars, vans, pickups, and trucks. Coverage for owned, hired, and employee-driven vehicles.",
     heroHeadline: "Virginia Business Auto Insurance",
     heroSubheadline:
       "Whether your team drives sedans to client meetings, cargo vans on service calls, or pickups between job sites, business auto insurance covers the gap a personal policy leaves behind. We write business auto coverage for Virginia companies of every size.",
@@ -812,6 +834,8 @@ export const services: Service[] = [
     navLabel: "Commercial Auto Insurance",
     shortDescription:
       "Commercial auto insurance for Virginia businesses. Liability, physical damage, and hired and non-owned coverage for trucks and vans, from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Commercial auto insurance for Virginia businesses. Liability, physical damage, and hired and non-owned coverage for trucks and vans statewide.",
     heroHeadline: "Virginia Commercial Auto Insurance",
     heroSubheadline:
       "If you use a vehicle for business, you need commercial auto coverage built for that risk. We insure work trucks, vans, and business vehicles of every kind across Virginia.",

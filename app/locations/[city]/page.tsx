@@ -31,7 +31,7 @@ export async function generateMetadata(props: PageProps<"/locations/[city]">): P
   if (!location) return {};
   return buildMetadata({
     title: `Commercial Truck Insurance in ${location.city}, VA`,
-    description: location.shortDescription,
+    description: location.metaDescription,
     path: `/locations/${location.slug}`,
     image: { src: location.image.src, alt: location.image.alt },
   });

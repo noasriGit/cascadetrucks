@@ -20,7 +20,8 @@ const path = "/about";
 export function generateMetadata(): Metadata {
   return buildMetadata({
     title: `About ${site.brandName}`,
-    description: `${site.brandName} is the commercial vehicle insurance division of ${site.parentName}, serving Virginia trucking and commercial vehicle businesses from Manassas, VA.`,
+    description:
+      "Cascade Truck Insurance is the commercial vehicle division of Cascade Insurance Group, serving Virginia trucking and fleet businesses from Manassas, VA.",
     path,
     image: { src: media.teamPhoto.src, alt: media.teamPhoto.alt },
   });

@@ -8,6 +8,8 @@ export const authors: Author[] = [
     name: "Cascade Commercial Lines Team",
     title: "Licensed Commercial Insurance Advisors, Cascade Insurance Group",
     bio: "The Cascade Truck Insurance team is the commercial lines division of Cascade Insurance Group, an independent agency based in Manassas, Virginia. Our licensed advisors place commercial auto, trucking, and fleet coverage for Virginia operators every day, working across multiple carrier partners to match dump truck, tow truck, contractor, and livery businesses with the right protection. The guides we publish reflect day-to-day experience with Virginia DMV requirements, FMCSA filings, and the coverages that keep commercial vehicles compliant and on the road.",
+    metaDescription:
+      "Meet the Cascade Truck Insurance commercial lines team in Manassas, VA. Licensed advisors placing trucking, fleet, and commercial auto coverage statewide.",
     credentials: [
       "Licensed property & casualty advisors in Virginia",
       "Commercial auto, trucking & fleet specialists",

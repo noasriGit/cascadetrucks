@@ -35,7 +35,7 @@ export async function generateMetadata(props: PageProps<"/coverage/[slug]">): Pr
   if (!service) return {};
   return buildMetadata({
     title: `${service.name} in Virginia`,
-    description: service.shortDescription,
+    description: service.metaDescription,
     path: `/coverage/${service.slug}`,
     image: { src: service.image.src, alt: service.image.alt },
   });
