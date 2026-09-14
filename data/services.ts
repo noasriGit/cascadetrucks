@@ -24,31 +24,70 @@ export const services: Service[] = [
     category: "industry",
     navLabel: "Dump Truck Insurance",
     shortDescription:
-      "Dump truck insurance for Virginia operators covering commercial auto liability, physical damage, and motor truck cargo. Fast quotes from licensed advisors in Manassas, VA.",
+      "Dump truck insurance for Northern Virginia operators covering commercial auto liability and physical damage. Fast quotes from licensed advisors in Manassas, VA.",
     metaDescription:
-      "Dump truck insurance for Virginia operators covering commercial auto liability, physical damage, and motor truck cargo. Fast quotes available.",
+      "Dump truck insurance for Northern Virginia operators covering commercial auto liability and physical damage. Fast quotes from Manassas advisors.",
     heroHeadline: "Virginia Dump Truck Insurance",
     heroSubheadline:
-      "We insure single-axle through tri-axle and articulated dump trucks across Virginia, with coverage built around your haul radius, cargo, and gross vehicle weight. Independent advisors, multiple carrier options.",
+      "We insure single-axle through tri-axle and articulated dump trucks across Northern Virginia, with coverage built around your haul radius and gross vehicle weight. Independent advisors, multiple carrier options.",
     semanticEntities: [
       "dump truck",
       "physical damage coverage",
-      "motor truck cargo",
       "gross vehicle weight",
       "Virginia DMV",
+      "dirt hauling",
+      "sand hauling",
+      "gravel hauling",
+      "aggregate hauling",
+      "topsoil hauling",
+      "fill hauling",
+      "mulch hauling",
+      "for-hire motor carrier",
+      "tri-axle dump truck",
+      "end dump",
     ],
     sections: [
       {
         heading: "What Dump Truck Insurance Covers in Virginia",
         body: [
           "A dump truck policy starts with commercial auto liability, which pays for bodily injury and property damage you cause to others while operating your truck on Virginia roads. For most operators, that liability coverage is the foundation that contracts, job sites, and the DMV expect you to carry.",
-          "From there, we build out the package to match how you run. Physical damage coverage protects the truck itself from collision and comprehensive losses, while motor truck cargo covers the dirt, gravel, stone, and fill you haul. Operators who rent units or send drivers in their own vehicles often add hired and non-owned auto as well.",
+          "From there, we build out the package to match how you run. Physical damage coverage protects the truck itself from collision and comprehensive losses. Operators who rent units or send drivers in their own vehicles often add hired and non-owned auto as well. Ask us about cargo specifics for your hauls.",
         ],
         bullets: [
           "Commercial auto liability for on-road bodily injury and property damage",
           "Physical damage (collision and comprehensive) for your truck",
-          "Motor truck cargo for the materials you haul",
           "Hired and non-owned auto for rented and borrowed units",
+          "Ask us about cargo specifics",
+        ],
+      },
+      {
+        heading: "Dump Truck Insurance for Dirt, Sand, Gravel & Mulch Haulers",
+        body: [
+          "A large share of Northern Virginia dump trucks move bulk material rather than general freight. Typical work includes excavation spoil removal, quarry and aggregate delivery, site fill, topsoil and mulch drops, short-haul trips between a yard and a nearby job, and for-hire subcontract hauling for a general contractor.",
+          "The truck and the broader business are separate insurance questions. Commercial auto liability and physical damage apply to the dump truck on public roads. An excavator or other machine that is not registered for the road is usually mobile equipment, and general liability for excavation work belongs on an excavation contractor insurance program. Ask us about cargo specifics for your hauls.",
+          "Operators who also pull dump trailers or transfer dump trailers should review those vehicle pages alongside this one. Construction fleets that mix dump trucks with other job-site vehicles often start with construction vehicle insurance and add dump-truck coverage for the hauling units. Operators with several trucks frequently look at commercial fleet insurance so units sit on one program. Our guide on how dump truck insurance works covers cost, requirements, and what to have ready for a quote.",
+        ],
+        bullets: [
+          "Dirt and excavation spoil",
+          "Sand",
+          "Gravel and crushed stone",
+          "Aggregate and quarry material",
+          "Topsoil and fill",
+          "Mulch",
+        ],
+      },
+      {
+        heading: "What Underwriters Need for a Material-Hauler Quote",
+        body: [
+          "Carriers price dump-truck risk from how you actually run, not from the vehicle class alone. Having the details below ready is what lets an advisor compare markets without going back and forth for basic facts.",
+        ],
+        bullets: [
+          "Material hauled, such as dirt, sand, gravel, aggregate, topsoil, fill, stone, mulch, or mixed loads",
+          "Dump-body or trailer type, including end dump, transfer dump, or tri-axle configurations",
+          "Gross vehicle weight and number of axles",
+          "Typical radius, and whether work is local job-site hauling or longer highway runs",
+          "Whether you operate under your own authority or as a leased or subcontracted hauler",
+          "Driver list, years in business, loss runs, and overnight parking or storage",
         ],
       },
       {
@@ -74,7 +113,7 @@ export const services: Service[] = [
         bullets: [
           "Gross vehicle weight and number of axles",
           "Radius of operation and typical haul routes",
-          "Cargo type and load value",
+          "Material hauled and how you use the truck",
           "Driver experience and motor vehicle records",
         ],
       },
@@ -82,18 +121,28 @@ export const services: Service[] = [
         heading: "How to Get a Dump Truck Insurance Quote",
         body: [
           "Getting started is straightforward. Have your truck details ready (year, make, model, VIN, and gross vehicle weight), your operators' license information, your radius of operation, and any prior insurance or loss history.",
-          "Call (703) 551-2000 or request a quote online, and a licensed advisor will review your operation and walk you through your options. Many dump truck policies can be quoted the same day.",
+          "Call (703) 551-2000 or request a quote online, and a licensed advisor will review your operation and walk you through your options.",
         ],
       },
     ],
     coverageHighlights: [
       "Commercial auto liability",
       "Physical damage: collision & comprehensive",
-      "Motor truck cargo",
       "Hired & non-owned auto",
+      "Ask us about cargo specifics",
     ],
-    faqIds: ["dump-truck-coverage", "dump-truck-classes", "general-cost", "general-requirements"],
-    relatedServiceSlugs: ["construction-vehicle-insurance", "commercial-fleet-insurance", "commercial-auto-insurance"],
+    faqIds: [
+      "dump-truck-coverage",
+      "dump-truck-materials",
+      "dump-truck-for-hire",
+      "dump-truck-cargo-bulk",
+      "dump-truck-quote-info",
+      "dump-truck-excavator",
+      "dump-truck-classes",
+      "general-cost",
+      "general-requirements",
+    ],
+    relatedServiceSlugs: ["excavation-contractor-insurance", "construction-vehicle-insurance", "commercial-fleet-insurance", "commercial-auto-insurance"],
     relatedLocationSlugs: NOVA,
     relatedResourceSlugs: ["how-dump-truck-insurance-works", "virginia-commercial-auto-insurance-guide"],
     relatedVehicleSlugs: [
@@ -106,7 +155,7 @@ export const services: Service[] = [
       "rag-top-trailer-insurance",
     ],
     image: image("dump-truck-insurance", "Dump truck on a Virginia job site"),
-    updated: "2026-06-11",
+    updated: "2026-09-14",
   },
   {
     slug: "tow-truck-insurance",
@@ -481,7 +530,7 @@ export const services: Service[] = [
         heading: "Truck, Trailer, and Equipment Coverage",
         body: [
           "A landscaping policy starts with commercial auto liability and physical damage for the trucks your crews drive. Each trailer you pull should also be listed on the policy so it carries liability and, if you choose, physical damage coverage of its own.",
-          "The mowers, blowers, trimmers, and other equipment hauled on those trailers are protected separately under a tools and equipment (inland marine) add-on rather than the auto policy. Listing your trucks, trailers, and equipment correctly is what keeps a claim from falling through the cracks.",
+          "The mowers, blowers, trimmers, and other equipment hauled on those trailers are protected separately under a tools and equipment (inland marine) add-on rather than the auto policy. Listing your trucks, trailers, and equipment correctly is what keeps a claim from falling through the cracks. Crews that also deliver mulch, topsoil, or bulk landscape material in a dump truck should review dump truck insurance for that hauling exposure, which is different from a pickup-and-trailer landscaping setup.",
         ],
         bullets: [
           "Commercial auto liability for landscaping trucks",
@@ -512,7 +561,7 @@ export const services: Service[] = [
       "Physical damage: collision & comprehensive",
     ],
     faqIds: ["landscaping-trailer", "general-cost", "general-multi-vehicle", "general-requirements"],
-    relatedServiceSlugs: ["contractor-vehicle-insurance", "construction-vehicle-insurance"],
+    relatedServiceSlugs: ["contractor-vehicle-insurance", "construction-vehicle-insurance", "dump-truck-insurance"],
     relatedLocationSlugs: NOVA,
     relatedResourceSlugs: ["virginia-commercial-auto-insurance-guide", "how-dump-truck-insurance-works"],
     relatedVehicleSlugs: [
@@ -525,7 +574,7 @@ export const services: Service[] = [
       "livestock-trailer-insurance",
     ],
     image: image("landscaping-vehicle-insurance", "Landscaping truck and trailer in Virginia"),
-    updated: "2026-06-11",
+    updated: "2026-09-14",
   },
   {
     slug: "construction-vehicle-insurance",
@@ -565,7 +614,7 @@ export const services: Service[] = [
         heading: "Project-Ready Protection in Virginia",
         body: [
           "General contractors and project owners frequently require proof of specific liability limits and additional-insured status before you can work on a site. We issue the certificates and structure the limits your contracts call for.",
-          "If your fleet includes dump trucks, our dump truck insurance page covers that vehicle class in depth, and operators running several units often benefit from a combined fleet policy.",
+          "If your fleet includes dump trucks, our dump truck insurance page covers that vehicle class in depth, including dirt, sand, gravel, aggregate, and mulch hauling, and operators running several units often benefit from a combined fleet policy. Excavation firms that also need general liability, contractors equipment, workers' compensation, or umbrella should review excavation contractor insurance.",
         ],
       },
       {
@@ -582,8 +631,8 @@ export const services: Service[] = [
       "Mobile equipment coverage",
       "Motor truck cargo",
     ],
-    faqIds: ["construction-coverage", "general-cost", "general-multi-vehicle", "general-requirements"],
-    relatedServiceSlugs: ["dump-truck-insurance", "contractor-vehicle-insurance", "commercial-fleet-insurance"],
+    faqIds: ["construction-coverage", "dump-truck-excavator", "general-cost", "general-multi-vehicle", "general-requirements"],
+    relatedServiceSlugs: ["dump-truck-insurance", "excavation-contractor-insurance", "contractor-vehicle-insurance", "commercial-fleet-insurance"],
     relatedLocationSlugs: CORRIDOR,
     relatedResourceSlugs: ["how-dump-truck-insurance-works", "virginia-commercial-auto-insurance-guide"],
     relatedVehicleSlugs: [
@@ -595,7 +644,105 @@ export const services: Service[] = [
       "front-loader-truck-insurance",
     ],
     image: image("construction-vehicle-insurance", "Construction vehicles at a Virginia site"),
-    updated: "2026-06-11",
+    updated: "2026-09-14",
+  },
+  {
+    slug: "excavation-contractor-insurance",
+    name: "Excavation Contractor Insurance",
+    category: "industry",
+    navLabel: "Excavation Contractor Insurance",
+    shortDescription:
+      "Excavation contractor insurance for Northern Virginia firms. Commercial auto, general liability, contractors equipment, workers' compensation, and umbrella from licensed advisors in Manassas, VA.",
+    metaDescription:
+      "Excavation contractor insurance in Northern Virginia: commercial auto, general liability, contractors equipment, workers' compensation, and umbrella.",
+    heroHeadline: "Virginia Excavation Contractor Insurance",
+    heroSubheadline:
+      "We insure Northern Virginia excavation contractors for the trucks on the road, the machines on the site, and the liability of the work itself. Independent advisors, multiple carrier options.",
+    semanticEntities: [
+      "excavation contractor",
+      "general liability",
+      "contractors equipment",
+      "inland marine",
+      "workers compensation",
+      "commercial auto",
+      "mobile equipment",
+    ],
+    sections: [
+      {
+        heading: "What Excavation Contractor Insurance Covers",
+        body: [
+          "An excavation contractor needs more than a truck policy. The program starts with commercial auto for dump trucks, pickups, service trucks, and trailers that travel public roads in Northern Virginia. General liability covers the excavation work itself, including third-party injury and property damage at the job site.",
+          "Contractors equipment, often written as inland marine, is the usual home for excavators, skid steers, loaders, and other machines that are not registered for the road. Workers' compensation, umbrella or excess, hired and non-owned auto, pollution, and bonds can be added when the operation and the contract call for them.",
+        ],
+        bullets: [
+          "Commercial auto for road-going trucks, pickups, and trailers",
+          "General liability for excavation operations",
+          "Contractors equipment / inland marine for mobile machinery",
+          "Workers' compensation, umbrella or excess, pollution, and bonds when needed",
+        ],
+      },
+      {
+        heading: "Road Vehicles Versus Mobile Equipment",
+        body: [
+          "A dump truck, crew pickup, or equipment trailer that runs Fairfax, Prince William, or Loudoun roads is a commercial auto exposure. An excavator, skid steer, or similar machine that stays on the job site is typically mobile equipment, not an auto.",
+          "Mixing those two on a single auto policy is a common source of claim gaps. We place the road units and the site machines on the forms that actually fit them, then issue the certificates general contractors require. Dump truck insurance remains the landing page for operators whose main need is the hauling unit.",
+        ],
+      },
+      {
+        heading: "Excavation Operations We Insure in Northern Virginia",
+        body: [
+          "We write excavation contractors based around Manassas and working across Northern Virginia. Typical operations include excavation, grading, trenching, site preparation, land clearing, and hauling dirt, sand, gravel, aggregate, topsoil, fill, stone, or mulch related to that work.",
+          "For-hire material hauling, own-account hauling, and new ventures can all be quoted. Tell us the mix of trucks, trailers, and machines you run so the auto, equipment, and liability pieces line up.",
+        ],
+        bullets: [
+          "Excavation and grading",
+          "Trenching and site preparation",
+          "Land clearing",
+          "Job-site material hauling, including dirt, sand, gravel, and mulch",
+        ],
+      },
+      {
+        heading: "Certificates, Filings, and Contract Requirements",
+        body: [
+          "Road-registered dump trucks still need Virginia liability coverage. As of January 1, 2025 the baseline registration minimum is 50/100/25, and for-hire operators with vehicles over 10,000 pounds GVWR must meet higher Virginia minimums, currently $750,000 in liability. Interstate for-hire hauling may also need FMCSA authority and an MCS-90 endorsement.",
+          "General contractors often require additional-insured wording, higher liability limits, and proof of workers' compensation or umbrella before you start. We structure the excavation package around those contract terms rather than quoting a generic contractor policy.",
+        ],
+      },
+      {
+        heading: "How to Get an Excavation Contractor Quote",
+        body: [
+          "Have a list of road vehicles and job-site machines, driver and payroll information, the work you perform, your typical Northern Virginia job area, and any contract insurance requirements ready.",
+          "Call (703) 551-2000 or request a quote online, and a licensed advisor will review the auto, liability, equipment, and excess pieces together.",
+        ],
+      },
+    ],
+    coverageHighlights: [
+      "Commercial auto liability",
+      "General liability",
+      "Contractors equipment / inland marine",
+      "Workers' compensation & umbrella",
+    ],
+    faqIds: [
+      "excavation-package",
+      "excavation-vehicles-vs-equipment",
+      "excavation-operations",
+      "excavation-wc-gl",
+      "excavation-umbrella-bonds",
+      "excavation-quote",
+    ],
+    relatedServiceSlugs: ["dump-truck-insurance", "construction-vehicle-insurance", "contractor-vehicle-insurance", "commercial-fleet-insurance"],
+    relatedLocationSlugs: NOVA,
+    relatedResourceSlugs: ["how-dump-truck-insurance-works", "virginia-commercial-auto-insurance-guide"],
+    relatedVehicleSlugs: [
+      "dump-trailer-insurance",
+      "transfer-dump-trailer-insurance",
+      "commercial-pickup-insurance",
+      "utility-trailer-insurance",
+      "lowboy-trailer-insurance",
+      "flatbed-truck-insurance",
+    ],
+    image: image("excavation-contractor-insurance", "Excavator and dump truck on a Northern Virginia job site"),
+    updated: "2026-09-14",
   },
   {
     slug: "commercial-fleet-insurance",

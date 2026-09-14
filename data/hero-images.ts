@@ -38,6 +38,10 @@ export const heroImages: Record<string, HeroImage> = {
     src: "https://images.unsplash.com/photo-1597974380476-fbf652dfe188?auto=format&fit=crop&w=2400&q=80",
     alt: "Construction site with dump trucks and heavy equipment at a Virginia work zone",
   },
+  "excavation-contractor-insurance": {
+    src: "https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    alt: "Yellow excavator working on a Northern Virginia job site",
+  },
   "commercial-fleet-insurance": {
     src: "https://images.unsplash.com/photo-1724556271642-e9acaf03ac23?auto=format&fit=crop&w=2400&q=80",
     alt: "Row of semi trucks parked in a commercial fleet lot",

@@ -29,13 +29,79 @@ export const faqs: Faq[] = [
     id: "dump-truck-coverage",
     question: "What does dump truck insurance cover?",
     answer:
-      "A dump truck policy is built around commercial auto liability, which pays for bodily injury and property damage you cause to others on the road. From there, most operators add physical damage coverage (collision and comprehensive) to protect the truck itself, and motor truck cargo coverage for the dirt, gravel, fill, or debris you haul. Depending on your operation, you may also carry hired and non-owned auto, on-hook, or mobile equipment coverage. We tailor the package to how and where you run.",
+      "A dump truck policy is built around commercial auto liability, which pays for bodily injury and property damage you cause to others on the road. From there, most operators add physical damage coverage (collision and comprehensive) to protect the truck itself. Depending on your operation, you may also carry hired and non-owned auto or mobile equipment coverage. Ask us about cargo specifics. We tailor the package to how and where you run.",
   },
   {
     id: "dump-truck-classes",
     question: "Which dump trucks can you insure?",
     answer:
       "We insure the full range of dump trucks Virginia operators run, from single-axle and tandem-axle trucks to tri-axle and quad units, transfer dumps, and articulated off-road haulers. We also write dump trailers, end dumps, and side dumps pulled behind tractors. Whether you run one truck or a mixed construction fleet, we can match coverage to your gross vehicle weight and haul type.",
+  },
+  {
+    id: "dump-truck-materials",
+    question: "Does dump truck insurance cover hauling dirt, sand, gravel, or mulch?",
+    answer:
+      "Commercial auto liability and physical damage apply to the dump truck on public roads whether the bed holds dirt, sand, gravel, aggregate, topsoil, fill, stone, or mulch. Those coverages protect other people and the truck itself. Ask us about cargo specifics for those hauls.",
+  },
+  {
+    id: "dump-truck-for-hire",
+    question: "What insurance does a for-hire material hauler need?",
+    answer:
+      "A for-hire hauler of dirt, sand, gravel, or similar bulk material still needs commercial auto liability for the truck, and usually physical damage if the unit is financed or would be costly to replace. Virginia for-hire operators with vehicles over 10,000 pounds GVWR must meet higher liability minimums than the private-passenger registration floor, and interstate for-hire carriers may also need FMCSA authority and an MCS-90 endorsement. Hired and non-owned auto and certificates naming a general contractor are common additions, but they depend on the contract and the filings your operation requires. Ask us about cargo specifics.",
+  },
+  {
+    id: "dump-truck-cargo-bulk",
+    question: "Can dump truck insurance include cargo?",
+    answer:
+      "Ask us about cargo specifics. We quote commercial auto liability and physical damage around the truck and the work you haul, then an advisor will review whether cargo belongs on your program.",
+  },
+  {
+    id: "dump-truck-quote-info",
+    question: "What information speeds up a dump-truck quote?",
+    answer:
+      "Have the truck's year, make, model, VIN, GVWR, and dump-body or axle setup ready, plus who drives it and their license records. Underwriters also ask what you haul, how far you typically run, whether you operate under your own authority or as a subcontractor, years in business, loss runs, and where the truck parks overnight. Contract-required limits and any trailer details help an advisor compare carriers on the first pass.",
+  },
+  {
+    id: "dump-truck-excavator",
+    question: "Does an excavation contractor need separate coverage for an excavator versus a road-going dump truck?",
+    answer:
+      "Usually yes, they are different lines. A dump truck that travels public roads is a commercial auto exposure, often with physical damage on the truck. An excavator, skid steer, or similar machine that is not registered for the road is typically mobile equipment, often written on an inland marine or contractors equipment form. General liability for the excavation work itself is a separate business coverage. Our excavation contractor insurance page is built for contractors who need those pieces together rather than auto alone.",
+  },
+  {
+    id: "excavation-package",
+    question: "What does excavation contractor insurance include?",
+    answer:
+      "A typical excavation program combines commercial auto for road-going dump trucks, pickups, and trailers with general liability for the excavation work, contractors equipment or inland marine for machines that are not registered for the road, and workers' compensation when you have employees. Umbrella or excess, hired and non-owned auto, pollution, and bonds can be added when the operation or a contract requires them.",
+  },
+  {
+    id: "excavation-vehicles-vs-equipment",
+    question: "Are dump trucks and excavators covered the same way?",
+    answer:
+      "No. Dump trucks, crew pickups, and trailers that travel public roads are commercial auto. Excavators, skid steers, and similar job-site machines are usually mobile equipment under a contractors equipment or inland marine form. Putting both on an auto policy alone is a common gap. We place each on the form that fits it.",
+  },
+  {
+    id: "excavation-operations",
+    question: "What excavation operations can you insure in Northern Virginia?",
+    answer:
+      "We write excavation, grading, trenching, site preparation, land clearing, and related material hauling for dirt, sand, gravel, aggregate, topsoil, fill, stone, and mulch. For-hire hauling, own-account hauling, and new ventures can be quoted. An advisor will match the trucks, trailers, and machines you actually run.",
+  },
+  {
+    id: "excavation-wc-gl",
+    question: "Do excavation contractors need general liability and workers' compensation?",
+    answer:
+      "Commercial auto does not replace those coverages. General liability addresses the excavation work and job-site third-party injury or property damage. Workers' compensation applies when you have employees. Most general contractors require proof of both before you start. We place them with the auto and equipment pieces so certificates match the contract.",
+  },
+  {
+    id: "excavation-umbrella-bonds",
+    question: "Can excavation contractors add umbrella, pollution, or bonds?",
+    answer:
+      "Yes. Umbrella or excess can raise limits above the primary auto and general liability. Pollution and bonds are available when the work or the contract calls for them. Tell us what the job requires and we will include the pieces that belong on the program.",
+  },
+  {
+    id: "excavation-quote",
+    question: "What do I need for an excavation contractor insurance quote?",
+    answer:
+      "Have a list of road vehicles and job-site machines, driver information, payroll if you have employees, the work you perform, your typical Northern Virginia job area, years in business, loss history, and any contract insurance requirements. Call (703) 551-2000 or request a quote online and a licensed advisor will follow up.",
   },
   {
     id: "tow-truck-onhook",

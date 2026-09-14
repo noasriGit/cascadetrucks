@@ -43,6 +43,7 @@ export function resolveQuoteCoverageCategory(specific?: string): QuoteCoverageCa
     lower.includes("tank truck") ||
     lower.includes("tractor") ||
     lower.includes("construction") ||
+    lower.includes("excavation") ||
     lower.includes("debris") ||
     lower.includes("front loader") ||
     lower.includes("hotshot") ||

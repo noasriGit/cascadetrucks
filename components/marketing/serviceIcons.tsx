@@ -22,6 +22,7 @@ const iconBySlug: Record<string, LucideIcon> = {
   "hvac-vehicle-insurance": Wind,
   "landscaping-vehicle-insurance": Trees,
   "construction-vehicle-insurance": HardHat,
+  "excavation-contractor-insurance": HardHat,
   "commercial-fleet-insurance": Boxes,
   "uber-black-insurance": CarFront,
   "commercial-auto-insurance": Car,

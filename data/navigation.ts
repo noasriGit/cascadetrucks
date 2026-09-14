@@ -76,6 +76,7 @@ export const footerNav: { heading: string; items: NavItem[] }[] = [
       { label: "HVAC Vehicle Insurance", href: "/coverage/hvac-vehicle-insurance" },
       { label: "Landscaping Vehicle Insurance", href: "/coverage/landscaping-vehicle-insurance" },
       { label: "Construction Vehicle Insurance", href: "/coverage/construction-vehicle-insurance" },
+      { label: "Excavation Contractor Insurance", href: "/coverage/excavation-contractor-insurance" },
       { label: "Business Auto Insurance", href: "/coverage/business-auto-insurance" },
     ],
   },

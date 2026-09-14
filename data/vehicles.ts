@@ -1240,7 +1240,7 @@ export const vehicles: VehicleType[] = [
         heading: "What Dump Trailer Insurance Covers",
         body: [
           "Trailer physical damage covers the dump body against collision and comprehensive losses. Motor truck cargo covers the material in the trailer. Commercial auto liability for the combination unit (tractor plus trailer) must meet FMCSA minimums for interstate for-hire carriers.",
-          "Bottom and side dump trailers often operate at high GVW in train configurations, and the liability exposure reflects that.",
+          "Bottom and side dump trailers often operate at high GVW in train configurations, and the liability exposure reflects that. If the power unit is a dump truck rather than a tractor pulling the trailer, start with dump truck insurance and treat the trailer as part of that hauling operation.",
         ],
         bullets: [
           "Trailer physical damage",
@@ -1291,7 +1291,7 @@ export const vehicles: VehicleType[] = [
     relatedLocationSlugs: DEFAULT_LOCATIONS,
     relatedResourceSlugs: ["how-dump-truck-insurance-works", "virginia-commercial-auto-insurance-guide"],
     image: image("dump-trailer-insurance", "Bottom dump trailer on a Virginia highway project"),
-    updated: "2026-06-11",
+    updated: "2026-09-14",
   },
   {
     slug: "bulk-commodity-trailer-insurance",
@@ -1318,7 +1318,7 @@ export const vehicles: VehicleType[] = [
         heading: "What Bulk Commodity Trailer Insurance Covers",
         body: [
           "Trailer physical damage covers the bulk trailer against collision and comprehensive losses. Motor truck cargo covers the commodity inside. Commercial auto liability for the combination unit must meet FMCSA minimums for interstate for-hire carriers.",
-          "Pneumatic trailers used for dry bulk discharge may have specific equipment endorsements depending on the pressurized delivery system.",
+          "Pneumatic trailers used for dry bulk discharge may have specific equipment endorsements depending on the pressurized delivery system. Sand, aggregate, and similar dry bulk that moves in a dump body rather than a pneumatic or grain trailer is usually quoted with dump truck insurance, not as a bulk-commodity trailer program.",
         ],
         bullets: [
           "Trailer physical damage",
@@ -1365,11 +1365,11 @@ export const vehicles: VehicleType[] = [
       "truck-tractor-insurance",
       "dry-freight-trailer-insurance",
     ],
-    relatedServiceSlugs: ["commercial-auto-insurance", "commercial-fleet-insurance"],
+    relatedServiceSlugs: ["dump-truck-insurance", "commercial-auto-insurance", "commercial-fleet-insurance"],
     relatedLocationSlugs: NOVA,
-    relatedResourceSlugs: ["virginia-commercial-auto-insurance-guide"],
+    relatedResourceSlugs: ["how-dump-truck-insurance-works", "virginia-commercial-auto-insurance-guide"],
     image: image("bulk-commodity-trailer-insurance", "Bulk commodity trailer at a Virginia loading facility"),
-    updated: "2026-06-11",
+    updated: "2026-09-14",
   },
   {
     slug: "concession-trailer-insurance",
@@ -1548,7 +1548,7 @@ export const vehicles: VehicleType[] = [
         heading: "What Transfer Dump Trailer Insurance Covers",
         body: [
           "Trailer physical damage covers the transfer dump body. Motor truck cargo covers the aggregate or earth material. Commercial auto liability for the tractor-trailer combination must meet FMCSA minimums for interstate for-hire carriers.",
-          "Transfer dump operations often run at maximum legal weight, and the liability exposure from a braking or handling incident with that mass is substantial.",
+          "Transfer dump operations often run at maximum legal weight, and the liability exposure from a braking or handling incident with that mass is substantial. Transfer dump trailers used with dump trucks on aggregate or earth-moving jobs are commonly quoted together with dump truck insurance for the power unit.",
         ],
         bullets: [
           "Trailer/transfer body physical damage",
@@ -1598,7 +1598,7 @@ export const vehicles: VehicleType[] = [
     relatedLocationSlugs: CORRIDOR,
     relatedResourceSlugs: ["how-dump-truck-insurance-works", "virginia-commercial-auto-insurance-guide"],
     image: image("transfer-dump-trailer-insurance", "Transfer dump trailer on a Virginia highway project"),
-    updated: "2026-06-11",
+    updated: "2026-09-14",
   },
   {
     slug: "pole-trailer-insurance",
