@@ -8,7 +8,7 @@ const SPLASH_OVERLAY_CSS =
 
 const SPLASH_BODY_LOCK = "body{overflow:hidden!important}";
 
-export const SPLASH_BOOT_SCRIPT = `(function(){try{if(sessionStorage.getItem("${SPLASH_SESSION_KEY}"))return;if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches){sessionStorage.setItem("${SPLASH_SESSION_KEY}","1");return}}catch(e){return}var s=document.createElement("style");s.id="splash-critical";s.textContent="${SPLASH_OVERLAY_CSS}${SPLASH_BODY_LOCK}";document.head.appendChild(s)})();`;
+export const SPLASH_BOOT_SCRIPT = `(function(){try{if(sessionStorage.getItem("${SPLASH_SESSION_KEY}"))return;if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches){sessionStorage.setItem("${SPLASH_SESSION_KEY}","1");return}}catch(e){return}var s=document.createElement("style");s.id="splash-critical";s.textContent="${SPLASH_OVERLAY_CSS}${SPLASH_BODY_LOCK}";document.head.appendChild(s);window.setTimeout(function(){var b=document.getElementById("splash-boot");if(b&&!b.classList.contains("splash-done")){b.classList.add("splash-done","splash-exiting");b.style.display="none";b.style.pointerEvents="none";var c=document.getElementById("splash-critical");if(c)c.remove();document.body.style.removeProperty("overflow");try{sessionStorage.setItem("${SPLASH_SESSION_KEY}","1")}catch(e){}}},2500)})();`;
 
 /** Idempotent — safe to call multiple times. */
 export function hideSplash() {

@@ -7,11 +7,15 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
       { protocol: "https", hostname: "images.pexels.com", pathname: "/**" },
     ],
-    // Placeholder art ships as trusted, first-party SVGs in /public.
-    // TODO: remove dangerouslyAllowSVG once real raster photography replaces placeholders.
-    dangerouslyAllowSVG: true,
-    contentDispositionType: "attachment",
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  async redirects() {
+    return [
+      {
+        source: "/site.webmanifest",
+        destination: "/manifest.webmanifest",
+        permanent: true,
+      },
+    ];
   },
 };
 
