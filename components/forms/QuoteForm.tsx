@@ -1,11 +1,12 @@
 "use client";
 
-import { useActionState, useEffect, useId } from "react";
+import { useActionState, useEffect, useId, useRef } from "react";
 import { useFormStatus } from "react-dom";
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
 import { submitQuoteRequest } from "@/app/actions/quote";
 import { initialQuoteState, quoteCoverageCategories, resolveQuoteCoverageCategory } from "@/lib/quote";
+import { captureLeadAttribution } from "@/lib/lead-attribution";
 import { Field, FieldError, Input, Label, Select, Textarea } from "@/components/ui/Field";
 import { buttonClasses } from "@/components/ui/Button";
 
@@ -30,15 +31,39 @@ export function QuoteForm({
   description = "Tell us about your vehicles and we'll get back to you fast.",
   defaultCoverage,
   defaultCity,
+  specificServiceSlug,
+  specificVehicleSlug,
 }: {
   heading?: string;
   description?: string;
   defaultCoverage?: string;
   defaultCity?: string;
+  specificServiceSlug?: string;
+  specificVehicleSlug?: string;
 }) {
   const [state, formAction] = useActionState(submitQuoteRequest, initialQuoteState);
   const uid = useId();
+  const formRef = useRef<HTMLFormElement>(null);
   const coverageDefault = resolveQuoteCoverageCategory(defaultCoverage);
+
+  useEffect(() => {
+    const attribution = captureLeadAttribution(window.location, {
+      serviceSlug: specificServiceSlug,
+      vehicleSlug: specificVehicleSlug,
+    });
+    const values = {
+      source_path: attribution.sourcePath,
+      utm_source: attribution.utmSource,
+      utm_medium: attribution.utmMedium,
+      utm_campaign: attribution.utmCampaign,
+      specific_service_slug: attribution.serviceSlug,
+      specific_vehicle_slug: attribution.vehicleSlug,
+    };
+    for (const [name, value] of Object.entries(values)) {
+      const input = formRef.current?.elements.namedItem(name);
+      if (input instanceof HTMLInputElement) input.value = value ?? "";
+    }
+  }, [specificServiceSlug, specificVehicleSlug]);
 
   useEffect(() => {
     if (state.status !== "error") return;
@@ -63,12 +88,18 @@ export function QuoteForm({
         </p>
       ) : null}
 
-      <form action={formAction} className="mt-5 space-y-4" noValidate>
+      <form ref={formRef} action={formAction} className="mt-5 space-y-4" noValidate>
         {/* Honeypot field for spam bots; visually hidden. */}
         <div aria-hidden="true" className="hidden">
           <label htmlFor={`${uid}-company_website`}>Company website</label>
           <input id={`${uid}-company_website`} name="company_website" type="text" tabIndex={-1} autoComplete="off" />
         </div>
+        <input type="hidden" name="source_path" defaultValue="" />
+        <input type="hidden" name="utm_source" defaultValue="" />
+        <input type="hidden" name="utm_medium" defaultValue="" />
+        <input type="hidden" name="utm_campaign" defaultValue="" />
+        <input type="hidden" name="specific_service_slug" defaultValue="" />
+        <input type="hidden" name="specific_vehicle_slug" defaultValue="" />
 
         <div className="grid gap-4 sm:grid-cols-2">
           <Field>

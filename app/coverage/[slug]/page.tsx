@@ -78,6 +78,7 @@ export default async function ServicePage(props: PageProps<"/coverage/[slug]">) 
         aside={
           <QuoteForm
             defaultCoverage={service.name}
+            specificServiceSlug={service.slug}
             heading="Get your free quote"
             description="Tell us about your operation and we'll follow up fast."
           />
