@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import { site } from "@/data/site";
+import type { LeadAttribution } from "@/lib/lead-attribution";
 
 export interface QuoteLead {
   name: string;
@@ -10,6 +11,7 @@ export interface QuoteLead {
   vehicles: string;
   message: string;
   receivedAt: string;
+  attribution: LeadAttribution;
 }
 
 const DEFAULT_FROM = `${site.brandName} <quotes@cascadetruckinsurance.com>`;
@@ -20,7 +22,15 @@ function getResendClient(): Resend | null {
   return new Resend(apiKey);
 }
 
-function formatLeadText(lead: QuoteLead): string {
+export function formatLeadText(lead: QuoteLead): string {
+  const attributionLines = [
+    lead.attribution.sourcePath && `Source path: ${lead.attribution.sourcePath}`,
+    lead.attribution.serviceSlug && `Specific service: ${lead.attribution.serviceSlug}`,
+    lead.attribution.vehicleSlug && `Specific vehicle: ${lead.attribution.vehicleSlug}`,
+    lead.attribution.utmSource && `UTM source: ${lead.attribution.utmSource}`,
+    lead.attribution.utmMedium && `UTM medium: ${lead.attribution.utmMedium}`,
+    lead.attribution.utmCampaign && `UTM campaign: ${lead.attribution.utmCampaign}`,
+  ].filter((line): line is string => Boolean(line));
   const lines = [
     "New quote request from cascadetruckinsurance.com",
     "",
@@ -33,6 +43,9 @@ function formatLeadText(lead: QuoteLead): string {
     "",
     "Additional details:",
     lead.message || "(none)",
+    "",
+    "Lead attribution:",
+    ...(attributionLines.length > 0 ? attributionLines : ["(not available)"]),
     "",
     `Submitted: ${lead.receivedAt}`,
   ];

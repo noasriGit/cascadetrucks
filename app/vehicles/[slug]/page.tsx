@@ -84,6 +84,7 @@ export default async function VehiclePage(props: PageProps<"/vehicles/[slug]">) 
         aside={
           <QuoteForm
             defaultCoverage={vehicle.name}
+            specificVehicleSlug={vehicle.slug}
             heading="Get your free quote"
             description="Tell us about your vehicles and we'll follow up fast."
           />
